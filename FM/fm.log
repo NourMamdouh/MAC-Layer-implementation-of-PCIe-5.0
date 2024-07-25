@@ -1,0 +1,1334 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC (RHEL64)
+Current time: Thu Jun 27 05:39:52 2024
+
+Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
+############################  Search PATH ################################
+set PROJECT_PATH /home/IC/RX_PCIE
+/home/IC/RX_PCIE
+lappend search_path /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+lappend search_path $PROJECT_PATH/RTL
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/RX_PCIE/RTL
+lappend search_path $PROJECT_PATH/syn
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/RX_PCIE/RTL /home/IC/RX_PCIE/syn
+########################### Define Top Module ############################
+set top_module PL_TOP
+PL_TOP
+######################### Formality Setup File ###########################
+set synopsys_auto_setup true
+true
+set_svf "/home/IC/RX_PCIE/Syn/PL_TOP.svf"
+
+guide_transformation restricted to guide mode only
+Error:  /home/IC/RX_PCIE/FM/formality4_svf/svf.txt (Line: 11076) Originally from /home/IC/RX_PCIE/Syn/PL_TOP.svf: Parse error.
+SVF set to '/home/IC/RX_PCIE/Syn/PL_TOP.svf'.
+1
+####################### Read Reference tech libs ########################
+set SSLIB "/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+read_db -container Ref [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Created container 'Ref'
+Current container set to 'Ref'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+###################  Read Reference Design Files ######################## 
+read_sverilog -container Ref "BA_counters.sv"
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home/IC/RX_PCIE/RTL/BA_counters.sv'
+1
+read_sverilog -container Ref "BA_flag_genarator.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/BA_flag_genarator.sv'
+1
+read_sverilog -container Ref "BA_FSM.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/BA_FSM.sv'
+1
+read_sverilog -container Ref "BA_TOP.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/BA_TOP.sv'
+1
+read_sverilog -container Ref "Block_Type_Logic.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Block_Type_Logic.sv'
+1
+read_sverilog -container Ref "Counter.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Counter.sv'
+1
+read_sverilog -container Ref "Descrambler.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Descrambler.sv'
+1
+read_sverilog -container Ref "elstc_buff_TOP.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/elstc_buff_TOP.sv'
+1
+read_sverilog -container Ref "Filtering_Buffer.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Filtering_Buffer.sv'
+1
+read_sverilog -container Ref "Frame_Checker.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Frame_Checker.sv'
+1
+read_sverilog -container Ref "lane_control.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/lane_control.sv'
+1
+read_sverilog -container Ref "lane_deskew.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/lane_deskew.sv'
+1
+read_sverilog -container Ref "Descrambler_Controler.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Descrambler_Controler.sv'
+1
+read_sverilog -container Ref "Packet_Filter_fsm.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Packet_Filter_fsm.sv'
+1
+read_sverilog -container Ref "Packet_Filter_TOP.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Packet_Filter_TOP.sv'
+1
+read_sverilog -container Ref "PHY_RX.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/PHY_RX.sv'
+1
+read_sverilog -container Ref "PIPE_Counter.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/PIPE_Counter.sv'
+1
+read_sverilog -container Ref "PIPE_Counter_pipe.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/PIPE_Counter_pipe.sv'
+1
+read_sverilog -container Ref "read_proc_and_ptr_genr.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/read_proc_and_ptr_genr.sv'
+1
+read_sverilog -container Ref "Rx_Buffer.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Rx_Buffer.sv'
+1
+read_sverilog -container Ref "RX_TOP.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/RX_TOP.sv'
+1
+read_sverilog -container Ref "storage_unit.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/storage_unit.sv'
+1
+read_sverilog -container Ref "dff_sync2.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/dff_sync2.sv'
+1
+read_sverilog -container Ref "top_RX.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/top_RX.sv'
+1
+read_sverilog -container Ref "wptr_generation.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/wptr_generation.sv'
+1
+read_sverilog -container Ref "write_processor.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/write_processor.sv'
+1
+read_sverilog -container Ref "LFSR_8_gen3.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/LFSR_8_gen3.sv'
+1
+read_sverilog -container Ref "LFSR_8.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/LFSR_8.sv'
+1
+read_sverilog -container Ref "decoder.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/decoder.sv'
+1
+read_sverilog -container Ref "LTSSM.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/LTSSM.sv'
+1
+read_sverilog -container Ref "LTSSM_TOP.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/LTSSM_TOP.sv'
+1
+read_sverilog -container Ref "OS_CREATOR.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/OS_CREATOR.sv'
+1
+read_sverilog -container Ref "Timer.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Timer.sv'
+1
+read_sverilog -container Ref "DC_Balance.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/DC_Balance.sv'
+1
+read_sverilog -container Ref "Framing_Buffer.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Framing_Buffer.sv'
+1
+read_sverilog -container Ref "Framing_fsm_one_lane.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Framing_fsm_one_lane.sv'
+1
+read_sverilog -container Ref "Framing_fsm.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Framing_fsm.sv'
+1
+read_sverilog -container Ref "Gen3_Top.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Gen3_Top.sv'
+1
+read_sverilog -container Ref "OR_Gate.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/OR_Gate.sv'
+1
+read_sverilog -container Ref "PHY_TX.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/PHY_TX.sv'
+1
+read_sverilog -container Ref "scrambler_and_sync.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/scrambler_and_sync.sv'
+1
+read_sverilog -container Ref "Scrambler_Controler.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Scrambler_Controler.sv'
+1
+read_sverilog -container Ref "Scrambler.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Scrambler.sv'
+1
+read_sverilog -container Ref "Sync_Logic.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Sync_Logic.sv'
+1
+read_sverilog -container Ref "tokens.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/tokens.sv'
+1
+read_sverilog -container Ref "Interface_Buffer.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Interface_Buffer.sv'
+1
+read_sverilog -container Ref "Tx_Framing.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/Tx_Framing.sv'
+1
+read_sverilog -container Ref "TX_TOP.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/TX_TOP.sv'
+1
+read_sverilog -container Ref "PL_TOP.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/PL_TOP.sv'
+1
+read_sverilog -container Ref "phy_top.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/phy_top.sv'
+1
+read_sverilog -container Ref "IDLE_Counter.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/IDLE_Counter.sv'
+1
+read_sverilog -container Ref "SKP_Counter.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/RTL/SKP_Counter.sv'
+1
+######################## set the top Reference Design ######################## 
+set_reference_design PL_TOP
+Reference design set to 'Ref:/WORK/PL_TOP'
+1
+set_top PL_TOP
+Setting top design to 'Ref:/WORK/PL_TOP'
+Status:   Elaborating design PL_TOP   ...  
+Status:   Elaborating design phy_top  serdes=0 ...  
+Information: Created design named 'phy_top_serdes0'. (FE-LINK-13)
+Status:   Elaborating design PHY_TX  BUFFER_DEPTH=8, ADDR_WIDTH=3, serdes=0 ...  
+Information: Created design named 'PHY_TX_BUFFER_DEPTH8_ADDR_WIDTH3_serdes0'. (FE-LINK-13)
+Status:   Elaborating design TX_TOP   ...  
+Status:   Elaborating design Interface_Buffer  BUFFER_DEPTH=8, ADDR_WIDTH=3 ...  
+Information: Created design named 'Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3'. (FE-LINK-13)
+Status:   Elaborating design Tx_Framing   ...  
+Status:   Elaborating design Gen3_Top  SYMBOL_WIDTH='d8, PACKET_LENGTH='d11, SYMBOL_NUM_WIDTH='d4, SYMBOL_PTR_WIDTH='d5, MAX_LANES=32, EDS_DIPTH=32'd4, STP_DIPTH=32'd4, SDP_DIPTH=32'd2, FRAMING_DATA_WIDTH=32'd16 ...  
+Information: Created design named 'Gen3_Top_00000008_0000000b_00000004_00000005_32_00000004_00000004_00000002_00000010'. (FE-LINK-13)
+Status:   Elaborating design Framing_fsm   ...  
+Status:   Elaborating design Framing_fsm_one_lane   ...  
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: i_EDS Block: /Framing_fsm_one_lane File: /home/IC/RX_PCIE/RTL/Framing_fsm_one_lane.sv Line: 140)  (FMR_ELAB-147)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: i_SDP Block: /Framing_fsm_one_lane File: /home/IC/RX_PCIE/RTL/Framing_fsm_one_lane.sv Line: 149)  (FMR_ELAB-147)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: i_STP Block: /Framing_fsm_one_lane File: /home/IC/RX_PCIE/RTL/Framing_fsm_one_lane.sv Line: 164)  (FMR_ELAB-147)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: i_SDP Block: /Framing_fsm_one_lane File: /home/IC/RX_PCIE/RTL/Framing_fsm_one_lane.sv Line: 171)  (FMR_ELAB-147)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Framing_fsm_one_lane.sv Line: 187)  (FMR_VLOG-063)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: i_EDS Block: /Framing_fsm_one_lane File: /home/IC/RX_PCIE/RTL/Framing_fsm_one_lane.sv Line: 189)  (FMR_ELAB-147)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Framing_fsm_one_lane.sv Line: 205)  (FMR_VLOG-063)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: i_STP Block: /Framing_fsm_one_lane File: /home/IC/RX_PCIE/RTL/Framing_fsm_one_lane.sv Line: 207)  (FMR_ELAB-147)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Framing_fsm_one_lane.sv Line: 223)  (FMR_VLOG-063)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: i_SDP Block: /Framing_fsm_one_lane File: /home/IC/RX_PCIE/RTL/Framing_fsm_one_lane.sv Line: 225)  (FMR_ELAB-147)
+Status:   Elaborating design tokens   ...  
+Status:   Elaborating design Counter   ...  
+Status:   Elaborating design Framing_Buffer   ...  
+Status:   Elaborating design OR_Gate   ...  
+Status:   Elaborating design scrambler_and_sync  serdes=0 ...  
+Information: Created design named 'scrambler_and_sync_serdes0'. (FE-LINK-13)
+Status:   Elaborating design Sync_Logic  serdes=0 ...  
+Information: Created design named 'Sync_Logic_serdes0'. (FE-LINK-13)
+Status:   Elaborating design LFSR_8_gen3   ...  
+Warning: Variable(s) is(are) being read asynchronously. This may cause simulation-synthesis mismatches. (File: /home/IC/RX_PCIE/RTL/LFSR_8_gen3.sv Line: 60)  (FMR_VLOG-100)
+Status:   Elaborating design LFSR_8   ...  
+Status:   Elaborating design DC_Balance   ...  
+Status:   Elaborating design Scrambler_Controler   ...  
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Scrambler_Controler.sv Line: 49)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Scrambler_Controler.sv Line: 51)  (FMR_VLOG-063)
+Status:   Elaborating design Scrambler   ...  
+Status:   Elaborating design IDLE_Counter   ...  
+Status:   Elaborating design PHY_RX  BUFFER_DEPTH=8, ADDR_WIDTH=3, serdes=0 ...  
+Information: Created design named 'PHY_RX_BUFFER_DEPTH8_ADDR_WIDTH3_serdes0'. (FE-LINK-13)
+Status:   Elaborating design RX_TOP  BUFFER_DEPTH=8, ADDR_WIDTH=3 ...  
+Information: Created design named 'RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3'. (FE-LINK-13)
+Status:   Elaborating design Packet_Filter_TOP   ...  
+Status:   Elaborating design Filtering_Buffer   ...  
+Status:   Elaborating design Packet_Filter_fsm   ...  
+Status:   Elaborating design Frame_Checker   ...  
+Status:   Elaborating design Rx_Buffer  BUFFER_DEPTH=8, ADDR_WIDTH=3 ...  
+Information: Created design named 'Rx_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3'. (FE-LINK-13)
+Status:   Elaborating design top_RX  serdes=0 ...  
+Information: Created design named 'top_RX_serdes0'. (FE-LINK-13)
+Status:   Elaborating design Descrambler_Controler   ...  
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Descrambler_Controler.sv Line: 51)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Descrambler_Controler.sv Line: 53)  (FMR_VLOG-063)
+Status:   Elaborating design Descrambler   ...  
+Status:   Elaborating design PIPE_Counter_pipe  CNT_WIDTH=4 ...  
+Information: Created design named 'PIPE_Counter_pipe_CNT_WIDTH4'. (FE-LINK-13)
+Status:   Elaborating design Block_Type_Logic   ...  
+Status:   Elaborating design LTSSM_TOP   ...  
+Status:   Elaborating design LTSSM   ...  
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/LTSSM.sv Line: 1669)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/LTSSM.sv Line: 1697)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/LTSSM.sv Line: 1739)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/LTSSM.sv Line: 1746)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/LTSSM.sv Line: 1768)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/LTSSM.sv Line: 1775)  (FMR_VLOG-063)
+Status:   Elaborating design OS_CREATOR   ...  
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/OS_CREATOR.sv Line: 237)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/OS_CREATOR.sv Line: 385)  (FMR_VLOG-063)
+Status:   Elaborating design decoder  lane_num=31 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num31'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=30 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num30'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=29 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num29'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=28 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num28'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=27 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num27'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=26 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num26'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=25 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num25'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=24 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num24'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=23 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num23'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=22 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num22'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=21 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num21'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=20 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num20'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=19 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num19'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=18 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num18'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=17 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num17'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=16 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num16'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=15 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num15'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=14 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num14'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=13 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num13'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=12 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num12'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=11 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num11'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=10 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num10'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=9 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num9'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=8 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num8'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=7 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num7'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=6 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num6'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=5 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num5'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=4 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num4'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=3 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num3'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=2 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num2'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=1 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num1'. (FE-LINK-13)
+Status:   Elaborating design decoder  lane_num=0 ...  
+$display output: enter rcvrlock
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 944)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 949)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1015)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1040)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1069)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1094)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1124)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1156)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1214)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1242)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1347)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1361)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1421)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1439)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1513)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1526)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1584)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1602)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1677)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1689)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1752)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/decoder.sv Line: 1767)  (FMR_VLOG-063)
+Information: Created design named 'decoder_lane_num0'. (FE-LINK-13)
+Status:   Elaborating design Timer   ...  
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Timer.sv Line: 38)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Timer.sv Line: 42)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Timer.sv Line: 46)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Timer.sv Line: 50)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Timer.sv Line: 54)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Timer.sv Line: 59)  (FMR_VLOG-063)
+Warning: Signed to unsigned assignment occurs. (File: /home/IC/RX_PCIE/RTL/Timer.sv Line: 60)  (FMR_VLOG-063)
+Status:   Elaborating design SKP_Counter   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design set to 'Ref:/WORK/PL_TOP' with warnings
+   ATTENTION: RTL interpretation messages were produced during link.
+              Verification results may disagree with a logic simulator.
+
+************ RTL Interpretation Summary ************
+************ Design: Ref:/WORK/PL_TOP
+7 FMR_ELAB-147 messages produced    
+
+Please refer to the Formality log file for more details,
+or execute report_hdlin_mismatches.
+****************************************************
+
+Reference design set to 'Ref:/WORK/PL_TOP'
+1
+####################### Read Implementation tech libs ######################## 
+read_db -container Imp [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Created container 'Imp'
+Current container set to 'Imp'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+#################### Read Implementation Design Files ######################## 
+read_verilog -container Imp -netlist "/home/IC/RX_PCIE/Syn/netlists/PL_TOP.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/RX_PCIE/Syn/netlists/PL_TOP.v'
+1
+####################  set the top Implementation Design ######################
+set_implementation_design PL_TOP
+Implementation design set to 'Imp:/WORK/PL_TOP'
+1
+set_top PL_TOP
+Setting top design to 'Imp:/WORK/PL_TOP'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Imp:/WORK/PL_TOP'
+Implementation design set to 'Imp:/WORK/PL_TOP'
+1
+## matching Compare points
+match
+Reference design is 'Ref:/WORK/PL_TOP'
+Implementation design is 'Imp:/WORK/PL_TOP'
+Status:  Checking designs...
+    Warning: 323 (67) undriven nets found in reference (implementation) design; see formality4.log for list (FM-399)
+    Info:  1 (2) multiply-driven nets found in reference (implementation) design; see formality4.log for list.
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+. 946A/2R/0US/54UP (100% SVF completed) 06/27/24 05:40 752MB/53.70sec
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+environment         :          2          0          0          0          2
+instance_map        :         69          0          0          0         69
+mark                :        108          0          0          0        108
+reg_constant        :         74          0          0          0         74
+replace             :         99          0          0          0         99
+transformation
+   map              :        399          0          0          0        399
+   share            :        124          1          0          0        125
+   tree             :         70          0          0          0         70
+uniquify            :          1          1          0          0          2
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      /home/IC/RX_PCIE/Syn/PL_TOP.svf
+
+SVF files produced:
+  /home/IC/RX_PCIE/FM/formality4_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 10270 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 793 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 468(0) Unmatched reference(implementation) unread points    
+****************************************************************************************
+
+1
+## verify
+set successful [verify]
+Reference design is 'Ref:/WORK/PL_TOP'
+Implementation design is 'Imp:/WORK/PL_TOP'
+    
+*********************************** Matching Results ***********************************    
+ 10270 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 793 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 468(0) Unmatched reference(implementation) unread points    
+****************************************************************************************
+
+Status:  Verifying...
+........
+
+************ RTL Interpretation Summary ************
+************ Design: Ref:/WORK/PL_TOP
+7 FMR_ELAB-147 messages produced    
+
+Please refer to the Formality log file for more details,
+or execute report_hdlin_mismatches.
+****************************************************
+
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+   ATTENTION: RTL interpretation messages were produced during link
+              of reference design.
+              Verification results may disagree with a logic simulator.
+-----------------------------------------------------------------------
+ Reference design: Ref:/WORK/PL_TOP
+ Implementation design: Imp:/WORK/PL_TOP
+ 10270 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0     862    9408       0   10270
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Constant reg                                                         1       0       1
+  Unread                       0       0       0       0       0     776       0     776
+****************************************************************************************
+1
+if {!$successful} {
+diagnose
+analyze_points -failing
+}
+report_passing_points > "reports/passing_points.rpt"
+report_failing_points > "reports/failing_points.rpt"
+report_aborted_points > "reports/aborted_points.rpt"
+report_unverified_points > "reports/unverified_points.rpt"
+start_gui

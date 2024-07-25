@@ -1,0 +1,1509 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/IC/.synopsys_dv_prefs.tcl
+########################### Define Top Module ############################
+set top_module PHY_RX
+PHY_RX
+##################### Define Working Library Directory ######################
+define_design_lib work -path ./work
+1
+############################# Formality Setup File ##########################
+set_svf $top_module.svf
+1
+################## Design Compiler Library Files #setup ######################
+puts "###########################################"
+###########################################
+puts "#      #setting Design Libraries          #"
+#      #setting Design Libraries          #
+puts "###########################################"
+###########################################
+#Add the path of the libraries and RTL files to the search_path variable
+set PROJECT_PATH /home/IC/RX_PCIE
+/home/IC/RX_PCIE
+set LIB_PATH     /home/IC/tsmc_fb_cl013g_sc/aci/sc-m
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m
+lappend search_path $LIB_PATH/synopsys
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+lappend search_path $PROJECT_PATH/RTL 
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/RX_PCIE/RTL
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell libraries 
+set target_library [list $SSLIB $TTLIB $FFLIB]
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell & Hard Macros libraries 
+set link_library [list * $SSLIB $TTLIB $FFLIB]  
+* scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+######################## Reading RTL Files #################################
+puts "###########################################"
+###########################################
+puts "#             Reading RTL Files           #"
+#             Reading RTL Files           #
+puts "###########################################"
+###########################################
+set file_format sverilog
+sverilog
+#ALU
+analyze -format $file_format BA_counters.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/BA_counters.sv
+Presto compilation completed successfully.
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+analyze -format $file_format BA_flag_genarator.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/BA_flag_genarator.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format BA_FSM.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/BA_FSM.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format BA_TOP.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/BA_TOP.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format Block_Type_Logic.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/Block_Type_Logic.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format Byte_unstripping.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/Byte_unstripping.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format Counter.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/Counter.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format Descrambler.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/Descrambler.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format elstc_buff_TOP.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/elstc_buff_TOP.sv
+Warning:  /home/IC/RX_PCIE/RTL/elstc_buff_TOP.sv:55: the undeclared symbol 'empty' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+1
+analyze -format $file_format Filtering_Buffer.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/Filtering_Buffer.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format Frame_Checker.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/Frame_Checker.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format lane_control.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/lane_control.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format lane_deskew.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/lane_deskew.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format LFSR_8_gen3.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/LFSR_8_gen3.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format LFSR_8.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/LFSR_8.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format Descrambler_Controler.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/Descrambler_Controler.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format Packet_Filter_fsm.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/Packet_Filter_fsm.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format Packet_Filter_TOP.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/Packet_Filter_TOP.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format PHY_RX.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/PHY_RX.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format PIPE_Counter.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/PIPE_Counter.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format PIPE_Counter_pipe.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/PIPE_Counter_pipe.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format read_proc_and_ptr_genr.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/read_proc_and_ptr_genr.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format Rx_Buffer.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/Rx_Buffer.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format RX_TOP.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/RX_TOP.sv
+Warning:  /home/IC/RX_PCIE/RTL/RX_TOP.sv:52: the undeclared symbol 'o_SOP2' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+1
+analyze -format $file_format storage_unit.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/storage_unit.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format dff_sync2.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/dff_sync2.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format top_RX.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/top_RX.sv
+Warning:  /home/IC/RX_PCIE/RTL/top_RX.sv:127: the undeclared symbol 'gen' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /home/IC/RX_PCIE/RTL/top_RX.sv:322: the undeclared symbol 'gen' assumed to have the default net type, which is 'wire'. (VER-936)
+Presto compilation completed successfully.
+1
+analyze -format $file_format wptr_generation.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/wptr_generation.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format write_processor.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/write_processor.sv
+Presto compilation completed successfully.
+1
+elaborate -lib WORK PHY_RX
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'PHY_RX'.
+Information: Building the design 'RX_TOP' instantiated from design 'PHY_RX' with
+	the parameters "BUFFER_DEPTH=8,ADDR_WIDTH=3". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'top_RX' instantiated from design 'PHY_RX' with
+	the parameters "serdes=1". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Packet_Filter_TOP'. (HDL-193)
+
+Statistics for case statements in always block at line 59 in file
+	'/home/IC/RX_PCIE/RTL/Packet_Filter_TOP.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            60            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'Rx_Buffer' instantiated from design 'RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3' with
+	the parameters "BUFFER_DEPTH=8,ADDR_WIDTH=3". (HDL-193)
+
+Inferred memory devices in process
+	in routine Rx_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3 line 39 in file
+		'/home/IC/RX_PCIE/RTL/Rx_Buffer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop | 2200  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     wr_ptr_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Rx_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3 line 66 in file
+		'/home/IC/RX_PCIE/RTL/Rx_Buffer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rd_ptr_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+=================================================================================
+|            block name/line             | Inputs | Outputs | # sel inputs | MB |
+=================================================================================
+| Rx_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3/79 |   8    |   275   |      3       | N  |
+=================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'elstc_buff_TOP'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'BA_TOP'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'LFSR_8_gen3'. (HDL-193)
+
+Inferred memory devices in process
+	in routine LFSR_8_gen3 line 57 in file
+		'/home/IC/RX_PCIE/RTL/LFSR_8_gen3.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     LFSR_q_reg      | Flip-flop |  23   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'PIPE_Counter' instantiated from design 'top_RX_serdes1' with
+	the parameters "CNT_WIDTH=4". (HDL-193)
+
+Inferred memory devices in process
+	in routine PIPE_Counter_CNT_WIDTH4 line 13 in file
+		'/home/IC/RX_PCIE/RTL/PIPE_Counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      o_CNT_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'LFSR_8'. (HDL-193)
+
+Inferred memory devices in process
+	in routine LFSR_8 line 48 in file
+		'/home/IC/RX_PCIE/RTL/LFSR_8.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     LFSR_q_reg      | Flip-flop |  16   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Descrambler_Controler'. (HDL-193)
+
+Statistics for case statements in always block at line 24 in file
+	'/home/IC/RX_PCIE/RTL/Descrambler_Controler.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            55            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine Descrambler_Controler line 112 in file
+		'/home/IC/RX_PCIE/RTL/Descrambler_Controler.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| TS_flag_Stored_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Descrambler'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'lane_deskew'. (HDL-193)
+
+Statistics for case statements in always block at line 59 in file
+	'/home/IC/RX_PCIE/RTL/lane_deskew.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            61            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine lane_deskew line 24 in file
+		'/home/IC/RX_PCIE/RTL/lane_deskew.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| registers_sync_reg  | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+| registers_valid_reg | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+| registers_data_reg  | Flip-flop |  48   |  Y  | N  | Y  | N  | N  | N  | N  |
+| registers_count_reg | Flip-flop |  24   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'lane_control'. (HDL-193)
+Error:  /home/IC/RX_PCIE/RTL/lane_control.sv:43: The statements in this 'always' block are outside the scope of the synthesis policy. Only an 'if' statement is allowed at the top level in this always block. (ELAB-302)
+Error:  /home/IC/RX_PCIE/RTL/lane_control.sv:99: The statements in this 'always' block are outside the scope of the synthesis policy. Only an 'if' statement is allowed at the top level in this always block. (ELAB-302)
+*** Presto compilation terminated with 2 errors. ***
+Information: Building the design 'Filtering_Buffer'. (HDL-193)
+Warning:  /home/IC/RX_PCIE/RTL/Filtering_Buffer.sv:59: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/Filtering_Buffer.sv:61: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 46 in file
+	'/home/IC/RX_PCIE/RTL/Filtering_Buffer.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            56            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine Filtering_Buffer line 46 in file
+		'/home/IC/RX_PCIE/RTL/Filtering_Buffer.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+|      o_Type_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| Filter_Buff_Data_reg | Flip-flop |  248  |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_SOP_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     o_Length_reg     | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Packet_Filter_fsm'. (HDL-193)
+Warning:  /home/IC/RX_PCIE/RTL/Packet_Filter_fsm.sv:141: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/Packet_Filter_fsm.sv:148: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/Packet_Filter_fsm.sv:346: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/Packet_Filter_fsm.sv:344: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/Packet_Filter_fsm.sv:329: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/Packet_Filter_fsm.sv:459: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/Packet_Filter_fsm.sv:464: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 179 in file
+	'/home/IC/RX_PCIE/RTL/Packet_Filter_fsm.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           219            |     no/auto      |
+|           243            |    auto/auto     |
+|           394            |    auto/auto     |
+|           509            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine Packet_Filter_fsm line 159 in file
+		'/home/IC/RX_PCIE/RTL/Packet_Filter_fsm.sv'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+| current_TLP_Length_reg | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   current_state_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Counter'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Counter line 14 in file
+		'/home/IC/RX_PCIE/RTL/Counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      o_CNT_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Frame_Checker'. (HDL-193)
+
+Statistics for case statements in always block at line 92 in file
+	'/home/IC/RX_PCIE/RTL/Frame_Checker.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            93            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'write_processor'. (HDL-193)
+
+Inferred memory devices in process
+	in routine write_processor line 73 in file
+		'/home/IC/RX_PCIE/RTL/write_processor.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  deleted_count_reg  | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'wptr_generation'. (HDL-193)
+Warning:  /home/IC/RX_PCIE/RTL/wptr_generation.sv:74: Statement unreachable (Branch condition impossible to meet).  (VER-61)
+
+Statistics for case statements in always block at line 57 in file
+	'/home/IC/RX_PCIE/RTL/wptr_generation.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            59            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 81 in file
+	'/home/IC/RX_PCIE/RTL/wptr_generation.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            83            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine wptr_generation line 34 in file
+		'/home/IC/RX_PCIE/RTL/wptr_generation.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      wptr_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      waddr_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine wptr_generation line 57 in file
+		'/home/IC/RX_PCIE/RTL/wptr_generation.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|    gray_wptr_reg    | Latch |   4   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/wptr_generation.sv:57: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'storage_unit'. (HDL-193)
+Warning:  /home/IC/RX_PCIE/RTL/storage_unit.sv:27: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/storage_unit.sv:31: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine storage_unit line 22 in file
+		'/home/IC/RX_PCIE/RTL/storage_unit.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       MEM_reg       | Flip-flop |  104  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+| storage_unit/38  |   8    |   13    |      3       | N  |
+===========================================================
+Presto compilation completed successfully.
+Information: Building the design 'read_proc_and_ptr_genr'. (HDL-193)
+Warning:  /home/IC/RX_PCIE/RTL/read_proc_and_ptr_genr.sv:58: Statement unreachable (Branch condition impossible to meet).  (VER-61)
+
+Statistics for case statements in always block at line 41 in file
+	'/home/IC/RX_PCIE/RTL/read_proc_and_ptr_genr.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            43            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine read_proc_and_ptr_genr line 20 in file
+		'/home/IC/RX_PCIE/RTL/read_proc_and_ptr_genr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      raddr_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      rptr_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine read_proc_and_ptr_genr line 41 in file
+		'/home/IC/RX_PCIE/RTL/read_proc_and_ptr_genr.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|    gray_rptr_reg    | Latch |   4   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/read_proc_and_ptr_genr.sv:41: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'dff_sync2'. (HDL-193)
+Warning:  /home/IC/RX_PCIE/RTL/dff_sync2.sv:20: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/dff_sync2.sv:27: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/dff_sync2.sv:34: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine dff_sync2 line 11 in file
+		'/home/IC/RX_PCIE/RTL/dff_sync2.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   sync_flop1_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   sync_flop2_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'BA_FSM'. (HDL-193)
+
+Statistics for case statements in always block at line 66 in file
+	'/home/IC/RX_PCIE/RTL/BA_FSM.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            84            |    auto/auto     |
+|           160            |    auto/auto     |
+|           189            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine BA_FSM line 52 in file
+		'/home/IC/RX_PCIE/RTL/BA_FSM.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine BA_FSM line 303 in file
+		'/home/IC/RX_PCIE/RTL/BA_FSM.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   error_flag_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+| reg_block_type_reg  | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine BA_FSM line 323 in file
+		'/home/IC/RX_PCIE/RTL/BA_FSM.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| reg_flag_state_reg  | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'BA_flag_genarator'. (HDL-193)
+
+Inferred memory devices in process
+	in routine BA_flag_genarator line 25 in file
+		'/home/IC/RX_PCIE/RTL/BA_flag_genarator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      flag_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'BA_counters'. (HDL-193)
+
+Inferred memory devices in process
+	in routine BA_counters line 22 in file
+		'/home/IC/RX_PCIE/RTL/BA_counters.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   bits_count_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine BA_counters line 41 in file
+		'/home/IC/RX_PCIE/RTL/BA_counters.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  symbols_count_reg  | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Design 'PHY_RX' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+###################### Defining toplevel ###################################
+current_design $top_module
+Current design is 'PHY_RX'.
+{PHY_RX}
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## Liniking All The Design Parts ########"
+######## Liniking All The Design Parts ########
+puts "###############################################"
+###############################################
+link 
+
+  Linking design 'PHY_RX'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (25 designs)              /home/IC/RX_PCIE/Syn/PHY_RX.db, etc
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+
+Information: Building the design 'lane_control'. (HDL-193)
+Error:  /home/IC/RX_PCIE/RTL/lane_control.sv:43: The statements in this 'always' block are outside the scope of the synthesis policy. Only an 'if' statement is allowed at the top level in this always block. (ELAB-302)
+Error:  /home/IC/RX_PCIE/RTL/lane_control.sv:99: The statements in this 'always' block are outside the scope of the synthesis policy. Only an 'if' statement is allowed at the top level in this always block. (ELAB-302)
+*** Presto compilation terminated with 2 errors. ***
+Warning: Unable to resolve reference 'lane_control' in 'top_RX_serdes1'. (LINK-5)
+0
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## checking design consistency ##########"
+######## checking design consistency ##########
+puts "###############################################"
+###############################################
+check_design >> reports/check_design.rpt
+#################### Define Design Constraints #########################
+puts "###############################################"
+###############################################
+puts "############ Design Constraints #### ##########"
+############ Design Constraints #### ##########
+puts "###############################################"
+###############################################
+source -echo ./cons.tcl
+####################################################################################
+# Constraints
+# ----------------------------------------------------------------------------
+#
+# 0. Design Compiler variables
+#
+# 1. Master Clock Definitions
+#
+# 2. Generated Clock Definitions
+#
+# 3. Clock Uncertainties
+#
+# 4. Clock Latencies 
+#
+# 5. Clock Relationships
+#
+# 6. set input/output delay on ports
+#
+# 7. Driving cells
+#
+# 8. Output load
+####################################################################################
+#########################################################
+#### Section 0 : DC Variables ####
+#########################################################
+#################################################################################### 
+# Prevent assign statements in the generated netlist (must be applied before compile command)
+set_fix_multiple_port_nets -all -buffer_constants -feedthroughs
+####################################################################################
+#########################################################
+#### Section 1 : Clock Definition ####
+#########################################################
+#################################################################################### 
+# 1. Master Clock Definitions 
+# 2. Generated Clock Definitions
+# 3. Clock Latencies
+# 4. Clock Uncertainties
+# 4. Clock Transitions
+####################################################################################
+# REF CLOCK (125 MHz)
+set CLK1_NAME CLK
+set CLK1_PER 8
+#2. UART_RX CLOCK (1GHz)
+set CLK2_NAME rx_clk
+set CLK2_PER 1.0
+# Skew
+#set CLK_SETUP_SKEW 0.2
+#set CLK_HOLD_SKEW 0.1
+#1. Master Clocks
+create_clock -name $CLK1_NAME -period $CLK1_PER -waveform {0 4} [get_ports CLK]
+Warning: Design 'PHY_RX' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+#set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $CLK1_NAME]
+#set_clock_uncertainty -hold $CLK_HOLD_SKEW  [get_clocks $CLK1_NAME]
+create_clock -name $CLK2_NAME -period $CLK2_PER -waveform {0 0.5} [get_ports rx_clk]
+Warning: Design 'PHY_RX' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+#set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $CLK2_NAME]
+#set_clock_uncertainty -hold $CLK_HOLD_SKEW  [get_clocks $CLK2_NAME]
+#2. Generated clocks
+#create_generated_clock -master_clock $CLK2_NAME -source [get_ports UART_CLK]  #                      -name "UART_RX_CLK" [get_port U1_ClkDiv/o_div_clk]  #                      -divide_by 1
+#set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks "UART_RX_CLK"]
+#set_clock_uncertainty -hold $CLK_HOLD_SKEW   [get_clocks "UART_RX_CLK"]
+#create_generated_clock -master_clock $CLK2_NAME -source [get_ports UART_CLK] #                       -name "UART_TX_CLK" [get_port U0_ClkDiv/o_div_clk] #                       -divide_by 32
+#set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks "UART_TX_CLK"]
+#set_clock_uncertainty -hold $CLK_HOLD_SKEW   [get_clocks "UART_TX_CLK"]
+#create_generated_clock -master_clock $CLK1_NAME -source [get_ports REF_CLK] #                       -name "ALU_CLK" [get_port U0_CLK_GATE/GATED_CLK] #                       -divide_by 1
+#set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks "ALU_CLK"]
+#set_clock_uncertainty -hold $CLK_HOLD_SKEW   [get_clocks "ALU_CLK"]
+####################################################################################
+#########################################################
+#### Section 2 : Clocks Relationship ####
+#########################################################
+####################################################################################
+#set_clock_groups -asynchronous -group [get_clocks "$CLK1_NAME local_clk"]  #                               -group [get_clocks "$CLK2_NAME rx_clk "]  
+####################################################################################
+#########################################################
+#### Section 3 : set input/output delay on ports ####
+#########################################################
+####################################################################################
+#set in_delay  [expr 0.2*$CLK2_PER]
+#set out_delay [expr 0.2*$CLK2_PER]
+#Constrain Input Paths
+#set_input_delay $in_delay -clock $CLK2_NAME [get_port UART_RX_IN]
+#Constrain Output Paths
+#set_output_delay $out_delay -clock UART_TX_CLK [get_port UART_TX_O]
+#set_output_delay $out_delay -clock $CLK2_NAME [get_port parity_error]
+#set_output_delay $out_delay -clock $CLK2_NAME [get_port framing_error]
+####################################################################################
+#########################################################
+#### Section 4 : Driving cells ####
+#########################################################
+####################################################################################
+#set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port UART_RX_IN]
+####################################################################################
+#########################################################
+#### Section 5 : Output load ####
+#########################################################
+####################################################################################
+#set_load 0.5 [get_port UART_TX_O]
+#set_load 0.5 [get_port parity_error]
+#set_load 0.5 [get_port framing_error]
+####################################################################################
+#########################################################
+#### Section 6 : Operating Condition ####
+#########################################################
+####################################################################################
+# Define the Worst Library for Max(#setup) analysis
+# Define the Best Library for Min(hold) analysis
+set_operating_conditions -min_library "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -min "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -max_library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c" -max "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' found in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'.
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' found in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'.
+####################################################################################
+#########################################################
+#### Section 7 : wireload Model ####
+#########################################################
+####################################################################################
+#set_wire_load_model -name tsmc13_wl30 -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+####################################################################################
+###################### Mapping and optimization ########################
+puts "###############################################"
+###############################################
+puts "########## Mapping & Optimization #############"
+########## Mapping & Optimization #############
+puts "###############################################"
+###############################################
+compile -map_effort medium
+Warning: Design 'PHY_RX' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 2222 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design PHY_RX has different process,
+voltage and temperatures parameters than the parameters at which target library 
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'lane_deskew_0'
+  Processing 'Descrambler_0'
+  Processing 'Descrambler_Controler_0'
+  Processing 'LFSR_8_0'
+  Processing 'LFSR_8_gen3_0'
+  Processing 'BA_counters_0'
+  Processing 'BA_flag_genarator_0'
+  Processing 'BA_FSM_0'
+  Processing 'BA_TOP_0'
+  Processing 'PIPE_Counter_CNT_WIDTH4_0'
+  Processing 'dff_sync2_0'
+  Processing 'read_proc_and_ptr_genr_0'
+  Processing 'storage_unit_0'
+  Processing 'wptr_generation_0'
+  Processing 'write_processor_0'
+  Processing 'elstc_buff_TOP_0'
+  Processing 'top_RX_serdes1'
+  Processing 'Rx_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3'
+  Processing 'Frame_Checker'
+  Processing 'Counter'
+  Processing 'Packet_Filter_fsm'
+  Processing 'Filtering_Buffer'
+  Processing 'Packet_Filter_TOP'
+  Processing 'RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3'
+  Processing 'PHY_RX'
+Information: Building the design 'lane_control'. (HDL-193)
+Error:  /home/IC/RX_PCIE/RTL/lane_control.sv:43: The statements in this 'always' block are outside the scope of the synthesis policy. Only an 'if' statement is allowed at the top level in this always block. (ELAB-302)
+Error:  /home/IC/RX_PCIE/RTL/lane_control.sv:99: The statements in this 'always' block are outside the scope of the synthesis policy. Only an 'if' statement is allowed at the top level in this always block. (ELAB-302)
+*** Presto compilation terminated with 2 errors. ***
+Warning: Unable to resolve reference 'lane_control' in 'top_RX_serdes1'. (LINK-5)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'Frame_Checker_DW01_cmp2_0'
+  Processing 'Counter_DW01_cmp6_0'
+  Processing 'Counter_DW01_inc_0'
+  Processing 'Packet_Filter_fsm_DW01_add_0'
+  Processing 'Packet_Filter_fsm_DW01_add_1'
+  Processing 'Packet_Filter_fsm_DW01_add_2'
+  Processing 'Packet_Filter_fsm_DW01_add_3'
+  Processing 'Packet_Filter_fsm_DW01_add_4'
+  Processing 'Packet_Filter_fsm_DW01_add_5'
+  Processing 'Packet_Filter_fsm_DW01_inc_0'
+  Processing 'Packet_Filter_fsm_DW01_sub_0'
+  Processing 'Packet_Filter_fsm_DW01_cmp2_0'
+  Processing 'Packet_Filter_fsm_DW01_sub_1'
+  Processing 'Packet_Filter_fsm_DW01_sub_2'
+  Processing 'Packet_Filter_fsm_DW01_cmp6_0'
+  Processing 'Packet_Filter_fsm_DW01_ash_0'
+  Processing 'Packet_Filter_fsm_DW01_sub_3'
+  Processing 'Packet_Filter_fsm_DW01_sub_4'
+  Processing 'Packet_Filter_fsm_DW01_cmp6_1'
+  Processing 'Packet_Filter_fsm_DW01_ash_1'
+  Processing 'Packet_Filter_fsm_DW01_cmp2_1'
+  Processing 'Packet_Filter_fsm_DW01_sub_5'
+  Processing 'Filtering_Buffer_DW01_add_0'
+  Processing 'Filtering_Buffer_DW01_add_1'
+  Processing 'Filtering_Buffer_DW01_add_2'
+  Processing 'Filtering_Buffer_DW01_add_3'
+  Processing 'Filtering_Buffer_DW01_add_4'
+  Processing 'Filtering_Buffer_DW01_add_5'
+  Processing 'Filtering_Buffer_DW01_inc_0'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+  Processing 'DW01_sub_width3'
+  Processing 'DW01_add_width3'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:12:13 1126369.0     15.20   58869.8     643.8                          
+    0:12:13 1126369.0     15.20   58869.8     643.8                          
+    0:12:14 1132533.7     14.97   57677.7     607.9                          
+    0:12:40 1172330.9      6.03   24907.7       0.0                          
+    0:12:41 1172029.7      6.03   24907.7       0.0                          
+    0:12:41 1172029.7      6.03   24907.7       0.0                          
+    0:13:08 1172019.1      6.03   24907.7       0.0                          
+    0:13:18 1172013.2      6.03   24906.2       0.0                          
+    0:13:18 1172013.2      6.03   24906.2       0.0                          
+    0:13:19 1172013.2      6.03   24906.2       0.0                          
+    0:13:51  686039.6      7.66   33180.6       0.0                          
+    0:14:06  685247.7      7.75   32901.4       0.0                          
+    0:14:12  684552.3      7.04   29300.4       0.0                          
+    0:14:17  684457.0      6.91   29347.6       0.0                          
+    0:14:23  684419.3      6.93   28748.9       0.0                          
+    0:14:27  684429.9      6.83   28827.3       0.0                          
+    0:14:30  684375.8      6.83   28818.7       0.0                          
+    0:14:34  684452.3      6.75   28754.4       0.0                          
+    0:14:38  684424.0      6.76   28672.4       0.0                          
+    0:14:42  684499.3      6.72   28615.9       0.0                          
+    0:14:43  684509.9      6.72   28469.7       0.0                          
+    0:14:44  684529.9      6.72   28456.2       0.0                          
+    0:14:44  684548.8      6.65   28410.0       0.0                          
+    0:14:45  684574.6      6.65   28402.3       0.0                          
+    0:14:46  684609.9      6.65   28379.9       0.0                          
+    0:14:47  684621.7      6.65   28372.4       0.0                          
+    0:14:48  684652.3      6.65   28357.1       0.0                          
+    0:14:49  684652.3      6.65   28357.1       0.0                          
+    0:14:50  683447.4      6.65   28357.1       0.0                          
+    0:14:50  683447.4      6.65   28357.1       0.0                          
+    0:14:50  683447.4      6.65   28357.1       0.0                          
+    0:14:50  683447.4      6.65   28357.1       0.0                          
+    0:14:50  683447.4      6.65   28357.1       0.0                          
+    0:14:51  683662.7      6.65   28299.8       0.0 DUT/genblk1.sc_Gen3[5].u0_elstc_buff_TOP/u0_storage_unit/MEM_reg[5][6]/D
+    0:14:51  683846.3      6.64   28229.3       0.0 genblk1.RT/RB/mem_reg[7][224]/D
+    0:15:08  683869.8      6.61   28161.6       0.0 genblk1.RT/RB/mem_reg[0][62]/D
+    0:15:13  683955.7      6.61   28160.3       0.0 genblk1.RT/RB/mem_reg[2][54]/D
+    0:15:14  684002.8      6.59   28008.5       0.0 genblk1.RT/RB/mem_reg[0][54]/D
+    0:15:19  684140.4      6.39   27445.2       0.0 genblk1.RT/RB/mem_reg[7][208]/D
+    0:15:21  684184.0      6.29   26978.8       0.0 genblk1.RT/PF/FB/Filter_Buff_Data_reg[37]/D
+    0:15:23  684278.1      6.29   26681.1       0.0 genblk1.RT/PF/FB/Filter_Buff_Data_reg[149]/D
+    0:15:25  684273.4      6.23   26662.8       0.0 genblk1.RT/PF/FB/Filter_Buff_Data_reg[133]/D
+    0:15:31  684526.4      6.13   26374.2       0.0 genblk1.RT/RB/mem_reg[1][54]/D
+    0:15:35  684580.5      6.10   26316.0       0.0 genblk1.RT/RB/mem_reg[1][264]/D
+    0:15:40  684604.1      6.08   26265.8       0.0 genblk1.RT/RB/mem_reg[7][115]/D
+    0:15:42  684670.0      6.08   26250.6       0.0 genblk1.RT/RB/mem_reg[0][116]/D
+    0:15:45  684654.7      6.06   26182.5       0.0 genblk1.RT/PF/FB/Filter_Buff_Data_reg[4]/D
+    0:15:51  684746.4      6.02   26112.6       0.0 genblk1.RT/RB/mem_reg[7][213]/D
+    0:15:57  684794.7      6.01   26041.0       0.0 genblk1.RT/RB/mem_reg[4][271]/D
+    0:16:40  688827.2      5.98   26025.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:16:40  688827.2      5.98   26025.0       0.0                          
+    0:16:45  688864.9      5.96   25970.5       0.0 genblk1.RT/RB/mem_reg[6][30]/D
+    0:16:51  688917.8      5.93   25899.7       0.0 genblk1.RT/RB/mem_reg[7][192]/D
+    0:16:56  688975.5      5.91   25849.1       0.0 genblk1.RT/PF/FB/Filter_Buff_Data_reg[84]/D
+    0:17:00  689036.7      5.90   25809.4       0.0 genblk1.RT/RB/mem_reg[7][81]/D
+    0:17:02  689302.6      5.90   25706.8       0.0 DUT/genblk1.sc_Gen3[4].u0_elstc_buff_TOP/u0_storage_unit/MEM_reg[0][8]/D
+    0:17:02  689369.7      5.90   25682.3       0.0 genblk1.RT/RB/mem_reg[7][132]/D
+    0:17:11  689429.7      5.86   25600.8       0.1 genblk1.RT/RB/mem_reg[2][75]/D
+    0:17:15  689554.4      5.85   25567.5       0.1 genblk1.RT/RB/mem_reg[2][75]/D
+    0:17:20  689599.2      5.83   25522.9       0.2 genblk1.RT/RB/mem_reg[3][132]/D
+    0:17:25  689666.2      5.82   25480.4       0.2 genblk1.RT/RB/mem_reg[7][231]/D
+    0:17:29  689742.7      5.80   25440.4       0.2 genblk1.RT/RB/mem_reg[3][132]/D
+    0:17:34  689769.8      5.79   25412.3       0.2 genblk1.RT/RB/mem_reg[3][132]/D
+    0:17:37  689816.8      5.78   25395.6       0.2 genblk1.RT/RB/mem_reg[2][75]/D
+    0:17:40  689854.5      5.78   25384.7       0.2 genblk1.RT/RB/mem_reg[2][75]/D
+    0:17:44  689883.9      5.77   25370.7       0.2 genblk1.RT/RB/mem_reg[0][132]/D
+    0:17:45  689968.6      5.77   25369.0       0.2 genblk1.RT/RB/mem_reg[5][131]/D
+    0:17:45  690053.4      5.77   25367.2       0.2 genblk1.RT/RB/mem_reg[2][131]/D
+    0:17:48  690074.5      5.77   25365.6       0.2 genblk1.RT/RB/mem_reg[3][131]/D
+    0:17:52  690124.0      5.76   25340.6       0.2 genblk1.RT/RB/mem_reg[3][131]/D
+    0:17:56  690218.1      5.75   25298.6       0.2 genblk1.RT/RB/mem_reg[7][222]/D
+    0:18:00  690274.6      5.74   25271.3       0.2 genblk1.RT/RB/mem_reg[7][69]/D
+    0:18:04  690307.5      5.73   25243.5       0.2 genblk1.RT/RB/mem_reg[3][131]/D
+    0:18:09  690344.0      5.73   25238.2       0.2 genblk1.RT/RB/mem_reg[7][48]/D
+    0:18:10  690349.9      5.73   25236.0       0.2 genblk1.RT/RB/mem_reg[3][131]/D
+    0:18:15  690409.9      5.71   25211.3       0.2 genblk1.RT/RB/mem_reg[3][132]/D
+    0:18:19  690472.3      5.71   25204.2       0.2 genblk1.RT/RB/mem_reg[2][132]/D
+    0:18:20  690558.2      5.71   25202.3       0.2 genblk1.RT/RB/mem_reg[3][132]/D
+    0:18:23  690593.5      5.70   25181.8       0.2 genblk1.RT/RB/mem_reg[1][182]/D
+    0:18:26  690645.2      5.70   25170.5       0.2 genblk1.RT/RB/mem_reg[0][26]/D
+    0:18:29  690772.3      5.70   25157.6       0.2 genblk1.RT/RB/mem_reg[0][113]/D
+    0:18:30  690920.6      5.70   25155.3       0.2 genblk1.RT/RB/mem_reg[5][21]/D
+    0:18:31  691061.8      5.70   25153.1       0.2 genblk1.RT/RB/mem_reg[1][51]/D
+    0:18:31  691203.0      5.70   25150.8       0.2 genblk1.RT/RB/mem_reg[2][50]/D
+    0:18:32  691354.8      5.70   25148.6       0.2 genblk1.RT/RB/mem_reg[3][57]/D
+    0:18:33  691500.7      5.70   25146.4       0.2 genblk1.RT/RB/mem_reg[1][84]/D
+    0:18:34  691652.5      5.70   25144.2       0.2 genblk1.RT/RB/mem_reg[1][28]/D
+    0:18:35  691804.3      5.70   25142.0       0.2 genblk1.RT/RB/mem_reg[6][21]/D
+    0:18:36  691966.7      5.70   25139.7       0.2 genblk1.RT/RB/mem_reg[4][85]/D
+    0:18:37  692052.6      5.70   25138.2       0.2 genblk1.RT/RB/mem_reg[0][26]/D
+    0:18:41  692119.6      5.68   25123.8       0.2 genblk1.RT/RB/mem_reg[1][182]/D
+    0:18:44  692179.7      5.68   25105.7       0.2 genblk1.RT/RB/mem_reg[4][271]/D
+    0:18:49  692284.4      5.67   25083.2       0.2 genblk1.RT/RB/mem_reg[0][48]/D
+    0:18:54  692355.0      5.66   25060.8       0.2 genblk1.RT/RB/mem_reg[7][139]/D
+    0:18:57  692352.6      5.66   25051.0       0.2 genblk1.RT/RB/mem_reg[7][139]/D
+    0:19:02  692367.9      5.66   25040.8       0.2 genblk1.RT/RB/mem_reg[7][69]/D
+    0:19:03  692449.1      5.66   25038.9       0.2 genblk1.RT/RB/mem_reg[7][139]/D
+    0:19:07  692427.9      5.65   25032.6       0.2 genblk1.RT/RB/mem_reg[3][133]/D
+    0:19:11  692506.8      5.64   25015.4       0.2 genblk1.RT/RB/mem_reg[0][211]/D
+    0:19:16  692558.6      5.63   24976.9       0.2 genblk1.RT/RB/mem_reg[1][139]/D
+    0:19:18  692558.6      5.63   24974.5       0.2 genblk1.RT/RB/mem_reg[0][48]/D
+    0:19:20  692573.9      5.62   24970.9       0.2 genblk1.RT/RB/mem_reg[4][271]/D
+    0:19:21  692586.8      5.62   24966.4       0.2 genblk1.RT/PF/FB/Filter_Buff_Data_reg[85]/D
+    0:19:26  692637.4      5.62   24954.2       0.2 genblk1.RT/RB/mem_reg[0][211]/D
+    0:19:30  692698.6      5.62   24948.2       0.2 genblk1.RT/RB/mem_reg[1][139]/D
+    0:19:32  692730.4      5.62   24945.9       0.2 genblk1.RT/RB/mem_reg[3][133]/D
+    0:19:33  692896.3      5.62   24944.4       0.2 genblk1.RT/RB/mem_reg[1][139]/D
+    0:19:34  692958.6      5.61   24941.1       0.2 genblk1.RT/RB/mem_reg[0][219]/D
+    0:19:36  692963.3      5.61   24940.9       0.2 genblk1.RT/RB/mem_reg[2][74]/D
+    0:19:36  693114.0      5.61   24937.9       0.2 genblk1.RT/RB/mem_reg[0][22]/D
+    0:19:37  693198.7      5.61   24936.1       0.2 genblk1.RT/RB/mem_reg[1][148]/D
+    0:19:37  693266.9      5.61   24934.4       0.2 genblk1.RT/RB/mem_reg[1][149]/D
+    0:19:37  693391.7      5.61   24932.2       0.2 genblk1.RT/RB/mem_reg[1][149]/D
+    0:19:38  693499.9      5.61   24932.7       0.2 genblk1.RT/RB/mem_reg[2][65]/D
+    0:19:38  693649.4      5.61   24930.2       0.2 genblk1.RT/RB/mem_reg[2][232]/D
+    0:19:39  693717.6      5.61   24925.8       0.2 genblk1.RT/RB/mem_reg[7][118]/D
+    0:19:39  693822.3      5.61   24918.1       0.2 genblk1.RT/RB/mem_reg[5][273]/D
+    0:19:40  693958.8      5.61   24915.3       0.2 genblk1.RT/RB/mem_reg[4][41]/D
+    0:19:40  694100.0      5.61   24912.9       0.2 genblk1.RT/RB/mem_reg[4][211]/D
+    0:19:40  694262.4      5.61   24910.3       0.2 genblk1.RT/RB/mem_reg[4][163]/D
+    0:19:41  694422.4      5.61   24909.1       0.2 genblk1.RT/RB/mem_reg[5][72]/D
+    0:19:41  694636.6      5.61   24907.2       0.2 genblk1.RT/RB/mem_reg[6][68]/D
+    0:19:42  694704.9      5.60   24905.8       0.2 genblk1.RT/RB/mem_reg[0][206]/D
+    0:19:42  694848.4      5.60   24903.9       0.2 genblk1.RT/RB/mem_reg[0][104]/D
+    0:19:43  695056.7      5.60   24901.8       0.2 genblk1.RT/RB/mem_reg[1][74]/D
+    0:19:43  695146.1      5.60   24892.2       0.2 genblk1.RT/RB/mem_reg[0][166]/D
+    0:19:44  695314.4      5.60   24889.7       0.2 genblk1.RT/RB/mem_reg[0][187]/D
+    0:19:44  695423.8      5.60   24881.7       0.2 genblk1.RT/RB/mem_reg[2][75]/D
+    0:19:44  695552.1      5.60   24879.6       0.2 genblk1.RT/RB/mem_reg[4][118]/D
+    0:19:45  695645.0      5.60   24881.4       0.2 genblk1.RT/RB/mem_reg[7][199]/D
+    0:19:45  695733.3      5.60   24879.2       0.2 genblk1.RT/RB/mem_reg[4][203]/D
+    0:19:46  695796.8      5.60   24878.0       0.2 genblk1.RT/RB/mem_reg[1][141]/D
+    0:19:46  695923.9      5.60   24872.3       0.2 genblk1.RT/RB/mem_reg[1][231]/D
+    0:19:46  696055.7      5.60   24869.9       0.2 genblk1.RT/RB/mem_reg[1][33]/D
+    0:19:47  696164.0      5.60   24865.9       0.2 genblk1.RT/RB/mem_reg[1][182]/D
+    0:19:48  696208.7      5.60   24860.8       0.2 genblk1.RT/RB/mem_reg[2][219]/D
+    0:19:48  696366.4      5.60   24858.6       0.2 genblk1.RT/RB/mem_reg[2][187]/D
+    0:19:49  696494.6      5.59   24855.5       0.2 genblk1.RT/RB/mem_reg[1][96]/D
+    0:19:49  696493.4      5.59   24850.7       0.2 genblk1.RT/RB/mem_reg[0][219]/D
+    0:19:50  696518.1      5.59   24842.1       0.2 genblk1.RT/RB/mem_reg[2][35]/D
+    0:19:52  696541.7      5.59   24837.3       0.2 genblk1.RT/RB/mem_reg[2][35]/D
+    0:19:53  696580.5      5.58   24829.6       0.2 genblk1.RT/RB/mem_reg[2][35]/D
+    0:19:54  696528.7      5.58   24815.0       0.2 genblk1.RT/RB/mem_reg[2][35]/D
+    0:19:55  696539.3      5.58   24811.7       0.2 genblk1.RT/RB/mem_reg[2][35]/D
+    0:19:56  696577.0      5.58   24811.3       0.2 genblk1.RT/RB/mem_reg[3][73]/D
+    0:19:56  696728.8      5.58   24808.9       0.2 genblk1.RT/RB/mem_reg[6][140]/D
+    0:19:56  696884.1      5.58   24806.6       0.2 genblk1.RT/RB/mem_reg[5][17]/D
+    0:19:57  696944.1      5.57   24804.4       0.2 genblk1.RT/RB/mem_reg[5][194]/D
+    0:19:58  696911.2      5.57   24801.4       0.2 genblk1.RT/RB/mem_reg[0][162]/D
+    0:19:58  696931.2      5.57   24797.6       0.2 genblk1.RT/PF/FB/Filter_Buff_Data_reg[77]/D
+    0:20:00  696941.8      5.57   24788.7       0.2 genblk1.RT/RB/mem_reg[0][165]/D
+    0:20:00  696998.2      5.57   24787.4       0.2 genblk1.RT/RB/mem_reg[0][162]/D
+    0:20:02  697024.1      5.57   24781.6       0.2 genblk1.RT/RB/mem_reg[5][194]/D
+    0:20:04  697067.7      5.56   24769.3       0.2 genblk1.RT/RB/mem_reg[5][193]/D
+    0:20:04  697180.6      5.56   24767.2       0.2 genblk1.RT/RB/mem_reg[5][177]/D
+    0:20:05  697307.7      5.56   24765.2       0.2 genblk1.RT/RB/mem_reg[7][234]/D
+    0:20:05  697354.8      5.56   24767.5       0.2 genblk1.RT/RB/mem_reg[7][99]/D
+    0:20:06  697458.3      5.56   24763.9       0.2 genblk1.RT/RB/mem_reg[3][166]/D
+    0:20:06  697637.2      5.55   24761.9       0.2 genblk1.RT/RB/mem_reg[5][86]/D
+    0:20:07  697763.1      5.55   24760.7       0.2 genblk1.RT/RB/mem_reg[5][209]/D
+    0:20:07  697889.0      5.55   24756.4       0.2 genblk1.RT/RB/mem_reg[6][224]/D
+    0:20:08  698050.2      5.55   24754.5       0.2 genblk1.RT/RB/mem_reg[6][186]/D
+    0:20:08  698215.0      5.55   24752.5       0.2 genblk1.RT/RB/mem_reg[6][24]/D
+    0:20:09  698335.0      5.55   24749.1       0.2 genblk1.RT/RB/mem_reg[0][219]/D
+    0:20:10  698370.3      5.55   24747.4       0.2 genblk1.RT/RB/mem_reg[5][208]/D
+    0:20:11  698432.6      5.55   24732.9       0.2 genblk1.RT/RB/mem_reg[6][80]/D
+    0:20:13  698487.9      5.54   24716.3       0.2 genblk1.RT/RB/mem_reg[0][132]/D
+    0:20:14  698553.8      5.54   24705.7       0.2 genblk1.RT/RB/mem_reg[1][182]/D
+    0:20:15  698604.4      5.53   24697.9       0.2 genblk1.RT/RB/mem_reg[3][211]/D
+    0:20:17  698642.1      5.53   24694.7       0.2 genblk1.RT/RB/mem_reg[5][221]/D
+    0:20:25  698659.7      5.53   24694.1       0.2 genblk1.RT/RB/mem_reg[3][221]/D
+    0:20:27  698659.7      5.53   24694.1       0.2                          
+    0:20:33  693841.2      5.53   24788.6       0.2                          
+    0:20:34  693841.2      5.53   24788.6       0.2                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:20:34  693841.2      5.53   24788.6       0.2                          
+    0:20:35  693808.2      5.53   24782.0       0.0 genblk1.RT/RB/mem_reg[1][182]/D
+    0:20:36  693882.3      5.52   24768.2       0.0 genblk1.RT/RB/mem_reg[6][80]/D
+    0:20:37  693914.1      5.52   24761.0       0.0 genblk1.RT/RB/mem_reg[6][80]/D
+    0:20:40  693957.6      5.52   24759.9       0.0 genblk1.RT/RB/mem_reg[6][80]/D
+    0:20:41  694043.5      5.52   24758.1       0.0                          
+    0:20:42  694271.8      5.52   24752.1       0.0                          
+    0:20:43  694436.6      5.52   24744.8       0.0                          
+    0:20:43  694577.8      5.52   24738.0       0.0                          
+    0:20:44  694775.5      5.52   24733.8       0.0                          
+    0:20:44  694895.5      5.52   24722.2       0.0                          
+    0:20:45  695146.1      5.52   24698.4       0.0                          
+    0:20:46  695436.8      5.52   24685.0       0.0                          
+    0:20:46  695489.7      5.52   24675.8       0.0                          
+    0:20:46  695583.8      5.52   24624.0       0.0                          
+    0:20:47  695753.3      5.52   24559.0       0.0                          
+    0:20:47  695816.8      5.52   24536.1       0.0                          
+    0:20:48  695945.1      5.52   24489.2       0.0                          
+    0:20:48  696000.4      5.52   24446.9       0.0                          
+    0:20:48  696104.0      5.52   24377.7       0.0                          
+    0:20:49  696288.7      5.52   24281.7       0.0                          
+    0:20:49  696477.0      5.52   24223.5       0.0                          
+    0:20:50  696599.3      5.52   24181.2       0.0                          
+    0:20:50  696711.1      5.52   24152.4       0.0                          
+    0:20:50  696793.5      5.52   24107.8       0.0                          
+    0:20:51  696928.8      5.52   24068.7       0.0                          
+    0:20:51  697112.4      5.52   24004.5       0.0                          
+    0:20:52  697294.8      5.52   23957.6       0.0                          
+    0:20:52  697431.3      5.52   23919.4       0.0                          
+    0:20:52  697486.6      5.52   23885.1       0.0                          
+    0:20:53  697567.8      5.52   23866.8       0.0                          
+    0:20:53  697720.7      5.52   23833.8       0.0                          
+    0:20:53  697843.1      5.52   23794.1       0.0                          
+    0:20:54  697963.1      5.52   23759.7       0.0                          
+    0:20:54  698126.7      5.52   23713.5       0.0                          
+    0:20:54  698239.7      5.52   23682.6       0.0                          
+    0:20:55  698353.8      5.52   23649.5       0.0                          
+    0:20:55  698425.6      5.52   23614.6       0.0                          
+    0:20:55  698480.9      5.52   23593.4       0.0                          
+    0:20:56  698603.3      5.52   23577.0       0.0                          
+    0:20:56  698693.9      5.52   23568.1       0.0                          
+    0:20:56  698729.2      5.52   23559.0       0.0                          
+    0:20:57  698826.8      5.52   23533.9       0.0                          
+    0:20:57  698872.7      5.52   23513.4       0.0                          
+    0:20:57  698923.3      5.52   23484.9       0.0                          
+    0:20:57  699008.0      5.52   23470.8       0.0                          
+    0:20:58  699134.0      5.52   23449.8       0.0                          
+    0:20:58  699184.6      5.52   23435.3       0.0                          
+    0:20:59  699303.4      5.52   23423.7       0.0                          
+    0:20:59  699423.4      5.52   23413.3       0.0                          
+    0:20:59  699538.7      5.52   23409.2       0.0                          
+    0:21:00  699632.9      5.52   23398.3       0.0                          
+    0:21:00  699778.8      5.52   23392.1       0.0                          
+    0:21:00  699963.5      5.52   23384.5       0.0                          
+    0:21:01  700058.8      5.52   23375.4       0.0                          
+    0:21:01  700288.3      5.52   23363.5       0.0                          
+    0:21:01  700416.6      5.52   23355.7       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:21:01  700416.6      5.52   23355.7       0.0                          
+    0:21:02  700416.6      5.52   23355.7       0.0                          
+    0:21:07  698662.1      5.53   23362.7       0.0                          
+    0:21:08  698285.6      5.54   23363.0       0.0                          
+    0:21:08  698086.7      5.55   23383.9       0.0                          
+    0:21:08  698003.1      5.56   23390.8       0.0                          
+    0:21:09  697957.3      5.56   23400.2       0.0                          
+    0:21:09  697911.4      5.56   23407.2       0.0                          
+    0:21:09  697876.1      5.56   23413.1       0.0                          
+    0:21:09  697876.1      5.56   23413.1       0.0                          
+    0:21:10  697876.1      5.56   23413.1       0.0                          
+    0:21:12  693812.9      5.57   23469.4       0.0                          
+    0:21:12  692566.8      5.59   23456.2       0.0                          
+    0:21:13  692250.3      5.59   23460.1       0.0                          
+    0:21:13  692098.5      5.59   23458.3       0.0                          
+    0:21:13  692089.1      5.59   23458.3       0.0                          
+    0:21:13  692089.1      5.59   23458.3       0.0                          
+    0:21:13  692089.1      5.59   23458.3       0.0                          
+    0:21:13  692089.1      5.59   23458.3       0.0                          
+    0:21:14  692143.2      5.55   23426.7       0.0 genblk1.RT/RB/mem_reg[3][218]/D
+    0:21:16  692164.4      5.54   23436.0       0.0 DUT/genblk1.sc_Gen3[1].u0_elstc_buff_TOP/u0_storage_unit/MEM_reg[7][3]/D
+    0:21:17  692222.0      5.54   23402.4       0.0 genblk1.RT/RB/mem_reg[0][123]/D
+    0:21:24  692249.1      5.53   23398.1       0.0 DUT/genblk1.sc_Gen3[1].u0_elstc_buff_TOP/u0_storage_unit/MEM_reg[1][12]/D
+    0:21:25  692356.2      5.53   23372.5       0.0 DUT/genblk1.sc_Gen3[2].u0_elstc_buff_TOP/u0_storage_unit/MEM_reg[7][5]/D
+    0:21:31  692399.7      5.53   23367.9       0.0 genblk1.RT/RB/mem_reg[0][123]/D
+    0:21:47  692964.5      5.52   23338.1       0.0 genblk1.RT/RB/mem_reg[3][116]/D
+    0:21:48  692962.2      5.52   23336.4       0.0 genblk1.RT/RB/mem_reg[3][116]/D
+    0:21:54  693073.9      5.51   23288.4       0.0 genblk1.RT/RB/mem_reg[3][116]/D
+    0:21:58  693155.1      5.50   23271.5       0.0 genblk1.RT/RB/mem_reg[3][116]/D
+    0:21:59  693183.4      5.50   23268.8       0.0 genblk1.RT/RB/mem_reg[7][262]/D
+    0:22:01  693269.3      5.50   23249.7       0.0 genblk1.RT/RB/mem_reg[6][214]/D
+    0:22:04  693361.1      5.49   23231.0       0.0 genblk1.RT/RB/mem_reg[3][116]/D
+    0:22:05  693387.0      5.49   23225.8       0.0 genblk1.RT/RB/mem_reg[3][116]/D
+    0:22:06  693422.3      5.49   23216.0       0.0 genblk1.RT/RB/mem_reg[3][116]/D
+    0:22:08  693452.8      5.49   23215.1       0.0 genblk1.RT/RB/mem_reg[6][160]/D
+    0:22:08  693564.6      5.49   23213.0       0.0 genblk1.RT/RB/mem_reg[6][20]/D
+    0:22:09  693889.4      5.49   23166.4       0.0 DUT/genblk1.sc_Gen3[23].u0_elstc_buff_TOP/u0_storage_unit/MEM_reg[7][5]/D
+    0:22:10  694096.5      5.49   23123.0       0.0 DUT/genblk1.sc_Gen3[21].u0_elstc_buff_TOP/u0_storage_unit/MEM_reg[6][12]/D
+    0:22:10  694160.0      5.49   23109.3       0.0 DUT/genblk1.sc_Gen3[4].u0_elstc_buff_TOP/u0_storage_unit/MEM_reg[0][8]/D
+    0:22:11  694225.9      5.49   23081.5       0.0 genblk1.RT/RB/mem_reg[0][218]/D
+    0:22:14  694307.1      5.48   23065.5       0.0 genblk1.RT/RB/mem_reg[0][218]/D
+    0:22:16  694310.7      5.48   23069.9       0.0 genblk1.RT/RB/mem_reg[5][267]/D
+    0:22:18  694362.4      5.48   23067.0       0.0 genblk1.RT/RB/mem_reg[0][218]/D
+    0:22:20  694393.0      5.47   23055.2       0.0 genblk1.RT/RB/mem_reg[3][117]/D
+    0:22:21  694403.6      5.47   23054.0       0.0 genblk1.RT/RB/mem_reg[0][218]/D
+    0:22:23  694516.6      5.47   23039.4       0.0 genblk1.RT/RB/mem_reg[7][87]/D
+    0:22:25  694569.5      5.47   23032.4       0.0 genblk1.RT/RB/mem_reg[7][87]/D
+    0:22:28  694581.3      5.46   23025.6       0.0 genblk1.RT/RB/mem_reg[2][117]/D
+    0:22:30  694615.4      5.46   23025.5       0.0 genblk1.RT/RB/mem_reg[3][123]/D
+    0:22:32  694621.3      5.46   23025.4       0.0 genblk1.RT/RB/mem_reg[3][117]/D
+    0:22:33  694702.5      5.46   23025.2       0.0 genblk1.RT/RB/mem_reg[6][73]/D
+    0:22:34  694653.1      5.46   23023.8       0.0                          
+    0:22:34  694466.0      5.46   23021.1       0.0                          
+    0:22:35  694369.5      5.46   23019.5       0.0                          
+    0:22:36  694295.4      5.46   23017.0       0.0                          
+    0:22:38  694216.5      5.46   23013.1       0.0                          
+    0:22:39  694084.7      5.46   23009.9       0.0                          
+    0:22:39  694014.1      5.46   23009.0       0.0                          
+    0:22:41  693902.3      5.46   23005.4       0.0                          
+    0:22:41  693888.2      5.46   23004.3       0.0                          
+    0:22:42  693877.6      5.46   23004.3       0.0                          
+    0:22:42  693863.5      5.46   23004.0       0.0                          
+    0:22:44  693948.2      5.46   23003.7       0.0                          
+    0:22:45  694002.4      5.46   22998.4       0.0                          
+    0:22:45  694091.8      5.46   22988.3       0.0                          
+    0:22:48  694165.9      5.46   22976.4       0.0                          
+    0:22:51  694216.5      5.46   22972.4       0.0                          
+    0:22:51  694249.5      5.46   22965.5       0.0                          
+    0:22:52  694277.7      5.46   22956.0       0.0                          
+    0:22:52  694341.3      5.46   22940.1       0.0                          
+    0:22:53  694410.7      5.46   22924.4       0.0                          
+    0:22:53  694447.2      5.46   22917.8       0.0                          
+    0:22:53  694531.9      5.46   22910.9       0.0                          
+    0:22:54  694577.8      5.46   22899.0       0.0                          
+    0:22:54  694607.2      5.46   22894.7       0.0                          
+    0:22:54  694668.4      5.46   22886.0       0.0                          
+    0:22:55  694747.2      5.46   22870.2       0.0                          
+    0:22:55  694762.5      5.46   22863.0       0.0                          
+    0:22:56  694796.6      5.46   22859.6       0.0                          
+    0:22:56  694862.5      5.46   22848.8       0.0                          
+    0:22:56  694922.5      5.46   22842.3       0.0                          
+    0:22:57  695010.8      5.46   22832.0       0.0                          
+    0:22:57  695052.0      5.46   22828.1       0.0                          
+    0:22:57  695103.8      5.46   22824.5       0.0                          
+    0:22:58  695159.1      5.46   22811.4       0.0                          
+    0:22:58  695194.4      5.46   22805.2       0.0                          
+    0:22:58  695229.7      5.46   22796.3       0.0                          
+    0:22:59  695254.4      5.46   22782.5       0.0                          
+    0:22:59  695316.7      5.46   22777.1       0.0                          
+    0:23:00  695348.5      5.46   22770.1       0.0                          
+    0:23:00  695393.2      5.46   22762.5       0.0                          
+    0:23:00  695443.8      5.46   22758.8       0.0                          
+    0:23:01  695529.7      5.46   22750.9       0.0                          
+    0:23:01  695618.0      5.46   22741.0       0.0                          
+    0:23:01  695618.0      5.46   22740.2       0.0                          
+    0:23:01  695653.3      5.46   22735.0       0.0                          
+    0:23:02  695706.2      5.46   22722.9       0.0                          
+    0:23:02  695734.5      5.46   22716.5       0.0                          
+    0:23:03  695759.2      5.46   22712.0       0.0                          
+    0:23:03  695794.5      5.46   22709.5       0.0                          
+    0:23:03  695834.5      5.46   22702.3       0.0                          
+    0:23:04  695834.5      5.46   22700.4       0.0                          
+    0:23:04  695842.7      5.46   22695.9       0.0                          
+    0:23:05  695867.4      5.46   22690.8       0.0                          
+    0:23:05  695879.2      5.46   22687.1       0.0                          
+    0:23:05  695874.5      5.46   22684.7       0.0                          
+    0:23:06  695887.4      5.46   22681.9       0.0                          
+    0:23:06  695948.6      5.46   22673.6       0.0                          
+    0:23:06  695963.9      5.46   22668.5       0.0                          
+    0:23:07  695972.2      5.46   22666.3       0.0                          
+    0:23:07  695992.2      5.46   22658.7       0.0                          
+    0:23:07  696021.6      5.46   22654.1       0.0                          
+    0:23:08  696063.9      5.46   22647.9       0.0                          
+    0:23:08  696068.7      5.46   22647.3       0.0                          
+    0:23:08  696082.8      5.46   22643.3       0.0                          
+    0:23:09  696081.6      5.46   22642.3       0.0                          
+    0:23:09  696147.5      5.46   22637.4       0.0                          
+    0:23:10  696188.7      5.46   22633.9       0.0                          
+    0:23:10  696229.9      5.46   22627.5       0.0                          
+    0:23:11  696261.6      5.46   22623.0       0.0                          
+    0:23:11  696285.2      5.46   22618.4       0.0                          
+    0:23:11  696272.2      5.46   22617.4       0.0                          
+    0:23:12  696301.6      5.46   22613.7       0.0                          
+    0:23:12  696336.9      5.46   22610.6       0.0                          
+    0:23:13  696341.6      5.46   22605.7       0.0                          
+    0:23:13  696351.1      5.46   22603.4       0.0                          
+    0:23:13  696351.1      5.46   22601.4       0.0                          
+    0:23:14  696359.3      5.46   22599.6       0.0                          
+    0:23:14  696359.3      5.46   22599.2       0.0                          
+    0:23:14  696366.4      5.46   22597.8       0.0                          
+    0:23:15  696388.7      5.46   22595.1       0.0                          
+    0:23:15  696413.4      5.46   22591.5       0.0                          
+    0:23:16  696420.5      5.46   22590.9       0.0                          
+    0:23:16  696437.0      5.46   22586.9       0.0                          
+    0:23:17  696461.7      5.46   22582.8       0.0                          
+    0:23:17  696479.3      5.46   22579.9       0.0                          
+    0:23:18  696525.2      5.46   22574.6       0.0                          
+    0:23:18  696568.7      5.46   22569.5       0.0                          
+    0:23:19  696579.3      5.46   22567.2       0.0                          
+    0:23:19  696614.6      5.46   22564.2       0.0                          
+    0:23:20  696625.2      5.46   22562.1       0.0                          
+    0:23:20  696642.9      5.46   22559.8       0.0                          
+    0:23:21  696652.3      5.46   22558.3       0.0                          
+    0:23:21  696667.6      5.46   22557.2       0.0                          
+    0:23:21  696674.7      5.46   22556.0       0.0                          
+    0:23:22  696675.8      5.46   22554.6       0.0                          
+    0:23:22  696669.9      5.46   22553.4       0.0                          
+    0:23:23  696677.0      5.46   22552.8       0.0                          
+    0:23:23  696694.7      5.46   22552.5       0.0                          
+    0:23:23  696694.7      5.46   22552.6       0.0                          
+    0:23:24  696701.7      5.46   22549.8       0.0                          
+    0:23:24  696721.7      5.46   22547.8       0.0                          
+    0:23:24  696731.1      5.46   22547.0       0.0                          
+    0:23:24  696737.0      5.46   22546.7       0.0                          
+    0:23:25  696733.5      5.46   22547.2       0.0                          
+    0:23:25  696733.5      5.46   22547.1       0.0                          
+    0:23:26  696734.7      5.46   22547.0       0.0                          
+    0:23:26  696759.4      5.46   22544.4       0.0                          
+    0:23:26  696811.1      5.46   22543.7       0.0                          
+    0:23:26  696819.4      5.46   22543.2       0.0                          
+    0:23:26  696819.4      5.46   22542.9       0.0                          
+    0:23:27  696833.5      5.46   22542.5       0.0                          
+    0:23:27  696868.8      5.46   22541.1       0.0                          
+    0:23:27  696877.0      5.46   22541.1       0.0                          
+    0:23:27  696886.5      5.46   22541.3       0.0                          
+    0:23:28  696928.8      5.46   22541.1       0.0                          
+    0:23:28  696957.1      5.46   22539.9       0.0                          
+    0:23:28  696970.0      5.46   22539.6       0.0                          
+    0:23:28  696986.5      5.46   22539.0       0.0                          
+    0:23:28  696998.2      5.46   22538.7       0.0                          
+    0:23:29  697028.8      5.46   22537.8       0.0                          
+    0:23:29  697063.0      5.46   22536.6       0.0                          
+    0:23:29  697097.1      5.46   22535.5       0.0                          
+    0:23:29  697121.8      5.46   22535.0       0.0                          
+    0:23:30  697193.6      5.46   22532.1       0.0                          
+    0:23:30  697255.9      5.46   22532.1       0.0                          
+    0:23:30  697292.4      5.46   22530.9       0.0                          
+    0:23:31  697321.8      5.46   22525.8       0.0 genblk1.RT/RB/mem_reg[5][137]/D
+    0:23:33  697350.1      5.45   22514.6       0.0 genblk1.RT/RB/mem_reg[5][137]/D
+    0:23:34  697408.9      5.45   22499.0       0.0 genblk1.RT/RB/mem_reg[5][137]/D
+    0:23:36  697586.6      5.44   22486.4       0.0 genblk1.RT/RB/mem_reg[2][110]/D
+    0:23:37  697660.7      5.43   22473.4       0.0 genblk1.RT/RB/mem_reg[5][137]/D
+    0:23:39  697692.5      5.43   22465.9       0.0 genblk1.RT/RB/mem_reg[5][137]/D
+    0:23:39  697716.0      5.43   22459.7       0.0 genblk1.RT/RB/mem_reg[5][137]/D
+    0:23:42  697758.4      5.42   22448.3       0.0 genblk1.RT/PF/FB/Filter_Buff_Data_reg[199]/D
+    0:23:43  697843.1      5.42   22438.4       0.0 DUT/genblk1.sc_Gen3[13].u0_elstc_buff_TOP/u0_storage_unit/MEM_reg[4][8]/D
+    0:23:43  697879.6      5.42   22428.8       0.0 DUT/genblk1.sc_Gen3[16].u0_elstc_buff_TOP/u0_storage_unit/MEM_reg[7][11]/D
+    0:23:45  697873.7      5.42   22426.4       0.0 genblk1.RT/RB/mem_reg[2][137]/D
+    0:23:45  697910.2      5.42   22425.9       0.0 genblk1.RT/RB/mem_reg[5][137]/D
+    0:23:47  697952.5      5.42   22423.5       0.0 genblk1.RT/RB/mem_reg[3][77]/D
+    0:23:47  698060.8      5.42   22422.2       0.0 genblk1.RT/RB/mem_reg[0][120]/D
+    0:23:49  698122.0      5.42   22412.5       0.0 genblk1.RT/RB/mem_reg[5][3]/D
+    0:23:50  698237.3      5.41   22398.0       0.0 genblk1.RT/RB/mem_reg[2][225]/D
+    0:23:51  698280.8      5.41   22393.4       0.0 genblk1.RT/RB/mem_reg[3][136]/D
+    0:23:52  698332.6      5.41   22391.9       0.0 genblk1.RT/RB/mem_reg[5][208]/D
+    0:23:54  698355.0      5.41   22386.5       0.0 genblk1.RT/RB/mem_reg[4][80]/D
+    0:23:55  698407.9      5.40   22375.5       0.0 genblk1.RT/RB/mem_reg[7][111]/D
+    0:23:56  698455.0      5.40   22374.1       0.0 genblk1.RT/RB/mem_reg[7][23]/D
+    0:23:56  698458.5      5.40   22374.0       0.0 genblk1.RT/RB/mem_reg[3][13]/D
+    0:23:58  698482.1      5.40   22358.7       0.0 genblk1.RT/RB/mem_reg[3][13]/D
+    0:23:58  698490.3      5.40   22355.9       0.0 genblk1.RT/RB/mem_reg[3][13]/D
+    0:24:00  698609.1      5.39   22348.1       0.0 genblk1.RT/RB/mem_reg[3][11]/D
+    0:24:01  698666.8      5.39   22339.6       0.0 genblk1.RT/RB/mem_reg[6][201]/D
+    0:24:01  698752.7      5.39   22339.3       0.0 genblk1.RT/RB/mem_reg[6][203]/D
+    0:24:02  698788.0      5.39   22336.0       0.0 genblk1.RT/RB/mem_reg[0][22]/D
+    0:24:02  698889.2      5.39   22328.6       0.0 genblk1.RT/RB/mem_reg[5][155]/D
+    0:24:03  698913.9      5.39   22326.2       0.0 genblk1.RT/RB/mem_reg[5][155]/D
+    0:24:03  698917.4      5.39   22324.0       0.0 genblk1.RT/PF/FB/Filter_Buff_Data_reg[109]/D
+    0:24:05  698946.9      5.38   22319.6       0.0 genblk1.RT/RB/mem_reg[7][15]/D
+    0:24:06  698973.9      5.38   22311.5       0.0 genblk1.RT/RB/mem_reg[0][22]/D
+    0:24:07  698996.3      5.38   22304.5       0.0 genblk1.RT/RB/mem_reg[5][274]/D
+    0:24:08  699029.2      5.38   22301.6       0.0 genblk1.RT/RB/mem_reg[5][128]/D
+    0:24:09  699168.1      5.38   22298.9       0.0 genblk1.RT/RB/mem_reg[5][217]/D
+    0:24:09  699304.6      5.38   22297.0       0.0 genblk1.RT/RB/mem_reg[5][34]/D
+    0:24:11  699385.8      5.38   22294.5       0.0 genblk1.RT/RB/mem_reg[5][274]/D
+    0:24:12  699430.5      5.38   22293.3       0.0 genblk1.RT/RB/mem_reg[3][190]/D
+    0:24:12  699562.3      5.38   22291.3       0.0 genblk1.RT/RB/mem_reg[3][62]/D
+    0:24:13  699605.8      5.38   22288.7       0.0 genblk1.RT/RB/mem_reg[2][169]/D
+    0:24:13  699757.6      5.38   22286.4       0.0 genblk1.RT/RB/mem_reg[2][32]/D
+    0:24:14  699728.2      5.38   22284.4       0.0 genblk1.RT/RB/mem_reg[3][37]/D
+    0:24:15  699752.9      5.38   22283.1       0.0 genblk1.RT/PF/FB/Filter_Buff_Data_reg[151]/D
+    0:24:15  699874.1      5.38   22280.7       0.0 genblk1.RT/RB/mem_reg[7][41]/D
+    0:24:17  699876.5      5.38   22280.3       0.0 genblk1.RT/RB/mem_reg[5][206]/D
+    0:24:17  699874.1      5.38   22278.5       0.0 genblk1.RT/PF/FB/Filter_Buff_Data_reg[23]/D
+    0:24:18  699945.9      5.37   22276.6       0.0 genblk1.RT/RB/mem_reg[3][96]/D
+    0:24:19  699984.7      5.37   22275.2       0.0 genblk1.RT/RB/mem_reg[5][122]/D
+    0:24:19  700056.5      5.37   22273.6       0.0 genblk1.RT/RB/mem_reg[5][66]/D
+    0:24:20  700077.7      5.37   22272.4       0.0 genblk1.RT/PF/FB/Filter_Buff_Data_reg[151]/D
+    0:24:20  700082.4      5.37   22271.5       0.0 genblk1.RT/PF/FB/Filter_Buff_Data_reg[23]/D
+    0:24:21  700103.6      5.37   22269.9       0.0 genblk1.RT/RB/mem_reg[2][103]/D
+    0:24:21  700177.7      5.37   22262.5       0.0 genblk1.RT/RB/mem_reg[5][23]/D
+    0:24:22  700236.5      5.37   22261.1       0.0 genblk1.RT/RB/mem_reg[0][114]/D
+    0:24:23  700278.9      5.37   22258.6       0.0 genblk1.RT/RB/mem_reg[4][99]/D
+    0:24:23  700346.0      5.37   22257.4       0.0 genblk1.RT/RB/mem_reg[0][142]/D
+    0:24:24  700455.4      5.37   22255.4       0.0 genblk1.RT/RB/mem_reg[7][192]/D
+    0:24:24  700511.9      5.37   22253.5       0.0 genblk1.RT/RB/mem_reg[0][209]/D
+    0:24:26  700587.2      5.36   22252.1       0.0 genblk1.RT/RB/mem_reg[0][230]/D
+    0:24:27  700687.2      5.36   22249.4       0.0 genblk1.RT/RB/mem_reg[0][114]/D
+    0:24:27  700824.9      5.36   22247.1       0.0 genblk1.RT/RB/mem_reg[3][238]/D
+    0:24:28  700954.3      5.36   22245.4       0.0 genblk1.RT/RB/mem_reg[4][44]/D
+    0:24:28  701042.6      5.36   22241.4       0.0 genblk1.RT/RB/mem_reg[7][151]/D
+    0:24:31  701053.2      5.36   22240.7       0.0 genblk1.RT/RB/mem_reg[7][151]/D
+    0:24:31  701060.2      5.36   22240.5       0.0 genblk1.RT/PF/FB/Filter_Buff_Data_reg[15]/D
+    0:24:32  701067.3      5.36   22239.8       0.0 genblk1.RT/RB/mem_reg[0][114]/D
+    0:24:33  701073.2      5.36   22237.6       0.0 genblk1.RT/RB/mem_reg[3][59]/D
+    0:24:34  701079.0      5.36   22236.9       0.0 genblk1.RT/RB/mem_reg[7][151]/D
+    0:24:38  701066.1      5.36   22236.1       0.0 genblk1.RT/RB/mem_reg[0][114]/D
+    0:24:38  701069.6      5.36   22236.0       0.0 genblk1.RT/RB/mem_reg[5][25]/D
+    0:24:46  701073.2      5.36   22236.0       0.0                          
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'PHY_RX' contains 4 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'genblk1.RT/PF/CTR/CLK': 7064 load(s), 1 driver(s), 1 inout(s)
+     Net 'genblk1.RT/PF/CTR/Hard_RST_L': 5880 load(s), 1 driver(s), 1 inout(s)
+     Net 'DUT/genblk1.sc_Gen3[1].descrambler/net278': 1472 load(s), 1 driver(s)
+     Net 'DUT/genblk1.sc_Gen3[1].u0_BA_TOP/u0_BA_counters/rx_clk': 4640 load(s), 1 driver(s)
+1
+##################### Close Formality Setup file ###########################
+set_svf -off
+1
+#############################################################################
+# Write out files
+#############################################################################
+#write_file -format sverilog -hierarchy -output netlists/$top_module.ddc
+#write_file -format sverilog -hierarchy -output netlists/$top_module.sv
+write_sdf  sdf/$top_module.sdf
+Information: Building the design 'lane_control'. (HDL-193)
+Error:  /home/IC/RX_PCIE/RTL/lane_control.sv:43: The statements in this 'always' block are outside the scope of the synthesis policy. Only an 'if' statement is allowed at the top level in this always block. (ELAB-302)
+Error:  /home/IC/RX_PCIE/RTL/lane_control.sv:99: The statements in this 'always' block are outside the scope of the synthesis policy. Only an 'if' statement is allowed at the top level in this always block. (ELAB-302)
+*** Presto compilation terminated with 2 errors. ***
+Warning: Unable to resolve reference 'lane_control' in 'top_RX_serdes1'. (LINK-5)
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Error: Cannot write the '/home/IC/RX_PCIE/Syn/sdf/PHY_RX.sdf' file. (UID-29)
+0
+write_sdc  -nosplit sdc/$top_module.sdc
+Warning: Design 'PHY_RX' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Cannot write the 'sdc/PHY_RX.sdc' script file. (UID-270)
+0
+####################### reporting ##########################################
+report_area -hierarchy > reports/area.rpt
+report_power -hierarchy > reports/power.rpt
+report_timing -delay_type min -max_paths 20 > reports/hold.rpt
+report_timing -delay_type max -max_paths 20 > reports/setup.rpt
+report_clock -attributes > reports/clocks.rpt
+report_constraint -all_violators -nosplit > reports/constraints.rpt
+################# starting graphical user interface #######################
+#gui_start
+#exit
+dc_shell> 

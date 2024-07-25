@@ -1,0 +1,886 @@
+ 
+****************************************
+Report : area
+Design : PL_TOP
+Version: K-2015.06
+Date   : Mon Jul  8 06:32:24 2024
+****************************************
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                        32827
+Number of nets:                        103603
+Number of cells:                        74732
+Number of combinational cells:          63663
+Number of sequential cells:             10581
+Number of macros/black boxes:               0
+Number of buf/inv:                      16527
+Number of references:                      24
+
+Combinational area:             502614.467144
+Buf/Inv area:                    65655.154654
+Noncombinational area:          293865.527538
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                796479.994683
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area              Local cell area
+                                  --------------------  -------------------------------- 
+Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-    Black-
+                                  Total        Total    national     national     boxes   Design
+--------------------------------  -----------  -------  -----------  -----------  ------  -----------------------------------------------------------------------------------
+PL_TOP                            796479.9947    100.0    3918.4110       0.0000  0.0000  PL_TOP
+LT                                172784.2763     21.7     368.3071       0.0000  0.0000  LTSSM_TOP_5_256_32_3_00000004_00000008
+LT/LT_DUT                          30787.1791      3.9   23574.0080    3967.8324  0.0000  LTSSM_00000008_5_32
+LT/LT_DUT/eq_1081                    458.9130      0.1     458.9130       0.0000  0.0000  LTSSM_00000008_5_32_DW01_cmp6_2
+LT/LT_DUT/eq_1086_2                  458.9130      0.1     458.9130       0.0000  0.0000  LTSSM_00000008_5_32_DW01_cmp6_1
+LT/LT_DUT/eq_1092_2                  458.9130      0.1     458.9130       0.0000  0.0000  LTSSM_00000008_5_32_DW01_cmp6_0
+LT/LT_DUT/eq_539                     458.9130      0.1     458.9130       0.0000  0.0000  LTSSM_00000008_5_32_DW01_cmp6_4
+LT/LT_DUT/eq_586                     458.9130      0.1     458.9130       0.0000  0.0000  LTSSM_00000008_5_32_DW01_cmp6_3
+LT/LT_DUT/r458                       491.8606      0.1     491.8606       0.0000  0.0000  LTSSM_00000008_5_32_DW01_cmp6_6
+LT/LT_DUT/r459                       458.9130      0.1     458.9130       0.0000  0.0000  LTSSM_00000008_5_32_DW01_cmp6_5
+LT/OC_DUT                           6395.3646      0.8    5837.6088     420.0819  0.0000  OS_CREATOR_256_32_00000008_3_00000004
+LT/OC_DUT/add_119                    137.6739      0.0     137.6739       0.0000  0.0000  OS_CREATOR_256_32_00000008_3_00000004_DW01_inc_0
+LT/T_DUT                            1809.7646      0.2     629.5345     813.0997  0.0000  Timer
+LT/T_DUT/add_107                     137.6739      0.0     137.6739       0.0000  0.0000  Timer_DW01_inc_0
+LT/T_DUT/add_88                      229.4565      0.0     229.4565       0.0000  0.0000  Timer_DW01_inc_1
+LT/dec[0].D_DUT                     4085.5024      0.5    2912.3326    1173.1699  0.0000  decoder_00000008_00000004_5_0
+LT/dec[10].D_DUT                    4180.8151      0.5    3011.1754    1169.6398  0.0000  decoder_00000008_00000004_5_10
+LT/dec[11].D_DUT                    4121.9801      0.5    2947.6336    1174.3466  0.0000  decoder_00000008_00000004_5_11
+LT/dec[12].D_DUT                    4167.8714      0.5    2987.6414    1180.2301  0.0000  decoder_00000008_00000004_5_12
+LT/dec[13].D_DUT                    4150.2209      0.5    2973.5210    1176.7000  0.0000  decoder_00000008_00000004_5_13
+LT/dec[14].D_DUT                    4131.3937      0.5    2954.6938    1176.7000  0.0000  decoder_00000008_00000004_5_14
+LT/dec[15].D_DUT                    4166.6947      0.5    2986.4647    1180.2301  0.0000  decoder_00000008_00000004_5_15
+LT/dec[16].D_DUT                    4159.6345      0.5    2986.4647    1173.1699  0.0000  decoder_00000008_00000004_5_16
+LT/dec[17].D_DUT                    4100.7995      0.5    2927.6297    1173.1699  0.0000  decoder_00000008_00000004_5_17
+LT/dec[18].D_DUT                    4172.5782      0.5    2995.8783    1176.7000  0.0000  decoder_00000008_00000004_5_18
+LT/dec[19].D_DUT                    4117.2733      0.5    2944.1035    1173.1699  0.0000  decoder_00000008_00000004_5_19
+LT/dec[1].D_DUT                     4139.6306      0.5    2964.1074    1175.5233  0.0000  decoder_00000008_00000004_5_1
+LT/dec[20].D_DUT                    4124.3335      0.5    2951.1637    1173.1699  0.0000  decoder_00000008_00000004_5_20
+LT/dec[21].D_DUT                    4136.1005      0.5    2962.9307    1173.1699  0.0000  decoder_00000008_00000004_5_21
+LT/dec[22].D_DUT                    4147.8675      0.5    2971.1676    1176.7000  0.0000  decoder_00000008_00000004_5_22
+LT/dec[23].D_DUT                    4107.8597      0.5    2934.6899    1173.1699  0.0000  decoder_00000008_00000004_5_23
+LT/dec[24].D_DUT                    4156.1044      0.5    2982.9346    1173.1699  0.0000  decoder_00000008_00000004_5_24
+LT/dec[25].D_DUT                    4131.3937      0.5    2960.5773    1170.8165  0.0000  decoder_00000008_00000004_5_25
+LT/dec[26].D_DUT                    4092.5626      0.5    2922.9229    1169.6398  0.0000  decoder_00000008_00000004_5_26
+LT/dec[27].D_DUT                    4213.7627      0.5    3039.4162    1174.3466  0.0000  decoder_00000008_00000004_5_27
+LT/dec[28].D_DUT                    4110.2131      0.5    2940.5734    1169.6398  0.0000  decoder_00000008_00000004_5_28
+LT/dec[29].D_DUT                    4119.6267      0.5    2949.9870    1169.6398  0.0000  decoder_00000008_00000004_5_29
+LT/dec[2].D_DUT                     4131.3937      0.5    2960.5773    1170.8165  0.0000  decoder_00000008_00000004_5_2
+LT/dec[30].D_DUT                    4147.8675      0.5    2975.8744    1171.9932  0.0000  decoder_00000008_00000004_5_30
+LT/dec[31].D_DUT                    4232.5899      0.5    3055.8900    1176.7000  0.0000  decoder_00000008_00000004_5_31
+LT/dec[3].D_DUT                     4120.8034      0.5    2949.9870    1170.8165  0.0000  decoder_00000008_00000004_5_3
+LT/dec[4].D_DUT                     4117.2733      0.5    2947.6336    1169.6398  0.0000  decoder_00000008_00000004_5_4
+LT/dec[5].D_DUT                     4165.5180      0.5    2995.8783    1169.6398  0.0000  decoder_00000008_00000004_5_5
+LT/dec[6].D_DUT                     4165.5180      0.5    2992.3482    1173.1699  0.0000  decoder_00000008_00000004_5_6
+LT/dec[7].D_DUT                     4116.0966      0.5    2944.1035    1171.9932  0.0000  decoder_00000008_00000004_5_7
+LT/dec[8].D_DUT                     4186.6986      0.5    3009.9987    1176.7000  0.0000  decoder_00000008_00000004_5_8
+LT/dec[9].D_DUT                     4226.7064      0.5    3050.0065    1176.7000  0.0000  decoder_00000008_00000004_5_9
+LT/sc                                778.9754      0.1     232.9866     362.4236  0.0000  SKP_Counter
+LT/sc/r57                            183.5652      0.0     183.5652       0.0000  0.0000  SKP_Counter_DW01_inc_0
+pt                                619777.3074     77.8       8.2369       0.0000  0.0000  phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3
+pt/u_PHY_RX                       286512.3313     36.0    1219.0612       0.0000  0.0000  PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3
+pt/u_PHY_RX/DUT                   123415.8268     15.5    1353.2050       0.0000  0.0000  top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3
+pt/u_PHY_RX/DUT/genblk1.Block_Type_Logic_1
+                                      48.2447      0.0      22.3573      25.8874  0.0000  Block_Type_Logic_0
+pt/u_PHY_RX/DUT/genblk1.LF1          855.4609      0.1     441.2625     414.1984  0.0000  LFSR_8_32
+pt/u_PHY_RX/DUT/genblk1.PIPE_Counter_1
+                                     300.0585      0.0     195.3322     104.7263  0.0000  PIPE_Counter_pipe_00000004_0
+pt/u_PHY_RX/DUT/genblk1.descrambler
+                                     501.2742      0.1     501.2742       0.0000  0.0000  Descrambler_0
+pt/u_PHY_RX/DUT/genblk1.descrambler_control
+                                     425.9654      0.1     400.0780      25.8874  0.0000  Descrambler_Controler_0
+pt/u_PHY_RX/DUT/genblk1.lfsr_8_gen3
+                                    1865.0695      0.2     971.9542     893.1153  0.0000  LFSR_8_gen3_32
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[10].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_22
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[10].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_22
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[10].PIPE_Counter_1
+                                     289.4682      0.0     184.7419     104.7263  0.0000  PIPE_Counter_pipe_00000004_22
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[10].descrambler
+                                     433.0256      0.1     433.0256       0.0000  0.0000  Descrambler_22
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[10].descrambler_control
+                                     403.6081      0.1     377.7207      25.8874  0.0000  Descrambler_Controler_22
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[10].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_22
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[11].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_21
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[11].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_21
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[11].PIPE_Counter_1
+                                     287.1148      0.0     182.3885     104.7263  0.0000  PIPE_Counter_pipe_00000004_21
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[11].descrambler
+                                     427.1421      0.1     427.1421       0.0000  0.0000  Descrambler_21
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[11].descrambler_control
+                                     393.0178      0.0     367.1304      25.8874  0.0000  Descrambler_Controler_21
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[11].lfsr_8_gen3
+                                    1865.0695      0.2     971.9542     893.1153  0.0000  LFSR_8_gen3_21
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[12].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_20
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[12].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_20
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[12].PIPE_Counter_1
+                                     285.9381      0.0     181.2118     104.7263  0.0000  PIPE_Counter_pipe_00000004_20
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[12].descrambler
+                                     385.9576      0.0     385.9576       0.0000  0.0000  Descrambler_20
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[12].descrambler_control
+                                     398.9013      0.1     373.0139      25.8874  0.0000  Descrambler_Controler_20
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[12].lfsr_8_gen3
+                                    1868.5996      0.2     975.4843     893.1153  0.0000  LFSR_8_gen3_20
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[13].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_19
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[13].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_19
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[13].PIPE_Counter_1
+                                     276.5245      0.0     171.7982     104.7263  0.0000  PIPE_Counter_pipe_00000004_19
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[13].descrambler
+                                     388.3110      0.0     388.3110       0.0000  0.0000  Descrambler_19
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[13].descrambler_control
+                                     389.4877      0.0     363.6003      25.8874  0.0000  Descrambler_Controler_19
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[13].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_19
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[14].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_18
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[14].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_18
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[14].PIPE_Counter_1
+                                     294.1750      0.0     189.4487     104.7263  0.0000  PIPE_Counter_pipe_00000004_18
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[14].descrambler
+                                     393.0178      0.0     393.0178       0.0000  0.0000  Descrambler_18
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[14].descrambler_control
+                                     415.3751      0.1     389.4877      25.8874  0.0000  Descrambler_Controler_18
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[14].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_18
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[15].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_17
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[15].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_17
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[15].PIPE_Counter_1
+                                     272.9944      0.0     168.2681     104.7263  0.0000  PIPE_Counter_pipe_00000004_17
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[15].descrambler
+                                     422.4353      0.1     422.4353       0.0000  0.0000  Descrambler_17
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[15].descrambler_control
+                                     394.1945      0.0     368.3071      25.8874  0.0000  Descrambler_Controler_17
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[15].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_17
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[16].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_16
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[16].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_16
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[16].PIPE_Counter_1
+                                     300.0585      0.0     195.3322     104.7263  0.0000  PIPE_Counter_pipe_00000004_16
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[16].descrambler
+                                     428.3188      0.1     428.3188       0.0000  0.0000  Descrambler_16
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[16].descrambler_control
+                                     411.8450      0.1     384.7809      27.0641  0.0000  Descrambler_Controler_16
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[16].lfsr_8_gen3
+                                    1872.1297      0.2     979.0144     893.1153  0.0000  LFSR_8_gen3_16
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[17].Block_Type_Logic_1
+                                      44.7146      0.0      18.8272      25.8874  0.0000  Block_Type_Logic_15
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[17].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_15
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[17].PIPE_Counter_1
+                                     296.5284      0.0     191.8021     104.7263  0.0000  PIPE_Counter_pipe_00000004_15
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[17].descrambler
+                                     443.6159      0.1     443.6159       0.0000  0.0000  Descrambler_15
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[17].descrambler_control
+                                     440.0858      0.1     414.1984      25.8874  0.0000  Descrambler_Controler_15
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[17].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_15
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[18].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_14
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[18].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_14
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[18].PIPE_Counter_1
+                                     290.6449      0.0     185.9186     104.7263  0.0000  PIPE_Counter_pipe_00000004_14
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[18].descrambler
+                                     440.0858      0.1     440.0858       0.0000  0.0000  Descrambler_14
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[18].descrambler_control
+                                     418.9052      0.1     393.0178      25.8874  0.0000  Descrambler_Controler_14
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[18].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_14
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[19].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_13
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[19].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_13
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[19].PIPE_Counter_1
+                                     288.2915      0.0     183.5652     104.7263  0.0000  PIPE_Counter_pipe_00000004_13
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[19].descrambler
+                                     433.0256      0.1     433.0256       0.0000  0.0000  Descrambler_13
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[19].descrambler_control
+                                     409.4916      0.1     383.6042      25.8874  0.0000  Descrambler_Controler_13
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[19].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_13
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[1].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_31
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[1].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_31
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[1].PIPE_Counter_1
+                                     303.5886      0.0     198.8623     104.7263  0.0000  PIPE_Counter_pipe_00000004_31
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[1].descrambler
+                                     520.1014      0.1     520.1014       0.0000  0.0000  Descrambler_31
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[1].descrambler_control
+                                     433.0256      0.1     407.1382      25.8874  0.0000  Descrambler_Controler_31
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[1].lfsr_8_gen3
+                                    1883.8967      0.2     990.7814     893.1153  0.0000  LFSR_8_gen3_31
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[20].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_12
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[20].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_12
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[20].PIPE_Counter_1
+                                     285.9381      0.0     181.2118     104.7263  0.0000  PIPE_Counter_pipe_00000004_12
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[20].descrambler
+                                     405.9615      0.1     405.9615       0.0000  0.0000  Descrambler_12
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[20].descrambler_control
+                                     407.1382      0.1     381.2508      25.8874  0.0000  Descrambler_Controler_12
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[20].lfsr_8_gen3
+                                    1872.1297      0.2     979.0144     893.1153  0.0000  LFSR_8_gen3_12
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[21].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_11
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[21].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_11
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[21].PIPE_Counter_1
+                                     289.4682      0.0     184.7419     104.7263  0.0000  PIPE_Counter_pipe_00000004_11
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[21].descrambler
+                                     380.0741      0.0     380.0741       0.0000  0.0000  Descrambler_11
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[21].descrambler_control
+                                     385.9576      0.0     360.0702      25.8874  0.0000  Descrambler_Controler_11
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[21].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_11
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[22].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_10
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[22].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_10
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[22].PIPE_Counter_1
+                                     285.9381      0.0     181.2118     104.7263  0.0000  PIPE_Counter_pipe_00000004_10
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[22].descrambler
+                                     369.4838      0.0     369.4838       0.0000  0.0000  Descrambler_10
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[22].descrambler_control
+                                     395.3712      0.0     369.4838      25.8874  0.0000  Descrambler_Controler_10
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[22].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_10
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[23].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_9
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[23].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_9
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[23].PIPE_Counter_1
+                                     295.3517      0.0     190.6254     104.7263  0.0000  PIPE_Counter_pipe_00000004_9
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[23].descrambler
+                                     455.3829      0.1     455.3829       0.0000  0.0000  Descrambler_9
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[23].descrambler_control
+                                     401.2547      0.1     375.3673      25.8874  0.0000  Descrambler_Controler_9
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[23].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_9
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[24].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_8
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[24].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_8
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[24].PIPE_Counter_1
+                                     292.9983      0.0     188.2720     104.7263  0.0000  PIPE_Counter_pipe_00000004_8
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[24].descrambler
+                                     421.2586      0.1     421.2586       0.0000  0.0000  Descrambler_8
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[24].descrambler_control
+                                     418.9052      0.1     391.8411      27.0641  0.0000  Descrambler_Controler_8
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[24].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_8
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[25].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_7
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[25].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_7
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[25].PIPE_Counter_1
+                                     296.5284      0.0     191.8021     104.7263  0.0000  PIPE_Counter_pipe_00000004_7
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[25].descrambler
+                                     391.8411      0.0     391.8411       0.0000  0.0000  Descrambler_7
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[25].descrambler_control
+                                     415.3751      0.1     388.3110      27.0641  0.0000  Descrambler_Controler_7
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[25].lfsr_8_gen3
+                                    1858.0093      0.2     964.8940     893.1153  0.0000  LFSR_8_gen3_7
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[26].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_6
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[26].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_6
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[26].PIPE_Counter_1
+                                     288.2915      0.0     183.5652     104.7263  0.0000  PIPE_Counter_pipe_00000004_6
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[26].descrambler
+                                     421.2586      0.1     421.2586       0.0000  0.0000  Descrambler_6
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[26].descrambler_control
+                                     417.7285      0.1     391.8411      25.8874  0.0000  Descrambler_Controler_6
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[26].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_6
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[27].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_5
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[27].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_5
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[27].PIPE_Counter_1
+                                     289.4682      0.0     184.7419     104.7263  0.0000  PIPE_Counter_pipe_00000004_5
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[27].descrambler
+                                     456.5596      0.1     456.5596       0.0000  0.0000  Descrambler_5
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[27].descrambler_control
+                                     389.4877      0.0     363.6003      25.8874  0.0000  Descrambler_Controler_5
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[27].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_5
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[28].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_4
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[28].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_4
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[28].PIPE_Counter_1
+                                     276.5245      0.0     171.7982     104.7263  0.0000  PIPE_Counter_pipe_00000004_4
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[28].descrambler
+                                     380.0741      0.0     380.0741       0.0000  0.0000  Descrambler_4
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[28].descrambler_control
+                                     364.7770      0.0     338.8896      25.8874  0.0000  Descrambler_Controler_4
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[28].lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_4
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[29].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_3
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[29].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_3
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[29].PIPE_Counter_1
+                                     280.0546      0.0     175.3283     104.7263  0.0000  PIPE_Counter_pipe_00000004_3
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[29].descrambler
+                                     393.0178      0.0     393.0178       0.0000  0.0000  Descrambler_3
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[29].descrambler_control
+                                     371.8372      0.0     345.9498      25.8874  0.0000  Descrambler_Controler_3
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[29].lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_3
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[2].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_30
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[2].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_30
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[2].PIPE_Counter_1
+                                     300.0585      0.0     195.3322     104.7263  0.0000  PIPE_Counter_pipe_00000004_30
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[2].descrambler
+                                     363.6003      0.0     363.6003       0.0000  0.0000  Descrambler_30
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[2].descrambler_control
+                                     384.7809      0.0     358.8935      25.8874  0.0000  Descrambler_Controler_30
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[2].lfsr_8_gen3
+                                    1872.1297      0.2     979.0144     893.1153  0.0000  LFSR_8_gen3_30
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[30].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_2
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[30].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_2
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[30].PIPE_Counter_1
+                                     292.9983      0.0     188.2720     104.7263  0.0000  PIPE_Counter_pipe_00000004_2
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[30].descrambler
+                                     374.1906      0.0     374.1906       0.0000  0.0000  Descrambler_2
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[30].descrambler_control
+                                     394.1945      0.0     367.1304      27.0641  0.0000  Descrambler_Controler_2
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[30].lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_2
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[31].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_1
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[31].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_1
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[31].PIPE_Counter_1
+                                     282.4080      0.0     177.6817     104.7263  0.0000  PIPE_Counter_pipe_00000004_1
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[31].descrambler
+                                     351.8333      0.0     351.8333       0.0000  0.0000  Descrambler_1
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[31].descrambler_control
+                                     394.1945      0.0     368.3071      25.8874  0.0000  Descrambler_Controler_1
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[31].lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_1
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[3].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_29
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[3].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_29
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[3].PIPE_Counter_1
+                                     292.9983      0.0     188.2720     104.7263  0.0000  PIPE_Counter_pipe_00000004_29
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[3].descrambler
+                                     415.3751      0.1     415.3751       0.0000  0.0000  Descrambler_29
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[3].descrambler_control
+                                     398.9013      0.1     373.0139      25.8874  0.0000  Descrambler_Controler_29
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[3].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_29
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[4].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_28
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[4].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_28
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[4].PIPE_Counter_1
+                                     280.0546      0.0     175.3283     104.7263  0.0000  PIPE_Counter_pipe_00000004_28
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[4].descrambler
+                                     374.1906      0.0     374.1906       0.0000  0.0000  Descrambler_28
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[4].descrambler_control
+                                     401.2547      0.1     375.3673      25.8874  0.0000  Descrambler_Controler_28
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[4].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_28
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[5].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_27
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[5].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_27
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[5].PIPE_Counter_1
+                                     283.5847      0.0     178.8584     104.7263  0.0000  PIPE_Counter_pipe_00000004_27
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[5].descrambler
+                                     354.1867      0.0     354.1867       0.0000  0.0000  Descrambler_27
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[5].descrambler_control
+                                     389.4877      0.0     363.6003      25.8874  0.0000  Descrambler_Controler_27
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[5].lfsr_8_gen3
+                                    1865.0695      0.2     971.9542     893.1153  0.0000  LFSR_8_gen3_27
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_26
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_26
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1
+                                     287.1148      0.0     182.3885     104.7263  0.0000  PIPE_Counter_pipe_00000004_26
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler
+                                     437.7324      0.1     437.7324       0.0000  0.0000  Descrambler_26
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control
+                                     409.4916      0.1     383.6042      25.8874  0.0000  Descrambler_Controler_26
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].lfsr_8_gen3
+                                    1858.0093      0.2     964.8940     893.1153  0.0000  LFSR_8_gen3_26
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_25
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_25
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].PIPE_Counter_1
+                                     284.7614      0.0     180.0351     104.7263  0.0000  PIPE_Counter_pipe_00000004_25
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler
+                                     375.3673      0.0     375.3673       0.0000  0.0000  Descrambler_25
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control
+                                     391.8411      0.0     365.9537      25.8874  0.0000  Descrambler_Controler_25
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].lfsr_8_gen3
+                                    1861.5394      0.2     968.4241     893.1153  0.0000  LFSR_8_gen3_25
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[8].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_24
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[8].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_24
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[8].PIPE_Counter_1
+                                     292.9983      0.0     188.2720     104.7263  0.0000  PIPE_Counter_pipe_00000004_24
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[8].descrambler
+                                     424.7887      0.1     424.7887       0.0000  0.0000  Descrambler_24
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[8].descrambler_control
+                                     393.0178      0.0     365.9537      27.0641  0.0000  Descrambler_Controler_24
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[8].lfsr_8_gen3
+                                    1865.0695      0.2     971.9542     893.1153  0.0000  LFSR_8_gen3_24
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[9].Block_Type_Logic_1
+                                      43.5379      0.0      17.6505      25.8874  0.0000  Block_Type_Logic_23
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[9].LF1
+                                     809.5696      0.1     395.3712     414.1984  0.0000  LFSR_8_23
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[9].PIPE_Counter_1
+                                     283.5847      0.0     178.8584     104.7263  0.0000  PIPE_Counter_pipe_00000004_23
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[9].descrambler
+                                     424.7887      0.1     424.7887       0.0000  0.0000  Descrambler_23
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[9].descrambler_control
+                                     384.7809      0.0     358.8935      25.8874  0.0000  Descrambler_Controler_23
+pt/u_PHY_RX/DUT/genblk1.sc_Gen3[9].lfsr_8_gen3
+                                    1865.0695      0.2     971.9542     893.1153  0.0000  LFSR_8_gen3_23
+pt/u_PHY_RX/genblk1.RT            161877.4433     20.3      21.1806       0.0000  0.0000  RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3
+pt/u_PHY_RX/genblk1.RT/PF          38503.9777      4.8     773.0919       0.0000  0.0000  Packet_Filter_TOP
+pt/u_PHY_RX/genblk1.RT/PF/CTR        387.1343      0.0     257.6973     129.4370  0.0000  Counter_0
+pt/u_PHY_RX/genblk1.RT/PF/FB       14247.4837      1.8    7464.9850    6782.4987  0.0000  Filtering_Buffer
+pt/u_PHY_RX/genblk1.RT/PF/Fc         877.8182      0.1     877.8182       0.0000  0.0000  Frame_Checker
+pt/u_PHY_RX/genblk1.RT/PF/Pf       22218.4496      2.8   21847.7891     370.6605  0.0000  Packet_Filter_fsm
+pt/u_PHY_RX/genblk1.RT/RB         123352.2850     15.5   56123.8832   67228.4018  0.0000  Rx_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3
+pt/u_PHY_TX                       333256.7392     41.8      67.0719       0.0000  0.0000  PHY_TX_8_3_00000004_00000008_0_2
+pt/u_PHY_TX/DUT0                    6562.4560      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_0
+pt/u_PHY_TX/DUT0/LF1                 804.8628      0.1     388.3110     416.5518  0.0000  LFSR_8_0
+pt/u_PHY_TX/DUT0/dc_balance         2772.3052      0.3    2072.1687     700.1365  0.0000  DC_Balance_0
+pt/u_PHY_TX/DUT0/lfsr_8_gen3        1777.9937      0.2     884.8784     893.1153  0.0000  LFSR_8_gen3_0
+pt/u_PHY_TX/DUT0/scrambler           382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_0
+pt/u_PHY_TX/DUT0/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_0
+pt/u_PHY_TX/DUT0/u0_sync_logic       520.1014      0.1     337.7129     182.3885  0.0000  Sync_Logic_0_00000008_00000004_2_0
+pt/u_PHY_TX/ID                       203.5691      0.0      98.8428     104.7263  0.0000  IDLE_Counter
+pt/u_PHY_TX/TT                    122966.3271     15.4      15.2971       0.0000  0.0000  TX_TOP
+pt/u_PHY_TX/TT/IB                 106284.2510     13.3   49103.6919   57180.5591  0.0000  Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3
+pt/u_PHY_TX/TT/TF                  16666.7790      2.1    5910.5641       0.0000  0.0000  Tx_Framing
+pt/u_PHY_TX/TT/TF/FRAMING_GEN_3    10756.2148      1.4      35.3010       0.0000  0.0000  Gen3_Top_00000008_0000000b_00000004_00000005_32_00000004_00000004_00000002_00000010
+pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/CTR
+                                     349.4799      0.0     220.0429     129.4370  0.0000  Counter_1
+pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FB
+                                     568.3461      0.1     154.1477     414.1984  0.0000  Framing_Buffer
+pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM1
+                                    5430.4705      0.7    5352.8083      77.6622  0.0000  Framing_fsm_one_lane
+pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32
+                                    3551.2807      0.4    3473.6185      77.6622  0.0000  Framing_fsm
+pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/II
+                                       5.8835      0.0       5.8835       0.0000  0.0000  OR_Gate_2
+pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/REN
+                                       5.8835      0.0       5.8835       0.0000  0.0000  OR_Gate_0
+pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/SS
+                                       5.8835      0.0       5.8835       0.0000  0.0000  OR_Gate_1
+pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/TKS
+                                     803.6861      0.1     803.6861       0.0000  0.0000  tokens
+pt/u_PHY_TX/sc_Gen3[10].DUT         6594.2269      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_22
+pt/u_PHY_TX/sc_Gen3[10].DUT/LF1      793.0958      0.1     370.6605     422.4353  0.0000  LFSR_8_54
+pt/u_PHY_TX/sc_Gen3[10].DUT/dc_balance
+                                    2829.9635      0.4    2107.4697     722.4938  0.0000  DC_Balance_22
+pt/u_PHY_TX/sc_Gen3[10].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_54
+pt/u_PHY_TX/sc_Gen3[10].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_22
+pt/u_PHY_TX/sc_Gen3[10].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_22
+pt/u_PHY_TX/sc_Gen3[10].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_22
+pt/u_PHY_TX/sc_Gen3[11].DUT         6487.1472      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_21
+pt/u_PHY_TX/sc_Gen3[11].DUT/LF1      793.0958      0.1     370.6605     422.4353  0.0000  LFSR_8_53
+pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance
+                                    2722.8838      0.3    2010.9803     711.9035  0.0000  DC_Balance_21
+pt/u_PHY_TX/sc_Gen3[11].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_53
+pt/u_PHY_TX/sc_Gen3[11].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_21
+pt/u_PHY_TX/sc_Gen3[11].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_21
+pt/u_PHY_TX/sc_Gen3[11].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_21
+pt/u_PHY_TX/sc_Gen3[12].DUT         6417.7219      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_20
+pt/u_PHY_TX/sc_Gen3[12].DUT/LF1      793.0958      0.1     370.6605     422.4353  0.0000  LFSR_8_52
+pt/u_PHY_TX/sc_Gen3[12].DUT/dc_balance
+                                    2653.4585      0.3    1936.8482     716.6103  0.0000  DC_Balance_20
+pt/u_PHY_TX/sc_Gen3[12].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_52
+pt/u_PHY_TX/sc_Gen3[12].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_20
+pt/u_PHY_TX/sc_Gen3[12].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_20
+pt/u_PHY_TX/sc_Gen3[12].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_20
+pt/u_PHY_TX/sc_Gen3[13].DUT         6528.3317      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_19
+pt/u_PHY_TX/sc_Gen3[13].DUT/LF1      793.0958      0.1     370.6605     422.4353  0.0000  LFSR_8_51
+pt/u_PHY_TX/sc_Gen3[13].DUT/dc_balance
+                                    2764.0683      0.3    2046.2813     717.7870  0.0000  DC_Balance_19
+pt/u_PHY_TX/sc_Gen3[13].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_51
+pt/u_PHY_TX/sc_Gen3[13].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_19
+pt/u_PHY_TX/sc_Gen3[13].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_19
+pt/u_PHY_TX/sc_Gen3[13].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_19
+pt/u_PHY_TX/sc_Gen3[14].DUT         6946.0602      0.9     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_18
+pt/u_PHY_TX/sc_Gen3[14].DUT/LF1      793.0958      0.1     370.6605     422.4353  0.0000  LFSR_8_50
+pt/u_PHY_TX/sc_Gen3[14].DUT/dc_balance
+                                    3181.7968      0.4    2469.8933     711.9035  0.0000  DC_Balance_18
+pt/u_PHY_TX/sc_Gen3[14].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_50
+pt/u_PHY_TX/sc_Gen3[14].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_18
+pt/u_PHY_TX/sc_Gen3[14].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_18
+pt/u_PHY_TX/sc_Gen3[14].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_18
+pt/u_PHY_TX/sc_Gen3[15].DUT         6561.2793      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_17
+pt/u_PHY_TX/sc_Gen3[15].DUT/LF1      800.1560      0.1     381.2508     418.9052  0.0000  LFSR_8_49
+pt/u_PHY_TX/sc_Gen3[15].DUT/dc_balance
+                                    2789.9557      0.4    2079.2289     710.7268  0.0000  DC_Balance_17
+pt/u_PHY_TX/sc_Gen3[15].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_49
+pt/u_PHY_TX/sc_Gen3[15].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_17
+pt/u_PHY_TX/sc_Gen3[15].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_17
+pt/u_PHY_TX/sc_Gen3[15].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_17
+pt/u_PHY_TX/sc_Gen3[16].DUT         6571.8696      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_16
+pt/u_PHY_TX/sc_Gen3[16].DUT/LF1      793.0958      0.1     370.6605     422.4353  0.0000  LFSR_8_48
+pt/u_PHY_TX/sc_Gen3[16].DUT/dc_balance
+                                    2807.6062      0.4    2090.9959     716.6103  0.0000  DC_Balance_16
+pt/u_PHY_TX/sc_Gen3[16].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_48
+pt/u_PHY_TX/sc_Gen3[16].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_16
+pt/u_PHY_TX/sc_Gen3[16].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_16
+pt/u_PHY_TX/sc_Gen3[16].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_16
+pt/u_PHY_TX/sc_Gen3[17].DUT         6570.6929      0.8     102.3729       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_15
+pt/u_PHY_TX/sc_Gen3[17].DUT/LF1      800.1560      0.1     381.2508     418.9052  0.0000  LFSR_8_47
+pt/u_PHY_TX/sc_Gen3[17].DUT/dc_balance
+                                    2806.4295      0.4    2095.7027     710.7268  0.0000  DC_Balance_15
+pt/u_PHY_TX/sc_Gen3[17].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_47
+pt/u_PHY_TX/sc_Gen3[17].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_15
+pt/u_PHY_TX/sc_Gen3[17].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_15
+pt/u_PHY_TX/sc_Gen3[17].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_15
+pt/u_PHY_TX/sc_Gen3[18].DUT         6485.9705      0.8     102.3729       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_14
+pt/u_PHY_TX/sc_Gen3[18].DUT/LF1      793.0958      0.1     370.6605     422.4353  0.0000  LFSR_8_46
+pt/u_PHY_TX/sc_Gen3[18].DUT/dc_balance
+                                    2728.7673      0.3    2016.8638     711.9035  0.0000  DC_Balance_14
+pt/u_PHY_TX/sc_Gen3[18].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_46
+pt/u_PHY_TX/sc_Gen3[18].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_14
+pt/u_PHY_TX/sc_Gen3[18].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_14
+pt/u_PHY_TX/sc_Gen3[18].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_14
+pt/u_PHY_TX/sc_Gen3[19].DUT         6531.8618      0.8     102.3729       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_13
+pt/u_PHY_TX/sc_Gen3[19].DUT/LF1      800.1560      0.1     381.2508     418.9052  0.0000  LFSR_8_45
+pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance
+                                    2767.5984      0.3    2059.2250     708.3734  0.0000  DC_Balance_13
+pt/u_PHY_TX/sc_Gen3[19].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_45
+pt/u_PHY_TX/sc_Gen3[19].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_13
+pt/u_PHY_TX/sc_Gen3[19].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_13
+pt/u_PHY_TX/sc_Gen3[19].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_13
+pt/u_PHY_TX/sc_Gen3[1].DUT          6574.2230      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_31
+pt/u_PHY_TX/sc_Gen3[1].DUT/LF1       800.1560      0.1     381.2508     418.9052  0.0000  LFSR_8_63
+pt/u_PHY_TX/sc_Gen3[1].DUT/dc_balance
+                                    2802.8994      0.4    2089.8192     713.0802  0.0000  DC_Balance_31
+pt/u_PHY_TX/sc_Gen3[1].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_63
+pt/u_PHY_TX/sc_Gen3[1].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_31
+pt/u_PHY_TX/sc_Gen3[1].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_31
+pt/u_PHY_TX/sc_Gen3[1].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_31
+pt/u_PHY_TX/sc_Gen3[20].DUT         6563.6326      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_12
+pt/u_PHY_TX/sc_Gen3[20].DUT/LF1      803.6861      0.1     384.7809     418.9052  0.0000  LFSR_8_44
+pt/u_PHY_TX/sc_Gen3[20].DUT/dc_balance
+                                    2788.7790      0.4    2079.2289     709.5501  0.0000  DC_Balance_12
+pt/u_PHY_TX/sc_Gen3[20].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_44
+pt/u_PHY_TX/sc_Gen3[20].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_12
+pt/u_PHY_TX/sc_Gen3[20].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_12
+pt/u_PHY_TX/sc_Gen3[20].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_12
+pt/u_PHY_TX/sc_Gen3[21].DUT         6631.8813      0.8     116.4933       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_11
+pt/u_PHY_TX/sc_Gen3[21].DUT/LF1      803.6861      0.1     384.7809     418.9052  0.0000  LFSR_8_43
+pt/u_PHY_TX/sc_Gen3[21].DUT/dc_balance
+                                    2849.9674      0.4    2142.7707     707.1967  0.0000  DC_Balance_11
+pt/u_PHY_TX/sc_Gen3[21].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_43
+pt/u_PHY_TX/sc_Gen3[21].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_11
+pt/u_PHY_TX/sc_Gen3[21].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_11
+pt/u_PHY_TX/sc_Gen3[21].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_11
+pt/u_PHY_TX/sc_Gen3[22].DUT         6608.3473      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_10
+pt/u_PHY_TX/sc_Gen3[22].DUT/LF1      803.6861      0.1     384.7809     418.9052  0.0000  LFSR_8_42
+pt/u_PHY_TX/sc_Gen3[22].DUT/dc_balance
+                                    2833.4936      0.4    2121.5901     711.9035  0.0000  DC_Balance_10
+pt/u_PHY_TX/sc_Gen3[22].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_42
+pt/u_PHY_TX/sc_Gen3[22].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_10
+pt/u_PHY_TX/sc_Gen3[22].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_10
+pt/u_PHY_TX/sc_Gen3[22].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_10
+pt/u_PHY_TX/sc_Gen3[23].DUT         6503.6210      0.8     102.3729       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_9
+pt/u_PHY_TX/sc_Gen3[23].DUT/LF1      803.6861      0.1     384.7809     418.9052  0.0000  LFSR_8_41
+pt/u_PHY_TX/sc_Gen3[23].DUT/dc_balance
+                                    2735.8275      0.3    2022.7473     713.0802  0.0000  DC_Balance_9
+pt/u_PHY_TX/sc_Gen3[23].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_41
+pt/u_PHY_TX/sc_Gen3[23].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_9
+pt/u_PHY_TX/sc_Gen3[23].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_9
+pt/u_PHY_TX/sc_Gen3[23].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_9
+pt/u_PHY_TX/sc_Gen3[24].DUT         6574.2230      0.8     116.4933       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_8
+pt/u_PHY_TX/sc_Gen3[24].DUT/LF1      803.6861      0.1     384.7809     418.9052  0.0000  LFSR_8_40
+pt/u_PHY_TX/sc_Gen3[24].DUT/dc_balance
+                                    2792.3091      0.4    2080.4056     711.9035  0.0000  DC_Balance_8
+pt/u_PHY_TX/sc_Gen3[24].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_40
+pt/u_PHY_TX/sc_Gen3[24].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_8
+pt/u_PHY_TX/sc_Gen3[24].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_8
+pt/u_PHY_TX/sc_Gen3[24].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_8
+pt/u_PHY_TX/sc_Gen3[25].DUT         6524.8016      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_7
+pt/u_PHY_TX/sc_Gen3[25].DUT/LF1      803.6861      0.1     384.7809     418.9052  0.0000  LFSR_8_39
+pt/u_PHY_TX/sc_Gen3[25].DUT/dc_balance
+                                    2749.9479      0.3    2038.0444     711.9035  0.0000  DC_Balance_7
+pt/u_PHY_TX/sc_Gen3[25].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_39
+pt/u_PHY_TX/sc_Gen3[25].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_7
+pt/u_PHY_TX/sc_Gen3[25].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_7
+pt/u_PHY_TX/sc_Gen3[25].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_7
+pt/u_PHY_TX/sc_Gen3[26].DUT         6476.5569      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_6
+pt/u_PHY_TX/sc_Gen3[26].DUT/LF1      803.6861      0.1     384.7809     418.9052  0.0000  LFSR_8_38
+pt/u_PHY_TX/sc_Gen3[26].DUT/dc_balance
+                                    2701.7032      0.3    1993.3298     708.3734  0.0000  DC_Balance_6
+pt/u_PHY_TX/sc_Gen3[26].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_38
+pt/u_PHY_TX/sc_Gen3[26].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_6
+pt/u_PHY_TX/sc_Gen3[26].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_6
+pt/u_PHY_TX/sc_Gen3[26].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_6
+pt/u_PHY_TX/sc_Gen3[27].DUT         6493.0306      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_5
+pt/u_PHY_TX/sc_Gen3[27].DUT/LF1      800.1560      0.1     381.2508     418.9052  0.0000  LFSR_8_37
+pt/u_PHY_TX/sc_Gen3[27].DUT/dc_balance
+                                    2721.7071      0.3    2010.9803     710.7268  0.0000  DC_Balance_5
+pt/u_PHY_TX/sc_Gen3[27].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_37
+pt/u_PHY_TX/sc_Gen3[27].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_5
+pt/u_PHY_TX/sc_Gen3[27].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_5
+pt/u_PHY_TX/sc_Gen3[27].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_5
+pt/u_PHY_TX/sc_Gen3[28].DUT         6614.2308      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_4
+pt/u_PHY_TX/sc_Gen3[28].DUT/LF1      796.6259      0.1     374.1906     422.4353  0.0000  LFSR_8_36
+pt/u_PHY_TX/sc_Gen3[28].DUT/dc_balance
+                                    2846.4373      0.4    2128.6503     717.7870  0.0000  DC_Balance_4
+pt/u_PHY_TX/sc_Gen3[28].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_36
+pt/u_PHY_TX/sc_Gen3[28].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_4
+pt/u_PHY_TX/sc_Gen3[28].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_4
+pt/u_PHY_TX/sc_Gen3[28].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_4
+pt/u_PHY_TX/sc_Gen3[29].DUT         6571.8696      0.8     102.3729       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_3
+pt/u_PHY_TX/sc_Gen3[29].DUT/LF1      802.5094      0.1     384.7809     417.7285  0.0000  LFSR_8_35
+pt/u_PHY_TX/sc_Gen3[29].DUT/dc_balance
+                                    2805.2528      0.4    2093.3493     711.9035  0.0000  DC_Balance_3
+pt/u_PHY_TX/sc_Gen3[29].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_35
+pt/u_PHY_TX/sc_Gen3[29].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_3
+pt/u_PHY_TX/sc_Gen3[29].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_3
+pt/u_PHY_TX/sc_Gen3[29].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_3
+pt/u_PHY_TX/sc_Gen3[2].DUT          6562.4560      0.8     102.3729       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_30
+pt/u_PHY_TX/sc_Gen3[2].DUT/LF1       802.5094      0.1     384.7809     417.7285  0.0000  LFSR_8_62
+pt/u_PHY_TX/sc_Gen3[2].DUT/dc_balance
+                                    2795.8392      0.4    2082.7590     713.0802  0.0000  DC_Balance_30
+pt/u_PHY_TX/sc_Gen3[2].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_62
+pt/u_PHY_TX/sc_Gen3[2].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_30
+pt/u_PHY_TX/sc_Gen3[2].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_30
+pt/u_PHY_TX/sc_Gen3[2].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_30
+pt/u_PHY_TX/sc_Gen3[30].DUT         6551.8657      0.8      95.3127       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_2
+pt/u_PHY_TX/sc_Gen3[30].DUT/LF1      802.5094      0.1     384.7809     417.7285  0.0000  LFSR_8_34
+pt/u_PHY_TX/sc_Gen3[30].DUT/dc_balance
+                                    2792.3091      0.4    2083.9357     708.3734  0.0000  DC_Balance_2
+pt/u_PHY_TX/sc_Gen3[30].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_34
+pt/u_PHY_TX/sc_Gen3[30].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_2
+pt/u_PHY_TX/sc_Gen3[30].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_2
+pt/u_PHY_TX/sc_Gen3[30].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_2
+pt/u_PHY_TX/sc_Gen3[31].DUT         6533.0385      0.8     102.3729       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_1
+pt/u_PHY_TX/sc_Gen3[31].DUT/LF1      802.5094      0.1     384.7809     417.7285  0.0000  LFSR_8_33
+pt/u_PHY_TX/sc_Gen3[31].DUT/dc_balance
+                                    2766.4217      0.3    2049.8114     716.6103  0.0000  DC_Balance_1
+pt/u_PHY_TX/sc_Gen3[31].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_33
+pt/u_PHY_TX/sc_Gen3[31].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_1
+pt/u_PHY_TX/sc_Gen3[31].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_1
+pt/u_PHY_TX/sc_Gen3[31].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_1
+pt/u_PHY_TX/sc_Gen3[3].DUT          6562.4560      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_29
+pt/u_PHY_TX/sc_Gen3[3].DUT/LF1       806.0395      0.1     388.3110     417.7285  0.0000  LFSR_8_61
+pt/u_PHY_TX/sc_Gen3[3].DUT/dc_balance
+                                    2785.2489      0.3    2069.8153     715.4336  0.0000  DC_Balance_29
+pt/u_PHY_TX/sc_Gen3[3].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_61
+pt/u_PHY_TX/sc_Gen3[3].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_29
+pt/u_PHY_TX/sc_Gen3[3].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_29
+pt/u_PHY_TX/sc_Gen3[3].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_29
+pt/u_PHY_TX/sc_Gen3[4].DUT          6578.9298      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_28
+pt/u_PHY_TX/sc_Gen3[4].DUT/LF1       813.0997      0.1     398.9013     414.1984  0.0000  LFSR_8_60
+pt/u_PHY_TX/sc_Gen3[4].DUT/dc_balance
+                                    2794.6625      0.4    2082.7590     711.9035  0.0000  DC_Balance_28
+pt/u_PHY_TX/sc_Gen3[4].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_60
+pt/u_PHY_TX/sc_Gen3[4].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_28
+pt/u_PHY_TX/sc_Gen3[4].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_28
+pt/u_PHY_TX/sc_Gen3[4].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_28
+pt/u_PHY_TX/sc_Gen3[5].DUT          6517.7414      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_27
+pt/u_PHY_TX/sc_Gen3[5].DUT/LF1       806.0395      0.1     388.3110     417.7285  0.0000  LFSR_8_59
+pt/u_PHY_TX/sc_Gen3[5].DUT/dc_balance
+                                    2740.5343      0.3    2032.1609     708.3734  0.0000  DC_Balance_27
+pt/u_PHY_TX/sc_Gen3[5].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_59
+pt/u_PHY_TX/sc_Gen3[5].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_27
+pt/u_PHY_TX/sc_Gen3[5].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_27
+pt/u_PHY_TX/sc_Gen3[5].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_27
+pt/u_PHY_TX/sc_Gen3[6].DUT          6641.2949      0.8     102.3729       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_26
+pt/u_PHY_TX/sc_Gen3[6].DUT/LF1       806.0395      0.1     388.3110     417.7285  0.0000  LFSR_8_58
+pt/u_PHY_TX/sc_Gen3[6].DUT/dc_balance
+                                    2871.1480      0.4    2162.7746     708.3734  0.0000  DC_Balance_26
+pt/u_PHY_TX/sc_Gen3[6].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_58
+pt/u_PHY_TX/sc_Gen3[6].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_26
+pt/u_PHY_TX/sc_Gen3[6].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_26
+pt/u_PHY_TX/sc_Gen3[6].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_26
+pt/u_PHY_TX/sc_Gen3[7].DUT          6561.2793      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_25
+pt/u_PHY_TX/sc_Gen3[7].DUT/LF1       813.0997      0.1     398.9013     414.1984  0.0000  LFSR_8_57
+pt/u_PHY_TX/sc_Gen3[7].DUT/dc_balance
+                                    2777.0120      0.3    2065.1085     711.9035  0.0000  DC_Balance_25
+pt/u_PHY_TX/sc_Gen3[7].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_57
+pt/u_PHY_TX/sc_Gen3[7].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_25
+pt/u_PHY_TX/sc_Gen3[7].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_25
+pt/u_PHY_TX/sc_Gen3[7].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_25
+pt/u_PHY_TX/sc_Gen3[8].DUT          6598.9337      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_24
+pt/u_PHY_TX/sc_Gen3[8].DUT/LF1       795.4492      0.1     374.1906     421.2586  0.0000  LFSR_8_56
+pt/u_PHY_TX/sc_Gen3[8].DUT/dc_balance
+                                    2832.3169      0.4    2120.4134     711.9035  0.0000  DC_Balance_24
+pt/u_PHY_TX/sc_Gen3[8].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_56
+pt/u_PHY_TX/sc_Gen3[8].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_24
+pt/u_PHY_TX/sc_Gen3[8].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_24
+pt/u_PHY_TX/sc_Gen3[8].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_24
+pt/u_PHY_TX/sc_Gen3[9].DUT          6517.7414      0.8     109.4331       0.0000  0.0000  scrambler_and_sync_0_00000008_00000004_2_23
+pt/u_PHY_TX/sc_Gen3[9].DUT/LF1       802.5094      0.1     384.7809     417.7285  0.0000  LFSR_8_55
+pt/u_PHY_TX/sc_Gen3[9].DUT/dc_balance
+                                    2744.0644      0.3    2034.5143     709.5501  0.0000  DC_Balance_23
+pt/u_PHY_TX/sc_Gen3[9].DUT/lfsr_8_gen3
+                                    1809.7646      0.2     916.6493     893.1153  0.0000  LFSR_8_gen3_55
+pt/u_PHY_TX/sc_Gen3[9].DUT/scrambler
+                                     382.4275      0.0     382.4275       0.0000  0.0000  Scrambler_23
+pt/u_PHY_TX/sc_Gen3[9].DUT/scrambler_control
+                                     195.3322      0.0     169.4448      25.8874  0.0000  Scrambler_Controler_23
+pt/u_PHY_TX/sc_Gen3[9].DUT/u0_sync_logic
+                                     474.2101      0.1     292.9983     181.2118  0.0000  Sync_Logic_0_00000008_00000004_2_23
+--------------------------------  -----------  -------  -----------  -----------  ------  -----------------------------------------------------------------------------------
+Total                                                   502614.4671  293865.5275  0.0000
+
+1

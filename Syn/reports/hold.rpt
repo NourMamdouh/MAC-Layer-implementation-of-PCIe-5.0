@@ -1,0 +1,697 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 20
+Design : PL_TOP
+Version: K-2015.06
+Date   : Mon Jul  8 06:32:45 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c   Library: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
+Wire Load Model Mode: top
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/LFSR_q_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/LFSR_q_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/LFSR_q_reg[7]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/U7/Y (OAI22XLM)          0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/LFSR_q_reg[7]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/LFSR_q_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/LFSR_q_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/LFSR_q_reg[5]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/U9/Y (OAI22XLM)          0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/LFSR_q_reg[5]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[1].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/LFSR_q_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/LFSR_q_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/LFSR_q_reg[7]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/U7/Y (OAI22XLM)          0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/LFSR_q_reg[7]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/LFSR_q_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/LFSR_q_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/LFSR_q_reg[5]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/U9/Y (OAI22XLM)          0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/LFSR_q_reg[5]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[2].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/LFSR_q_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/LFSR_q_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/LFSR_q_reg[7]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/U8/Y (OAI22XLM)          0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/LFSR_q_reg[7]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/LFSR_q_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/LFSR_q_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/LFSR_q_reg[5]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/U10/Y (OAI22XLM)         0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/LFSR_q_reg[5]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[3].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/LFSR_q_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/LFSR_q_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/LFSR_q_reg[7]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/U8/Y (OAI22XLM)          0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/LFSR_q_reg[7]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/LFSR_q_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/LFSR_q_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/LFSR_q_reg[5]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/U10/Y (OAI22XLM)         0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/LFSR_q_reg[5]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[5].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/LFSR_q_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/LFSR_q_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/LFSR_q_reg[7]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/U8/Y (OAI22XLM)          0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/LFSR_q_reg[7]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/LFSR_q_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/LFSR_q_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/LFSR_q_reg[5]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/U10/Y (OAI22XLM)         0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/LFSR_q_reg[5]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[6].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/LFSR_q_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/LFSR_q_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/LFSR_q_reg[6]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/LFSR_q_reg[6]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/U5/Y (OAI22XLM)          0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/LFSR_q_reg[6]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/LFSR_q_reg[6]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/LFSR_q_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/LFSR_q_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/LFSR_q_reg[7]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/U7/Y (OAI22XLM)          0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/LFSR_q_reg[7]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[8].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/LFSR_q_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/LFSR_q_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/LFSR_q_reg[7]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/U7/Y (OAI22XLM)          0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/LFSR_q_reg[7]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/LFSR_q_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/LFSR_q_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/LFSR_q_reg[5]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/U9/Y (OAI22XLM)          0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/LFSR_q_reg[5]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[9].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[6]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[6]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/U5/Y (OAI22XLM)         0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[6]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[6]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[7]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/U7/Y (OAI22XLM)         0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[7]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[5]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/U9/Y (OAI22XLM)         0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[5]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[10].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[6]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[6]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/U5/Y (OAI22XLM)         0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[6]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[6]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[7]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/U7/Y (OAI22XLM)         0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[7]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[7]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+  Startpoint: pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00 #     0.00 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[5]/QN (DFFSX1M)
+                                                          0.34       0.34 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/U9/Y (OAI22XLM)         0.08       0.43 f
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[5]/D (DFFSX1M)
+                                                          0.00       0.43 f
+  data arrival time                                                  0.43
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  pt/u_PHY_TX/sc_Gen3[11].DUT/LF1/LFSR_q_reg[5]/CK (DFFSX1M)
+                                                          0.00       0.10 r
+  library hold time                                       0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.33
+
+
+1

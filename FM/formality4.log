@@ -1,0 +1,435 @@
+Error:  /home/IC/RX_PCIE/FM/formality4_svf/svf.txt (Line: 11076) Originally from /home/IC/RX_PCIE/Syn/PL_TOP.svf: Parse error.
+****************************************************
+
+Info:  Multiple drivers on net Ref:/WORK/phy_top_serdes0/RX_Error.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[0] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[1] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[2] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[3] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[4] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[5] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[6] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[7] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[8] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[9] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[10] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[11] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[12] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[13] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[14] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[15] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[16] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[17] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[18] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[19] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[20] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[21] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[22] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[23] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[24] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[25] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[26] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[27] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[28] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[29] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[30] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[31] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[32] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[33] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[34] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[35] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[36] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[37] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[38] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[39] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[40] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[41] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[42] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[43] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[44] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[45] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[46] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[47] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[48] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[49] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[50] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[51] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[52] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[53] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[54] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[55] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[56] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[57] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[58] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[59] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[60] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[61] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[62] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[63] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[64] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[65] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[66] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[67] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[68] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[69] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[70] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[71] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[72] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[73] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[74] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[75] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[76] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[77] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[78] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[79] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[80] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[81] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[82] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[83] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[84] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[85] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[86] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[87] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[88] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[89] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[90] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[91] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[92] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[93] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[94] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[95] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[96] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[97] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[98] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[99] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[100] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[101] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[102] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[103] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[104] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[105] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[106] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[107] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[108] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[109] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[110] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[111] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[112] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[113] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[114] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[115] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[116] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[117] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[118] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[119] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[120] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[121] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[122] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[123] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[124] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[125] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[126] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[127] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[128] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[129] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[130] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[131] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[132] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[133] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[134] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[135] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[136] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[137] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[138] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[139] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[140] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[141] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[142] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[143] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[144] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[145] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[146] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[147] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[148] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[149] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[150] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[151] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[152] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[153] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[154] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[155] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[156] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[157] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[158] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[159] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[160] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[161] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[162] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[163] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[164] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[165] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[166] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[167] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[168] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[169] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[170] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[171] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[172] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[173] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[174] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[175] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[176] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[177] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[178] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[179] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[180] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[181] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[182] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[183] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[184] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[185] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[186] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[187] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[188] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[189] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[190] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[191] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[192] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[193] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[194] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[195] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[196] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[197] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[198] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[199] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[200] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[201] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[202] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[203] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[204] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[205] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[206] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[207] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[208] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[209] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[210] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[211] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[212] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[213] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[214] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[215] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[216] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[217] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[218] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[219] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[220] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[221] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[222] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[223] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[224] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[225] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[226] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[227] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[228] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[229] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[230] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[231] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[232] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[233] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[234] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[235] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[236] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[237] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[238] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[239] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[240] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[241] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[242] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[243] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[244] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[245] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[246] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[247] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[248] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[249] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[250] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[251] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[252] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[253] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[254] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_Data[255] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[0] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[1] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[2] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[3] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[4] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[5] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[6] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[7] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[8] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[9] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[10] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[11] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[12] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[13] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[14] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[15] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[16] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[17] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[18] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[19] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[20] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[21] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[22] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[23] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[24] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[25] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[26] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[27] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[28] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[29] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[30] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/BA_error[31] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/valid_deskew is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[0] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[1] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[2] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[3] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[4] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[5] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[6] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[7] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[8] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[9] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[10] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[11] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[12] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[13] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[14] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[15] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[16] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[17] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[18] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[19] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[20] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[21] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[22] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[23] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[24] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[25] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[26] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[27] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[28] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[29] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[30] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/deskewed_RX_valid[31] is undriven.
+Info:  Net Ref:/WORK/top_RX_serdes0/Deskew_error is undriven.
+Info:  Net Ref:/WORK/LTSSM_TOP/disable_reg is undriven.
+Info:  Multiple drivers on net Imp:/WORK/phy_top_serdes0/RX_Error.
+Info:  Multiple drivers on net Imp:/SCMETRO_TSMC_CL013G_RVT_SS_1P08V_125C/NAND3BX4M/Y.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[0] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[1] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[2] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[3] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[4] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[5] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[6] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[7] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[8] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[9] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[10] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[11] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[12] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[13] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[14] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[15] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[16] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[17] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[18] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[19] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[20] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[21] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[22] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[23] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[24] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[25] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[26] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[27] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[28] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[29] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[30] is undriven.
+Info:  Net Imp:/WORK/top_RX_serdes0/deskewed_RX_valid[31] is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_0/LT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_0/GT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_0/LE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_0/GE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_0/NE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_1/LT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_1/GT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_1/LE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_1/GE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_1/NE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_2/LT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_2/GT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_2/LE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_2/GE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_2/NE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_3/LT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_3/GT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_3/LE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_3/GE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_3/NE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_4/LT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_4/GT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_4/LE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_4/GE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_4/NE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_5/LT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_5/GT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_5/LE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_5/GE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_5/NE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_6/LT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_6/GT is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_6/LE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_6/GE is undriven.
+Info:  Net Imp:/WORK/LTSSM_DW01_cmp6_6/NE is undriven.
+Info:  guide_transformation 337 (Line: 2593)  Unmatched boundary nodes.
+Info:  guide_transformation 337 (Line: 2593) Retrying with unread processing enabled.
+Info:  guide_transformation 337 (Line: 2593)  Unmatched boundary nodes.
+Info:  SVF Operation 337 (Line: 2593) - transformation_share.  Status: rejected
+
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[31].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[30].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[29].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[28].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[27].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[26].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[25].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[24].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[23].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[22].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[21].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[20].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[19].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[18].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[17].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[16].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[15].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[14].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[13].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[12].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[11].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[10].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[9].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[8].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[7].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[6].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[5].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[4].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[3].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[2].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/sc_Gen3[1].DUT/u0_sync_logic/U4" in design 'PL_TOP'.
+Info:  guide_uniquify 679 (Line: 6787)  Cannot find object "pt/u_PHY_TX/DUT0/u0_sync_logic/U4" in design 'PL_TOP'.
+****************************************************
+

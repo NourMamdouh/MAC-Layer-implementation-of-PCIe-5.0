@@ -1,0 +1,2517 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : PL_TOP
+Version: K-2015.06
+Date   : Mon Jul  8 06:32:45 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: LT/dec[19].D_DUT/cons_count_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U663/Y (NAND2BX4M)                            0.08       4.99 r
+  LT/LT_DUT/U188/Y (OAI2BB2X8M)                           0.13       5.12 r
+  LT/LT_DUT/U937/Y (OAI32X4M)                             0.10       5.21 f
+  LT/LT_DUT/U936/Y (OAI21BX4M)                            0.21       5.42 f
+  LT/LT_DUT/controller_rst (LTSSM_00000008_5_32)          0.00       5.42 f
+  LT/U86/Y (INVX8M)                                       0.09       5.51 r
+  LT/U84/Y (CLKINVX4M)                                    0.09       5.60 f
+  LT/dec[19].D_DUT/controller_rst (decoder_00000008_00000004_5_19)
+                                                          0.00       5.60 f
+  LT/dec[19].D_DUT/U29/Y (CLKINVX1M)                      0.09       5.69 r
+  LT/dec[19].D_DUT/U27/Y (NAND2X2M)                       0.07       5.77 f
+  LT/dec[19].D_DUT/U28/Y (NOR2X2M)                        0.15       5.91 r
+  LT/dec[19].D_DUT/U79/Y (OAI2B11X4M)                     0.14       6.05 f
+  LT/dec[19].D_DUT/U3/Y (MXI2X3M)                         0.16       6.22 f
+  LT/dec[19].D_DUT/U68/Y (AO21X4M)                        0.22       6.43 f
+  LT/dec[19].D_DUT/U20/Y (AOI21X2M)                       0.11       6.54 r
+  LT/dec[19].D_DUT/U18/Y (MXI2X1M)                        0.10       6.65 f
+  LT/dec[19].D_DUT/cons_count_reg[0]/D (DFFRHQX1M)        0.00       6.65 f
+  data arrival time                                                  6.65
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  LT/dec[19].D_DUT/cons_count_reg[0]/CK (DFFRHQX1M)       0.00       6.80 r
+  library setup time                                     -0.15       6.65
+  data required time                                                 6.65
+  --------------------------------------------------------------------------
+  data required time                                                 6.65
+  data arrival time                                                 -6.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_SYNC_Header[0][0]
+              (input port clocked by clk)
+  Endpoint: TxElecIdle_PIPE[31]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_SYNC_Header[0][0] (in)                               0.02       1.42 r
+  pt/RX_SYNC_Header[0][0] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.42 r
+  pt/u_PHY_RX/RX_SYNC_Header[0][0] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.42 r
+  pt/u_PHY_RX/DUT/RX_SYNC_Header[0][0] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.42 r
+  pt/u_PHY_RX/DUT/genblk1.Block_Type_Logic_1/RX_Sync_Header[0] (Block_Type_Logic_0)
+                                                          0.00       1.42 r
+  pt/u_PHY_RX/DUT/genblk1.Block_Type_Logic_1/U4/Y (NOR2BX4M)
+                                                          0.12       1.54 r
+  pt/u_PHY_RX/DUT/genblk1.Block_Type_Logic_1/U3/Y (MX2X3M)
+                                                          0.17       1.71 r
+  pt/u_PHY_RX/DUT/genblk1.Block_Type_Logic_1/Block_Type (Block_Type_Logic_0)
+                                                          0.00       1.71 r
+  pt/u_PHY_RX/DUT/U74/Y (INVX4M)                          0.05       1.76 f
+  pt/u_PHY_RX/DUT/U73/Y (INVX8M)                          0.06       1.82 r
+  pt/u_PHY_RX/DUT/deskewed_RX_sync[0] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.82 r
+  pt/u_PHY_RX/deskewed_RX_sync[0] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.82 r
+  pt/Block_Type[0] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.82 r
+  LT/Block_Type (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       1.82 r
+  LT/LT_DUT/Block_Type (LTSSM_00000008_5_32)              0.00       1.82 r
+  LT/LT_DUT/U656/Y (NOR2X8M)                              0.04       1.86 f
+  LT/LT_DUT/U3114/Y (AO21X8M)                             0.23       2.09 f
+  LT/LT_DUT/U138/Y (BUFX10M)                              0.13       2.22 f
+  LT/LT_DUT/U415/Y (CLKINVX6M)                            0.06       2.29 r
+  LT/LT_DUT/U493/Y (XNOR2X2M)                             0.11       2.39 r
+  LT/LT_DUT/U802/Y (NAND4BX4M)                            0.16       2.56 r
+  LT/LT_DUT/U242/Y (INVX2M)                               0.06       2.62 f
+  LT/LT_DUT/U411/Y (NAND3BX2M)                            0.19       2.81 f
+  LT/LT_DUT/U149/Y (OR2X4M)                               0.19       3.00 f
+  LT/LT_DUT/U265/Y (CLKINVX4M)                            0.05       3.05 r
+  LT/LT_DUT/U495/Y (NAND3BX2M)                            0.11       3.15 f
+  LT/LT_DUT/U740/Y (INVX4M)                               0.09       3.25 r
+  LT/LT_DUT/U246/Y (AND4X4M)                              0.17       3.42 r
+  LT/LT_DUT/U207/Y (NAND2X4M)                             0.07       3.49 f
+  LT/LT_DUT/U257/Y (NAND2X6M)                             0.09       3.59 r
+  LT/LT_DUT/U406/Y (INVX8M)                               0.05       3.64 f
+  LT/LT_DUT/U140/Y (NAND2X8M)                             0.07       3.71 r
+  LT/LT_DUT/U662/Y (NAND3X12M)                            0.11       3.82 f
+  LT/LT_DUT/U98/Y (INVX8M)                                0.08       3.90 r
+  LT/LT_DUT/U521/Y (CLKINVX8M)                            0.07       3.97 f
+  LT/LT_DUT/U2412/Y (NAND2XLM)                            0.11       4.09 r
+  LT/LT_DUT/U1991/Y (AOI222X1M)                           0.14       4.23 f
+  LT/LT_DUT/U1989/Y (AND3X2M)                             0.28       4.50 f
+  LT/LT_DUT/U1915/Y (OAI222X1M)                           0.15       4.65 r
+  LT/LT_DUT/TxElecIdle_PIPE[31] (LTSSM_00000008_5_32)     0.00       4.65 r
+  LT/TxElecIdle_PIPE[31] (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.65 r
+  U113/Y (CLKINVX2M)                                      0.26       4.91 f
+  U133/Y (INVX14M)                                        0.49       5.40 r
+  TxElecIdle_PIPE[31] (out)                               0.00       5.40 r
+  data arrival time                                                  5.40
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  output external delay                                  -1.40       5.40
+  data required time                                                 5.40
+  --------------------------------------------------------------------------
+  data required time                                                 5.40
+  data arrival time                                                 -5.40
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: pt/u_PHY_TX/TT/IB/rd_ptr_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/dc_balance_reg[8]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/TT/IB/rd_ptr_reg[1]/CK (DFFRHQX4M)          0.00 #     0.00 r
+  pt/u_PHY_TX/TT/IB/rd_ptr_reg[1]/Q (DFFRHQX4M)           0.26       0.26 f
+  pt/u_PHY_TX/TT/IB/U9/Y (INVX4M)                         0.07       0.33 r
+  pt/u_PHY_TX/TT/IB/U8/Y (BUFX8M)                         0.10       0.42 r
+  pt/u_PHY_TX/TT/IB/U14/Y (OR2X2M)                        0.12       0.54 r
+  pt/u_PHY_TX/TT/IB/U12/Y (NOR2X2M)                       0.05       0.59 f
+  pt/u_PHY_TX/TT/IB/U15/Y (BUFX10M)                       0.13       0.72 f
+  pt/u_PHY_TX/TT/IB/U24/Y (AOI22X4M)                      0.21       0.93 r
+  pt/u_PHY_TX/TT/IB/U16/Y (NAND4X4M)                      0.16       1.08 f
+  pt/u_PHY_TX/TT/IB/o_Length[3] (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       1.08 f
+  pt/u_PHY_TX/TT/TF/i_Length[3] (Tx_Framing)              0.00       1.08 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/i_Length[3] (Gen3_Top_00000008_0000000b_00000004_00000005_32_00000004_00000004_00000002_00000010)
+                                                          0.00       1.08 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/i_Length[3] (Framing_fsm)
+                                                          0.00       1.08 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U9/Y (OA22X8M)
+                                                          0.29       1.37 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U6/Y (AOI222X4M)
+                                                          0.32       1.69 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U12/Y (NOR2BX2M)
+                                                          0.09       1.78 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U13/Y (OAI21BX4M)
+                                                          0.16       1.94 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U19/Y (OAI2BB1X4M)
+                                                          0.08       2.01 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U21/Y (NAND2X4M)
+                                                          0.06       2.07 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U20/Y (OAI21BX4M)
+                                                          0.15       2.22 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U27/Y (NAND4BX2M)
+                                                          0.17       2.38 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U30/Y (NOR2BX4M)
+                                                          0.15       2.54 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U28/Y (NAND4BX2M)
+                                                          0.08       2.62 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/o_Fram_Sel[1] (Framing_fsm)
+                                                          0.00       2.62 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/o_Fram_Sel_32[1] (Gen3_Top_00000008_0000000b_00000004_00000005_32_00000004_00000004_00000002_00000010)
+                                                          0.00       2.62 r
+  pt/u_PHY_TX/TT/TF/U15/Y (NAND2X2M)                      0.08       2.70 f
+  pt/u_PHY_TX/TT/TF/U13/Y (NAND2X2M)                      0.10       2.80 r
+  pt/u_PHY_TX/TT/TF/U12/Y (INVX4M)                        0.07       2.87 f
+  pt/u_PHY_TX/TT/TF/U17/Y (NOR2X12M)                      0.13       3.00 r
+  pt/u_PHY_TX/TT/TF/U101/Y (INVX3M)                       0.09       3.08 f
+  pt/u_PHY_TX/TT/TF/U295/Y (INVX2M)                       0.15       3.23 r
+  pt/u_PHY_TX/TT/TF/U150/Y (AO22X4M)                      0.19       3.42 r
+  pt/u_PHY_TX/TT/TF/U344/Y (AO21X8M)                      0.11       3.53 r
+  pt/u_PHY_TX/TT/TF/o_Framed_Data[152] (Tx_Framing)       0.00       3.53 r
+  pt/u_PHY_TX/TT/o_Framed_Data[152] (TX_TOP)              0.00       3.53 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/Sc_Data_In[7] (scrambler_and_sync_0_00000008_00000004_2_13)
+                                                          0.00       3.53 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/Sc_Data_In[7] (DC_Balance_13)
+                                                          0.00       3.53 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U82/Y (XNOR2X8M)
+                                                          0.16       3.69 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U5/Y (XOR2X8M)
+                                                          0.16       3.85 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U74/Y (XOR2X8M)
+                                                          0.15       4.00 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U29/Y (NAND2X4M)
+                                                          0.08       4.08 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U79/Y (AOI21BX8M)
+                                                          0.15       4.23 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U4/Y (XOR2X8M)
+                                                          0.11       4.34 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U92/Y (XOR3X2M)
+                                                          0.40       4.74 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U31/Y (CLKINVX4M)
+                                                          0.12       4.86 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U56/Y (XOR3X2M)
+                                                          0.40       5.26 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U52/Y (OAI21X2M)
+                                                          0.08       5.34 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U87/Y (NAND2X2M)
+                                                          0.10       5.44 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U6/Y (OAI21X2M)
+                                                          0.14       5.59 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U85/Y (OAI2BB1X2M)
+                                                          0.09       5.67 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U40/Y (OAI2BB1X4M)
+                                                          0.18       5.86 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U77/Y (OR2X6M)
+                                                          0.15       6.01 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U73/Y (NAND2BX4M)
+                                                          0.14       6.15 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U83/Y (CLKINVX4M)
+                                                          0.05       6.20 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U9/Y (NAND2X2M)
+                                                          0.05       6.25 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U39/Y (NOR2X2M)
+                                                          0.10       6.35 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U38/Y (NOR2X1M)
+                                                          0.06       6.41 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U47/Y (OAI31X1M)
+                                                          0.05       6.46 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/dc_balance_reg[8]/D (DFFRQX1M)
+                                                          0.00       6.46 r
+  data arrival time                                                  6.46
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/dc_balance_reg[8]/CK (DFFRQX1M)
+                                                          0.00       6.80 r
+  library setup time                                     -0.34       6.46
+  data required time                                                 6.46
+  --------------------------------------------------------------------------
+  data required time                                                 6.46
+  data arrival time                                                 -6.46
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: pt/u_PHY_TX/TT/IB/rd_ptr_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/zeros_flag_reg[8]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/TT/IB/rd_ptr_reg[1]/CK (DFFRHQX4M)          0.00 #     0.00 r
+  pt/u_PHY_TX/TT/IB/rd_ptr_reg[1]/Q (DFFRHQX4M)           0.26       0.26 f
+  pt/u_PHY_TX/TT/IB/U9/Y (INVX4M)                         0.07       0.33 r
+  pt/u_PHY_TX/TT/IB/U8/Y (BUFX8M)                         0.10       0.42 r
+  pt/u_PHY_TX/TT/IB/U14/Y (OR2X2M)                        0.12       0.54 r
+  pt/u_PHY_TX/TT/IB/U12/Y (NOR2X2M)                       0.05       0.59 f
+  pt/u_PHY_TX/TT/IB/U15/Y (BUFX10M)                       0.13       0.72 f
+  pt/u_PHY_TX/TT/IB/U24/Y (AOI22X4M)                      0.21       0.93 r
+  pt/u_PHY_TX/TT/IB/U16/Y (NAND4X4M)                      0.16       1.08 f
+  pt/u_PHY_TX/TT/IB/o_Length[3] (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       1.08 f
+  pt/u_PHY_TX/TT/TF/i_Length[3] (Tx_Framing)              0.00       1.08 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/i_Length[3] (Gen3_Top_00000008_0000000b_00000004_00000005_32_00000004_00000004_00000002_00000010)
+                                                          0.00       1.08 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/i_Length[3] (Framing_fsm)
+                                                          0.00       1.08 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U9/Y (OA22X8M)
+                                                          0.29       1.37 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U6/Y (AOI222X4M)
+                                                          0.32       1.69 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U12/Y (NOR2BX2M)
+                                                          0.09       1.78 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U13/Y (OAI21BX4M)
+                                                          0.16       1.94 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U19/Y (OAI2BB1X4M)
+                                                          0.08       2.01 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U21/Y (NAND2X4M)
+                                                          0.06       2.07 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U20/Y (OAI21BX4M)
+                                                          0.15       2.22 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U27/Y (NAND4BX2M)
+                                                          0.17       2.38 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U30/Y (NOR2BX4M)
+                                                          0.15       2.54 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U28/Y (NAND4BX2M)
+                                                          0.08       2.62 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/o_Fram_Sel[1] (Framing_fsm)
+                                                          0.00       2.62 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/o_Fram_Sel_32[1] (Gen3_Top_00000008_0000000b_00000004_00000005_32_00000004_00000004_00000002_00000010)
+                                                          0.00       2.62 r
+  pt/u_PHY_TX/TT/TF/U15/Y (NAND2X2M)                      0.08       2.70 f
+  pt/u_PHY_TX/TT/TF/U13/Y (NAND2X2M)                      0.10       2.80 r
+  pt/u_PHY_TX/TT/TF/U12/Y (INVX4M)                        0.07       2.87 f
+  pt/u_PHY_TX/TT/TF/U17/Y (NOR2X12M)                      0.13       3.00 r
+  pt/u_PHY_TX/TT/TF/U101/Y (INVX3M)                       0.09       3.08 f
+  pt/u_PHY_TX/TT/TF/U295/Y (INVX2M)                       0.15       3.23 r
+  pt/u_PHY_TX/TT/TF/U150/Y (AO22X4M)                      0.19       3.42 r
+  pt/u_PHY_TX/TT/TF/U344/Y (AO21X8M)                      0.11       3.53 r
+  pt/u_PHY_TX/TT/TF/o_Framed_Data[152] (Tx_Framing)       0.00       3.53 r
+  pt/u_PHY_TX/TT/o_Framed_Data[152] (TX_TOP)              0.00       3.53 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/Sc_Data_In[7] (scrambler_and_sync_0_00000008_00000004_2_13)
+                                                          0.00       3.53 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/Sc_Data_In[7] (DC_Balance_13)
+                                                          0.00       3.53 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U82/Y (XNOR2X8M)
+                                                          0.16       3.69 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U5/Y (XOR2X8M)
+                                                          0.16       3.85 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U74/Y (XOR2X8M)
+                                                          0.15       4.00 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U29/Y (NAND2X4M)
+                                                          0.08       4.08 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U79/Y (AOI21BX8M)
+                                                          0.15       4.23 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U4/Y (XOR2X8M)
+                                                          0.11       4.34 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U92/Y (XOR3X2M)
+                                                          0.45       4.79 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U95/Y (NOR2XLM)
+                                                          0.18       4.97 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U46/Y (XOR2X1M)
+                                                          0.21       5.18 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U44/Y (INVX3M)
+                                                          0.11       5.29 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U67/Y (OAI21X4M)
+                                                          0.16       5.45 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U70/Y (OAI2BB1X4M)
+                                                          0.08       5.54 f
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U45/Y (AOI22X2M)
+                                                          0.20       5.74 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U125/Y (OR2X2M)
+                                                          0.17       5.91 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U43/Y (OR2X6M)
+                                                          0.11       6.02 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U42/Y (OR2X6M)
+                                                          0.10       6.12 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U69/Y (OR2X4M)
+                                                          0.10       6.22 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U68/Y (XNOR2X4M)
+                                                          0.14       6.36 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/U66/Y (AO22X4M)
+                                                          0.15       6.51 r
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/zeros_flag_reg[8]/D (DFFRQX2M)
+                                                          0.00       6.51 r
+  data arrival time                                                  6.51
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/sc_Gen3[19].DUT/dc_balance/zeros_flag_reg[8]/CK (DFFRQX2M)
+                                                          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.51
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[7]
+              (input port clocked by clk)
+  Endpoint: LT/dec[16].D_DUT/cons_count_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[7] (in)                                  0.07       1.47 r
+  pt/RX_Start_Block[7] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.47 r
+  pt/u_PHY_RX/RX_Start_Block[7] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.47 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[7] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.47 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_25)
+                                                          0.00       1.47 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].PIPE_Counter_1/U4/Y (INVX2M)
+                                                          0.09       1.56 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].PIPE_Counter_1/U5/Y (CLKAND2X6M)
+                                                          0.17       1.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].PIPE_Counter_1/o_CNT[0] (PIPE_Counter_pipe_00000004_25)
+                                                          0.00       1.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/count[0] (Descrambler_Controler_25)
+                                                          0.00       1.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/U4/Y (INVX4M)
+                                                          0.07       1.80 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/U8/Y (NAND4BX4M)
+                                                          0.15       1.95 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/U10/Y (MXI2X4M)
+                                                          0.14       2.09 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/U5/Y (OAI21X4M)
+                                                          0.08       2.17 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/U14/Y (MX2X3M)
+                                                          0.20       2.37 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/descramblingEnable (Descrambler_Controler_25)
+                                                          0.00       2.37 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler/descramblingEnable (Descrambler_25)
+                                                          0.00       2.37 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler/U2/Y (INVX3M)
+                                                          0.08       2.45 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler/U18/Y (MX2X3M)
+                                                          0.20       2.64 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler/U17/Y (NOR2X2M)
+                                                          0.06       2.71 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler/U13/Y (MXI2X3M)
+                                                          0.24       2.94 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler/Des_Data_Out[6] (Descrambler_25)
+                                                          0.00       2.94 r
+  pt/u_PHY_RX/DUT/Des_Data_Out[57] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.94 r
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[57] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.94 r
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[57] (Packet_Filter_TOP)
+                                                          0.00       2.94 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[57] (Packet_Filter_fsm)
+                                                          0.00       2.94 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U106/Y (CLKINVX6M)         0.10       3.05 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U705/Y (AND3X6M)           0.17       3.22 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U704/Y (NAND3BX4M)         0.08       3.31 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U514/Y (CLKINVX4M)         0.07       3.37 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U351/Y (AND3X6M)           0.14       3.51 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U772/Y (NAND3BX4M)         0.08       3.60 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U289/Y (AND2X2M)           0.15       3.74 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U621/Y (NOR3X2M)           0.05       3.79 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U622/Y (AND3X4M)           0.13       3.92 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U213/Y (AND3X6M)           0.14       4.06 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U896/Y (NAND3X4M)          0.07       4.13 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U140/Y (OR2X6M)            0.12       4.25 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U174/Y (NAND2X4M)          0.04       4.29 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U805/Y (OAI32X2M)          0.31       4.60 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.18       4.78 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.78 r
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.78 r
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.78 r
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.78 r
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.78 r
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.78 r
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.78 r
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.11       4.89 r
+  LT/LT_DUT/U663/Y (NAND2BX4M)                            0.06       4.95 f
+  LT/LT_DUT/U188/Y (OAI2BB2X8M)                           0.15       5.11 f
+  LT/LT_DUT/U937/Y (OAI32X4M)                             0.24       5.35 r
+  LT/LT_DUT/U936/Y (OAI21BX4M)                            0.19       5.54 r
+  LT/LT_DUT/controller_rst (LTSSM_00000008_5_32)          0.00       5.54 r
+  LT/U86/Y (INVX8M)                                       0.09       5.62 f
+  LT/U85/Y (CLKINVX8M)                                    0.08       5.70 r
+  LT/dec[16].D_DUT/controller_rst (decoder_00000008_00000004_5_16)
+                                                          0.00       5.70 r
+  LT/dec[16].D_DUT/U15/Y (CLKINVX2M)                      0.09       5.79 f
+  LT/dec[16].D_DUT/U14/Y (OAI221X4M)                      0.09       5.88 r
+  LT/dec[16].D_DUT/U3/Y (INVX6M)                          0.07       5.95 f
+  LT/dec[16].D_DUT/U12/Y (NOR2BX4M)                       0.13       6.08 f
+  LT/dec[16].D_DUT/U57/Y (MX2X3M)                         0.18       6.26 f
+  LT/dec[16].D_DUT/U55/Y (AO21X8M)                        0.20       6.46 f
+  LT/dec[16].D_DUT/U20/Y (AOI2BB1X4M)                     0.10       6.56 r
+  LT/dec[16].D_DUT/U60/Y (MXI2X2M)                        0.08       6.64 f
+  LT/dec[16].D_DUT/cons_count_reg[0]/D (DFFRX1M)          0.00       6.64 f
+  data arrival time                                                  6.64
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  LT/dec[16].D_DUT/cons_count_reg[0]/CK (DFFRX1M)         0.00       6.80 r
+  library setup time                                     -0.16       6.64
+  data required time                                                 6.64
+  --------------------------------------------------------------------------
+  data required time                                                 6.64
+  data arrival time                                                 -6.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: pt/u_PHY_TX/TT/IB/rd_ptr_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/dc_balance_reg[8]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  pt/u_PHY_TX/TT/IB/rd_ptr_reg[1]/CK (DFFRHQX4M)          0.00 #     0.00 r
+  pt/u_PHY_TX/TT/IB/rd_ptr_reg[1]/Q (DFFRHQX4M)           0.26       0.26 f
+  pt/u_PHY_TX/TT/IB/U9/Y (INVX4M)                         0.07       0.33 r
+  pt/u_PHY_TX/TT/IB/U8/Y (BUFX8M)                         0.10       0.42 r
+  pt/u_PHY_TX/TT/IB/U14/Y (OR2X2M)                        0.12       0.54 r
+  pt/u_PHY_TX/TT/IB/U12/Y (NOR2X2M)                       0.05       0.59 f
+  pt/u_PHY_TX/TT/IB/U15/Y (BUFX10M)                       0.13       0.72 f
+  pt/u_PHY_TX/TT/IB/U24/Y (AOI22X4M)                      0.21       0.93 r
+  pt/u_PHY_TX/TT/IB/U16/Y (NAND4X4M)                      0.16       1.08 f
+  pt/u_PHY_TX/TT/IB/o_Length[3] (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       1.08 f
+  pt/u_PHY_TX/TT/TF/i_Length[3] (Tx_Framing)              0.00       1.08 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/i_Length[3] (Gen3_Top_00000008_0000000b_00000004_00000005_32_00000004_00000004_00000002_00000010)
+                                                          0.00       1.08 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/i_Length[3] (Framing_fsm)
+                                                          0.00       1.08 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U9/Y (OA22X8M)
+                                                          0.29       1.37 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U6/Y (AOI222X4M)
+                                                          0.32       1.69 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U12/Y (NOR2BX2M)
+                                                          0.09       1.78 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U13/Y (OAI21BX4M)
+                                                          0.16       1.94 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U19/Y (OAI2BB1X4M)
+                                                          0.08       2.01 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U21/Y (NAND2X4M)
+                                                          0.06       2.07 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U20/Y (OAI21BX4M)
+                                                          0.15       2.22 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U27/Y (NAND4BX2M)
+                                                          0.17       2.38 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U30/Y (NOR2BX4M)
+                                                          0.15       2.54 f
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/U28/Y (NAND4BX2M)
+                                                          0.08       2.62 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/FSM32/o_Fram_Sel[1] (Framing_fsm)
+                                                          0.00       2.62 r
+  pt/u_PHY_TX/TT/TF/FRAMING_GEN_3/o_Fram_Sel_32[1] (Gen3_Top_00000008_0000000b_00000004_00000005_32_00000004_00000004_00000002_00000010)
+                                                          0.00       2.62 r
+  pt/u_PHY_TX/TT/TF/U15/Y (NAND2X2M)                      0.08       2.70 f
+  pt/u_PHY_TX/TT/TF/U13/Y (NAND2X2M)                      0.10       2.80 r
+  pt/u_PHY_TX/TT/TF/U12/Y (INVX4M)                        0.07       2.87 f
+  pt/u_PHY_TX/TT/TF/U17/Y (NOR2X12M)                      0.13       3.00 r
+  pt/u_PHY_TX/TT/TF/U269/Y (INVX6M)                       0.07       3.07 f
+  pt/u_PHY_TX/TT/TF/U265/Y (INVX1M)                       0.16       3.22 r
+  pt/u_PHY_TX/TT/TF/U379/Y (AO22X2M)                      0.20       3.42 r
+  pt/u_PHY_TX/TT/TF/U155/Y (AO21X4M)                      0.12       3.54 r
+  pt/u_PHY_TX/TT/TF/o_Framed_Data[88] (Tx_Framing)        0.00       3.54 r
+  pt/u_PHY_TX/TT/o_Framed_Data[88] (TX_TOP)               0.00       3.54 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/Sc_Data_In[7] (scrambler_and_sync_0_00000008_00000004_2_21)
+                                                          0.00       3.54 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/Sc_Data_In[7] (DC_Balance_21)
+                                                          0.00       3.54 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U25/Y (XNOR2X4M)
+                                                          0.17       3.71 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U100/Y (NAND2X2M)
+                                                          0.10       3.81 f
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U65/Y (NAND2X3M)
+                                                          0.09       3.91 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U53/Y (XNOR2X8M)
+                                                          0.12       4.02 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U64/Y (NAND2X4M)
+                                                          0.07       4.09 f
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U99/Y (AOI21BX4M)
+                                                          0.15       4.24 f
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U105/Y (XOR2X4M)
+                                                          0.12       4.36 f
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U110/Y (XOR3X2M)
+                                                          0.44       4.81 f
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U4/Y (OAI21X2M)
+                                                          0.17       4.98 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U11/Y (OAI2BB1X2M)
+                                                          0.09       5.07 f
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U97/Y (OAI21X1M)
+                                                          0.08       5.15 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U88/Y (OAI2BB1X2M)
+                                                          0.10       5.25 f
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U98/Y (AO22X4M)
+                                                          0.30       5.55 f
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U10/Y (NAND3BX4M)
+                                                          0.09       5.64 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U29/Y (OR2X2M)
+                                                          0.15       5.79 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U28/Y (OR2X2M)
+                                                          0.13       5.92 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U27/Y (INVX2M)
+                                                          0.05       5.97 f
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U14/Y (XNOR2X2M)
+                                                          0.14       6.11 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U5/Y (AND3X2M)
+                                                          0.19       6.30 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U39/Y (AOI21BX4M)
+                                                          0.20       6.51 f
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/U38/Y (OAI31X1M)
+                                                          0.05       6.56 r
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/dc_balance_reg[8]/D (DFFRHQX1M)
+                                                          0.00       6.56 r
+  data arrival time                                                  6.56
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/sc_Gen3[11].DUT/dc_balance/dc_balance_reg[8]/CK (DFFRHQX1M)
+                                                          0.00       6.80 r
+  library setup time                                     -0.24       6.56
+  data required time                                                 6.56
+  --------------------------------------------------------------------------
+  data required time                                                 6.56
+  data arrival time                                                 -6.56
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[7]
+              (input port clocked by clk)
+  Endpoint: LT/dec[7].D_DUT/cons_count_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[7] (in)                                  0.07       1.47 r
+  pt/RX_Start_Block[7] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.47 r
+  pt/u_PHY_RX/RX_Start_Block[7] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.47 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[7] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.47 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_25)
+                                                          0.00       1.47 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].PIPE_Counter_1/U4/Y (INVX2M)
+                                                          0.09       1.56 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].PIPE_Counter_1/U5/Y (CLKAND2X6M)
+                                                          0.17       1.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].PIPE_Counter_1/o_CNT[0] (PIPE_Counter_pipe_00000004_25)
+                                                          0.00       1.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/count[0] (Descrambler_Controler_25)
+                                                          0.00       1.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/U4/Y (INVX4M)
+                                                          0.07       1.80 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/U8/Y (NAND4BX4M)
+                                                          0.15       1.95 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/U10/Y (MXI2X4M)
+                                                          0.14       2.09 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/U5/Y (OAI21X4M)
+                                                          0.08       2.17 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/U14/Y (MX2X3M)
+                                                          0.20       2.37 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler_control/descramblingEnable (Descrambler_Controler_25)
+                                                          0.00       2.37 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler/descramblingEnable (Descrambler_25)
+                                                          0.00       2.37 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler/U2/Y (INVX3M)
+                                                          0.08       2.45 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler/U18/Y (MX2X3M)
+                                                          0.20       2.64 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler/U17/Y (NOR2X2M)
+                                                          0.06       2.71 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler/U13/Y (MXI2X3M)
+                                                          0.24       2.94 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[7].descrambler/Des_Data_Out[6] (Descrambler_25)
+                                                          0.00       2.94 r
+  pt/u_PHY_RX/DUT/Des_Data_Out[57] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.94 r
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[57] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.94 r
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[57] (Packet_Filter_TOP)
+                                                          0.00       2.94 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[57] (Packet_Filter_fsm)
+                                                          0.00       2.94 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U106/Y (CLKINVX6M)         0.10       3.05 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U705/Y (AND3X6M)           0.17       3.22 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U704/Y (NAND3BX4M)         0.08       3.31 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U514/Y (CLKINVX4M)         0.07       3.37 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U351/Y (AND3X6M)           0.14       3.51 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U772/Y (NAND3BX4M)         0.08       3.60 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U289/Y (AND2X2M)           0.15       3.74 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U621/Y (NOR3X2M)           0.05       3.79 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U622/Y (AND3X4M)           0.13       3.92 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U213/Y (AND3X6M)           0.14       4.06 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U896/Y (NAND3X4M)          0.07       4.13 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U140/Y (OR2X6M)            0.12       4.25 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U174/Y (NAND2X4M)          0.04       4.29 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U805/Y (OAI32X2M)          0.31       4.60 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.18       4.78 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.78 r
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.78 r
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.78 r
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.78 r
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.78 r
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.78 r
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.78 r
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.11       4.89 r
+  LT/LT_DUT/U663/Y (NAND2BX4M)                            0.06       4.95 f
+  LT/LT_DUT/U188/Y (OAI2BB2X8M)                           0.15       5.11 f
+  LT/LT_DUT/U937/Y (OAI32X4M)                             0.24       5.35 r
+  LT/LT_DUT/U936/Y (OAI21BX4M)                            0.19       5.54 r
+  LT/LT_DUT/controller_rst (LTSSM_00000008_5_32)          0.00       5.54 r
+  LT/U86/Y (INVX8M)                                       0.09       5.62 f
+  LT/U85/Y (CLKINVX8M)                                    0.08       5.70 r
+  LT/dec[7].D_DUT/controller_rst (decoder_00000008_00000004_5_7)
+                                                          0.00       5.70 r
+  LT/dec[7].D_DUT/U18/Y (INVX2M)                          0.07       5.77 f
+  LT/dec[7].D_DUT/U35/Y (NAND3X4M)                        0.09       5.86 r
+  LT/dec[7].D_DUT/U36/Y (INVX3M)                          0.04       5.90 f
+  LT/dec[7].D_DUT/U63/Y (AND3X6M)                         0.14       6.04 f
+  LT/dec[7].D_DUT/U32/Y (OAI211X4M)                       0.08       6.12 r
+  LT/dec[7].D_DUT/U15/Y (CLKINVX4M)                       0.10       6.22 f
+  LT/dec[7].D_DUT/U60/Y (OAI2BB1X2M)                      0.19       6.41 f
+  LT/dec[7].D_DUT/U62/Y (AOI2BB1X1M)                      0.12       6.53 r
+  LT/dec[7].D_DUT/U56/Y (MXI2X1M)                         0.10       6.63 f
+  LT/dec[7].D_DUT/cons_count_reg[0]/D (DFFRX2M)           0.00       6.63 f
+  data arrival time                                                  6.63
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  LT/dec[7].D_DUT/cons_count_reg[0]/CK (DFFRX2M)          0.00       6.80 r
+  library setup time                                     -0.17       6.63
+  data required time                                                 6.63
+  --------------------------------------------------------------------------
+  data required time                                                 6.63
+  data arrival time                                                 -6.63
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: pt/u_PHY_TX/TT/IB/mem_reg[1][52]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U3124/Y (NAND3BX4M)                           0.09       5.01 r
+  LT/LT_DUT/U416/Y (INVX6M)                               0.07       5.08 f
+  LT/LT_DUT/Soft_RST_blocks (LTSSM_00000008_5_32)         0.00       5.08 f
+  LT/Soft_RST_blocks (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       5.08 f
+  pt/Soft_RST_blocks (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/Soft_RST_blocks (PHY_TX_8_3_00000004_00000008_0_2)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/Soft_RST_blocks (TX_TOP)                 0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/Soft_RST_blocks (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/U474/Y (NAND3BX4M)                    0.18       5.26 f
+  pt/u_PHY_TX/TT/IB/U337/Y (INVX8M)                       0.12       5.38 r
+  pt/u_PHY_TX/TT/IB/U34/Y (NAND2BX8M)                     0.06       5.44 f
+  pt/u_PHY_TX/TT/IB/U324/Y (NOR2X1M)                      0.14       5.57 r
+  pt/u_PHY_TX/TT/IB/U331/Y (NOR2X2M)                      0.08       5.66 f
+  pt/u_PHY_TX/TT/IB/U330/Y (NOR2X2M)                      0.12       5.77 r
+  pt/u_PHY_TX/TT/IB/U179/Y (INVX2M)                       0.06       5.83 f
+  pt/u_PHY_TX/TT/IB/U178/Y (CLKINVX4M)                    0.08       5.91 r
+  pt/u_PHY_TX/TT/IB/U1186/Y (BUFX2M)                      0.12       6.03 r
+  pt/u_PHY_TX/TT/IB/U265/Y (BUFX4M)                       0.26       6.30 r
+  pt/u_PHY_TX/TT/IB/U1993/Y (MX2XLM)                      0.21       6.50 r
+  pt/u_PHY_TX/TT/IB/mem_reg[1][52]/D (DFFRQX2M)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/TT/IB/mem_reg[1][52]/CK (DFFRQX2M)          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: pt/u_PHY_TX/TT/IB/mem_reg[1][53]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U3124/Y (NAND3BX4M)                           0.09       5.01 r
+  LT/LT_DUT/U416/Y (INVX6M)                               0.07       5.08 f
+  LT/LT_DUT/Soft_RST_blocks (LTSSM_00000008_5_32)         0.00       5.08 f
+  LT/Soft_RST_blocks (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       5.08 f
+  pt/Soft_RST_blocks (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/Soft_RST_blocks (PHY_TX_8_3_00000004_00000008_0_2)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/Soft_RST_blocks (TX_TOP)                 0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/Soft_RST_blocks (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/U474/Y (NAND3BX4M)                    0.18       5.26 f
+  pt/u_PHY_TX/TT/IB/U337/Y (INVX8M)                       0.12       5.38 r
+  pt/u_PHY_TX/TT/IB/U34/Y (NAND2BX8M)                     0.06       5.44 f
+  pt/u_PHY_TX/TT/IB/U324/Y (NOR2X1M)                      0.14       5.57 r
+  pt/u_PHY_TX/TT/IB/U331/Y (NOR2X2M)                      0.08       5.66 f
+  pt/u_PHY_TX/TT/IB/U330/Y (NOR2X2M)                      0.12       5.77 r
+  pt/u_PHY_TX/TT/IB/U179/Y (INVX2M)                       0.06       5.83 f
+  pt/u_PHY_TX/TT/IB/U178/Y (CLKINVX4M)                    0.08       5.91 r
+  pt/u_PHY_TX/TT/IB/U1186/Y (BUFX2M)                      0.12       6.03 r
+  pt/u_PHY_TX/TT/IB/U265/Y (BUFX4M)                       0.26       6.30 r
+  pt/u_PHY_TX/TT/IB/U1992/Y (MX2XLM)                      0.21       6.50 r
+  pt/u_PHY_TX/TT/IB/mem_reg[1][53]/D (DFFRQX2M)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/TT/IB/mem_reg[1][53]/CK (DFFRQX2M)          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: pt/u_PHY_TX/TT/IB/mem_reg[1][54]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U3124/Y (NAND3BX4M)                           0.09       5.01 r
+  LT/LT_DUT/U416/Y (INVX6M)                               0.07       5.08 f
+  LT/LT_DUT/Soft_RST_blocks (LTSSM_00000008_5_32)         0.00       5.08 f
+  LT/Soft_RST_blocks (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       5.08 f
+  pt/Soft_RST_blocks (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/Soft_RST_blocks (PHY_TX_8_3_00000004_00000008_0_2)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/Soft_RST_blocks (TX_TOP)                 0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/Soft_RST_blocks (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/U474/Y (NAND3BX4M)                    0.18       5.26 f
+  pt/u_PHY_TX/TT/IB/U337/Y (INVX8M)                       0.12       5.38 r
+  pt/u_PHY_TX/TT/IB/U34/Y (NAND2BX8M)                     0.06       5.44 f
+  pt/u_PHY_TX/TT/IB/U324/Y (NOR2X1M)                      0.14       5.57 r
+  pt/u_PHY_TX/TT/IB/U331/Y (NOR2X2M)                      0.08       5.66 f
+  pt/u_PHY_TX/TT/IB/U330/Y (NOR2X2M)                      0.12       5.77 r
+  pt/u_PHY_TX/TT/IB/U179/Y (INVX2M)                       0.06       5.83 f
+  pt/u_PHY_TX/TT/IB/U178/Y (CLKINVX4M)                    0.08       5.91 r
+  pt/u_PHY_TX/TT/IB/U1186/Y (BUFX2M)                      0.12       6.03 r
+  pt/u_PHY_TX/TT/IB/U265/Y (BUFX4M)                       0.26       6.30 r
+  pt/u_PHY_TX/TT/IB/U1991/Y (MX2XLM)                      0.21       6.50 r
+  pt/u_PHY_TX/TT/IB/mem_reg[1][54]/D (DFFRQX2M)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/TT/IB/mem_reg[1][54]/CK (DFFRQX2M)          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: pt/u_PHY_TX/TT/IB/mem_reg[1][55]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U3124/Y (NAND3BX4M)                           0.09       5.01 r
+  LT/LT_DUT/U416/Y (INVX6M)                               0.07       5.08 f
+  LT/LT_DUT/Soft_RST_blocks (LTSSM_00000008_5_32)         0.00       5.08 f
+  LT/Soft_RST_blocks (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       5.08 f
+  pt/Soft_RST_blocks (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/Soft_RST_blocks (PHY_TX_8_3_00000004_00000008_0_2)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/Soft_RST_blocks (TX_TOP)                 0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/Soft_RST_blocks (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/U474/Y (NAND3BX4M)                    0.18       5.26 f
+  pt/u_PHY_TX/TT/IB/U337/Y (INVX8M)                       0.12       5.38 r
+  pt/u_PHY_TX/TT/IB/U34/Y (NAND2BX8M)                     0.06       5.44 f
+  pt/u_PHY_TX/TT/IB/U324/Y (NOR2X1M)                      0.14       5.57 r
+  pt/u_PHY_TX/TT/IB/U331/Y (NOR2X2M)                      0.08       5.66 f
+  pt/u_PHY_TX/TT/IB/U330/Y (NOR2X2M)                      0.12       5.77 r
+  pt/u_PHY_TX/TT/IB/U179/Y (INVX2M)                       0.06       5.83 f
+  pt/u_PHY_TX/TT/IB/U178/Y (CLKINVX4M)                    0.08       5.91 r
+  pt/u_PHY_TX/TT/IB/U1186/Y (BUFX2M)                      0.12       6.03 r
+  pt/u_PHY_TX/TT/IB/U265/Y (BUFX4M)                       0.26       6.30 r
+  pt/u_PHY_TX/TT/IB/U1990/Y (MX2XLM)                      0.21       6.50 r
+  pt/u_PHY_TX/TT/IB/mem_reg[1][55]/D (DFFRQX2M)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/TT/IB/mem_reg[1][55]/CK (DFFRQX2M)          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: pt/u_PHY_TX/TT/IB/mem_reg[1][57]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U3124/Y (NAND3BX4M)                           0.09       5.01 r
+  LT/LT_DUT/U416/Y (INVX6M)                               0.07       5.08 f
+  LT/LT_DUT/Soft_RST_blocks (LTSSM_00000008_5_32)         0.00       5.08 f
+  LT/Soft_RST_blocks (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       5.08 f
+  pt/Soft_RST_blocks (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/Soft_RST_blocks (PHY_TX_8_3_00000004_00000008_0_2)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/Soft_RST_blocks (TX_TOP)                 0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/Soft_RST_blocks (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/U474/Y (NAND3BX4M)                    0.18       5.26 f
+  pt/u_PHY_TX/TT/IB/U337/Y (INVX8M)                       0.12       5.38 r
+  pt/u_PHY_TX/TT/IB/U34/Y (NAND2BX8M)                     0.06       5.44 f
+  pt/u_PHY_TX/TT/IB/U324/Y (NOR2X1M)                      0.14       5.57 r
+  pt/u_PHY_TX/TT/IB/U331/Y (NOR2X2M)                      0.08       5.66 f
+  pt/u_PHY_TX/TT/IB/U330/Y (NOR2X2M)                      0.12       5.77 r
+  pt/u_PHY_TX/TT/IB/U179/Y (INVX2M)                       0.06       5.83 f
+  pt/u_PHY_TX/TT/IB/U178/Y (CLKINVX4M)                    0.08       5.91 r
+  pt/u_PHY_TX/TT/IB/U1186/Y (BUFX2M)                      0.12       6.03 r
+  pt/u_PHY_TX/TT/IB/U265/Y (BUFX4M)                       0.26       6.30 r
+  pt/u_PHY_TX/TT/IB/U1988/Y (MX2XLM)                      0.21       6.50 r
+  pt/u_PHY_TX/TT/IB/mem_reg[1][57]/D (DFFRQX2M)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/TT/IB/mem_reg[1][57]/CK (DFFRQX2M)          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: pt/u_PHY_TX/TT/IB/mem_reg[1][58]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U3124/Y (NAND3BX4M)                           0.09       5.01 r
+  LT/LT_DUT/U416/Y (INVX6M)                               0.07       5.08 f
+  LT/LT_DUT/Soft_RST_blocks (LTSSM_00000008_5_32)         0.00       5.08 f
+  LT/Soft_RST_blocks (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       5.08 f
+  pt/Soft_RST_blocks (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/Soft_RST_blocks (PHY_TX_8_3_00000004_00000008_0_2)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/Soft_RST_blocks (TX_TOP)                 0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/Soft_RST_blocks (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/U474/Y (NAND3BX4M)                    0.18       5.26 f
+  pt/u_PHY_TX/TT/IB/U337/Y (INVX8M)                       0.12       5.38 r
+  pt/u_PHY_TX/TT/IB/U34/Y (NAND2BX8M)                     0.06       5.44 f
+  pt/u_PHY_TX/TT/IB/U324/Y (NOR2X1M)                      0.14       5.57 r
+  pt/u_PHY_TX/TT/IB/U331/Y (NOR2X2M)                      0.08       5.66 f
+  pt/u_PHY_TX/TT/IB/U330/Y (NOR2X2M)                      0.12       5.77 r
+  pt/u_PHY_TX/TT/IB/U179/Y (INVX2M)                       0.06       5.83 f
+  pt/u_PHY_TX/TT/IB/U178/Y (CLKINVX4M)                    0.08       5.91 r
+  pt/u_PHY_TX/TT/IB/U1186/Y (BUFX2M)                      0.12       6.03 r
+  pt/u_PHY_TX/TT/IB/U265/Y (BUFX4M)                       0.26       6.30 r
+  pt/u_PHY_TX/TT/IB/U1987/Y (MX2XLM)                      0.21       6.50 r
+  pt/u_PHY_TX/TT/IB/mem_reg[1][58]/D (DFFRQX2M)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/TT/IB/mem_reg[1][58]/CK (DFFRQX2M)          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: pt/u_PHY_TX/TT/IB/mem_reg[1][59]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U3124/Y (NAND3BX4M)                           0.09       5.01 r
+  LT/LT_DUT/U416/Y (INVX6M)                               0.07       5.08 f
+  LT/LT_DUT/Soft_RST_blocks (LTSSM_00000008_5_32)         0.00       5.08 f
+  LT/Soft_RST_blocks (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       5.08 f
+  pt/Soft_RST_blocks (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/Soft_RST_blocks (PHY_TX_8_3_00000004_00000008_0_2)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/Soft_RST_blocks (TX_TOP)                 0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/Soft_RST_blocks (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/U474/Y (NAND3BX4M)                    0.18       5.26 f
+  pt/u_PHY_TX/TT/IB/U337/Y (INVX8M)                       0.12       5.38 r
+  pt/u_PHY_TX/TT/IB/U34/Y (NAND2BX8M)                     0.06       5.44 f
+  pt/u_PHY_TX/TT/IB/U324/Y (NOR2X1M)                      0.14       5.57 r
+  pt/u_PHY_TX/TT/IB/U331/Y (NOR2X2M)                      0.08       5.66 f
+  pt/u_PHY_TX/TT/IB/U330/Y (NOR2X2M)                      0.12       5.77 r
+  pt/u_PHY_TX/TT/IB/U179/Y (INVX2M)                       0.06       5.83 f
+  pt/u_PHY_TX/TT/IB/U178/Y (CLKINVX4M)                    0.08       5.91 r
+  pt/u_PHY_TX/TT/IB/U1186/Y (BUFX2M)                      0.12       6.03 r
+  pt/u_PHY_TX/TT/IB/U265/Y (BUFX4M)                       0.26       6.30 r
+  pt/u_PHY_TX/TT/IB/U1986/Y (MX2XLM)                      0.21       6.50 r
+  pt/u_PHY_TX/TT/IB/mem_reg[1][59]/D (DFFRQX2M)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/TT/IB/mem_reg[1][59]/CK (DFFRQX2M)          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: pt/u_PHY_TX/TT/IB/mem_reg[1][60]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U3124/Y (NAND3BX4M)                           0.09       5.01 r
+  LT/LT_DUT/U416/Y (INVX6M)                               0.07       5.08 f
+  LT/LT_DUT/Soft_RST_blocks (LTSSM_00000008_5_32)         0.00       5.08 f
+  LT/Soft_RST_blocks (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       5.08 f
+  pt/Soft_RST_blocks (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/Soft_RST_blocks (PHY_TX_8_3_00000004_00000008_0_2)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/Soft_RST_blocks (TX_TOP)                 0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/Soft_RST_blocks (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/U474/Y (NAND3BX4M)                    0.18       5.26 f
+  pt/u_PHY_TX/TT/IB/U337/Y (INVX8M)                       0.12       5.38 r
+  pt/u_PHY_TX/TT/IB/U34/Y (NAND2BX8M)                     0.06       5.44 f
+  pt/u_PHY_TX/TT/IB/U324/Y (NOR2X1M)                      0.14       5.57 r
+  pt/u_PHY_TX/TT/IB/U331/Y (NOR2X2M)                      0.08       5.66 f
+  pt/u_PHY_TX/TT/IB/U330/Y (NOR2X2M)                      0.12       5.77 r
+  pt/u_PHY_TX/TT/IB/U179/Y (INVX2M)                       0.06       5.83 f
+  pt/u_PHY_TX/TT/IB/U178/Y (CLKINVX4M)                    0.08       5.91 r
+  pt/u_PHY_TX/TT/IB/U1186/Y (BUFX2M)                      0.12       6.03 r
+  pt/u_PHY_TX/TT/IB/U265/Y (BUFX4M)                       0.26       6.30 r
+  pt/u_PHY_TX/TT/IB/U1985/Y (MX2XLM)                      0.21       6.50 r
+  pt/u_PHY_TX/TT/IB/mem_reg[1][60]/D (DFFRQX2M)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/TT/IB/mem_reg[1][60]/CK (DFFRQX2M)          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: pt/u_PHY_TX/TT/IB/mem_reg[1][61]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U3124/Y (NAND3BX4M)                           0.09       5.01 r
+  LT/LT_DUT/U416/Y (INVX6M)                               0.07       5.08 f
+  LT/LT_DUT/Soft_RST_blocks (LTSSM_00000008_5_32)         0.00       5.08 f
+  LT/Soft_RST_blocks (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       5.08 f
+  pt/Soft_RST_blocks (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/Soft_RST_blocks (PHY_TX_8_3_00000004_00000008_0_2)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/Soft_RST_blocks (TX_TOP)                 0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/Soft_RST_blocks (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/U474/Y (NAND3BX4M)                    0.18       5.26 f
+  pt/u_PHY_TX/TT/IB/U337/Y (INVX8M)                       0.12       5.38 r
+  pt/u_PHY_TX/TT/IB/U34/Y (NAND2BX8M)                     0.06       5.44 f
+  pt/u_PHY_TX/TT/IB/U324/Y (NOR2X1M)                      0.14       5.57 r
+  pt/u_PHY_TX/TT/IB/U331/Y (NOR2X2M)                      0.08       5.66 f
+  pt/u_PHY_TX/TT/IB/U330/Y (NOR2X2M)                      0.12       5.77 r
+  pt/u_PHY_TX/TT/IB/U179/Y (INVX2M)                       0.06       5.83 f
+  pt/u_PHY_TX/TT/IB/U178/Y (CLKINVX4M)                    0.08       5.91 r
+  pt/u_PHY_TX/TT/IB/U1186/Y (BUFX2M)                      0.12       6.03 r
+  pt/u_PHY_TX/TT/IB/U265/Y (BUFX4M)                       0.26       6.30 r
+  pt/u_PHY_TX/TT/IB/U1984/Y (MX2XLM)                      0.21       6.50 r
+  pt/u_PHY_TX/TT/IB/mem_reg[1][61]/D (DFFRQX2M)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/TT/IB/mem_reg[1][61]/CK (DFFRQX2M)          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: pt/u_PHY_TX/TT/IB/mem_reg[1][68]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U3124/Y (NAND3BX4M)                           0.09       5.01 r
+  LT/LT_DUT/U416/Y (INVX6M)                               0.07       5.08 f
+  LT/LT_DUT/Soft_RST_blocks (LTSSM_00000008_5_32)         0.00       5.08 f
+  LT/Soft_RST_blocks (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       5.08 f
+  pt/Soft_RST_blocks (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/Soft_RST_blocks (PHY_TX_8_3_00000004_00000008_0_2)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/Soft_RST_blocks (TX_TOP)                 0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/Soft_RST_blocks (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/U474/Y (NAND3BX4M)                    0.18       5.26 f
+  pt/u_PHY_TX/TT/IB/U337/Y (INVX8M)                       0.12       5.38 r
+  pt/u_PHY_TX/TT/IB/U34/Y (NAND2BX8M)                     0.06       5.44 f
+  pt/u_PHY_TX/TT/IB/U324/Y (NOR2X1M)                      0.14       5.57 r
+  pt/u_PHY_TX/TT/IB/U331/Y (NOR2X2M)                      0.08       5.66 f
+  pt/u_PHY_TX/TT/IB/U330/Y (NOR2X2M)                      0.12       5.77 r
+  pt/u_PHY_TX/TT/IB/U179/Y (INVX2M)                       0.06       5.83 f
+  pt/u_PHY_TX/TT/IB/U178/Y (CLKINVX4M)                    0.08       5.91 r
+  pt/u_PHY_TX/TT/IB/U1186/Y (BUFX2M)                      0.12       6.03 r
+  pt/u_PHY_TX/TT/IB/U265/Y (BUFX4M)                       0.26       6.30 r
+  pt/u_PHY_TX/TT/IB/U1980/Y (MX2XLM)                      0.21       6.50 r
+  pt/u_PHY_TX/TT/IB/mem_reg[1][68]/D (DFFRQX2M)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/TT/IB/mem_reg[1][68]/CK (DFFRQX2M)          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: pt/u_PHY_TX/TT/IB/mem_reg[1][69]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U3124/Y (NAND3BX4M)                           0.09       5.01 r
+  LT/LT_DUT/U416/Y (INVX6M)                               0.07       5.08 f
+  LT/LT_DUT/Soft_RST_blocks (LTSSM_00000008_5_32)         0.00       5.08 f
+  LT/Soft_RST_blocks (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       5.08 f
+  pt/Soft_RST_blocks (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/Soft_RST_blocks (PHY_TX_8_3_00000004_00000008_0_2)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/Soft_RST_blocks (TX_TOP)                 0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/Soft_RST_blocks (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/U474/Y (NAND3BX4M)                    0.18       5.26 f
+  pt/u_PHY_TX/TT/IB/U337/Y (INVX8M)                       0.12       5.38 r
+  pt/u_PHY_TX/TT/IB/U34/Y (NAND2BX8M)                     0.06       5.44 f
+  pt/u_PHY_TX/TT/IB/U324/Y (NOR2X1M)                      0.14       5.57 r
+  pt/u_PHY_TX/TT/IB/U331/Y (NOR2X2M)                      0.08       5.66 f
+  pt/u_PHY_TX/TT/IB/U330/Y (NOR2X2M)                      0.12       5.77 r
+  pt/u_PHY_TX/TT/IB/U179/Y (INVX2M)                       0.06       5.83 f
+  pt/u_PHY_TX/TT/IB/U178/Y (CLKINVX4M)                    0.08       5.91 r
+  pt/u_PHY_TX/TT/IB/U1186/Y (BUFX2M)                      0.12       6.03 r
+  pt/u_PHY_TX/TT/IB/U265/Y (BUFX4M)                       0.26       6.30 r
+  pt/u_PHY_TX/TT/IB/U1979/Y (MX2XLM)                      0.21       6.50 r
+  pt/u_PHY_TX/TT/IB/mem_reg[1][69]/D (DFFRQX2M)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/TT/IB/mem_reg[1][69]/CK (DFFRQX2M)          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: pt/u_PHY_TX/TT/IB/mem_reg[1][70]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U3124/Y (NAND3BX4M)                           0.09       5.01 r
+  LT/LT_DUT/U416/Y (INVX6M)                               0.07       5.08 f
+  LT/LT_DUT/Soft_RST_blocks (LTSSM_00000008_5_32)         0.00       5.08 f
+  LT/Soft_RST_blocks (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       5.08 f
+  pt/Soft_RST_blocks (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/Soft_RST_blocks (PHY_TX_8_3_00000004_00000008_0_2)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/Soft_RST_blocks (TX_TOP)                 0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/Soft_RST_blocks (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/U474/Y (NAND3BX4M)                    0.18       5.26 f
+  pt/u_PHY_TX/TT/IB/U337/Y (INVX8M)                       0.12       5.38 r
+  pt/u_PHY_TX/TT/IB/U34/Y (NAND2BX8M)                     0.06       5.44 f
+  pt/u_PHY_TX/TT/IB/U324/Y (NOR2X1M)                      0.14       5.57 r
+  pt/u_PHY_TX/TT/IB/U331/Y (NOR2X2M)                      0.08       5.66 f
+  pt/u_PHY_TX/TT/IB/U330/Y (NOR2X2M)                      0.12       5.77 r
+  pt/u_PHY_TX/TT/IB/U179/Y (INVX2M)                       0.06       5.83 f
+  pt/u_PHY_TX/TT/IB/U178/Y (CLKINVX4M)                    0.08       5.91 r
+  pt/u_PHY_TX/TT/IB/U1186/Y (BUFX2M)                      0.12       6.03 r
+  pt/u_PHY_TX/TT/IB/U265/Y (BUFX4M)                       0.26       6.30 r
+  pt/u_PHY_TX/TT/IB/U1978/Y (MX2XLM)                      0.21       6.50 r
+  pt/u_PHY_TX/TT/IB/mem_reg[1][70]/D (DFFRQX2M)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/TT/IB/mem_reg[1][70]/CK (DFFRQX2M)          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: RX_Start_Block[6]
+              (input port clocked by clk)
+  Endpoint: pt/u_PHY_TX/TT/IB/mem_reg[1][56]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.40       1.40 r
+  RX_Start_Block[6] (in)                                  0.06       1.46 r
+  pt/RX_Start_Block[6] (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/RX_Start_Block[6] (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/RX_Start_Block[6] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/RX_Start_Block (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.46 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/U8/Y (NOR2X2M)
+                                                          0.06       1.52 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].PIPE_Counter_1/o_CNT[3] (PIPE_Counter_pipe_00000004_26)
+                                                          0.00       1.52 f
+  pt/u_PHY_RX/DUT/U114/Y (INVX2M)                         0.08       1.60 r
+  pt/u_PHY_RX/DUT/U115/Y (CLKINVX4M)                      0.08       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/count[3] (Descrambler_Controler_26)
+                                                          0.00       1.68 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U7/Y (INVX2M)
+                                                          0.08       1.76 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U13/Y (NAND4BX4M)
+                                                          0.11       1.88 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U4/Y (MXI2X2M)
+                                                          0.17       2.05 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U17/Y (OAI21X4M)
+                                                          0.08       2.13 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/U15/Y (MX2X3M)
+                                                          0.20       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler_control/descramblingEnable (Descrambler_Controler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/descramblingEnable (Descrambler_26)
+                                                          0.00       2.33 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U37/Y (INVX4M)
+                                                          0.07       2.39 r
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U1/Y (NOR2BX4M)
+                                                          0.06       2.46 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U35/Y (AO22X4M)
+                                                          0.27       2.73 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/U48/Y (MX2X3M)
+                                                          0.18       2.91 f
+  pt/u_PHY_RX/DUT/genblk1.sc_Gen3[6].descrambler/Des_Data_Out[7] (Descrambler_26)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/DUT/Des_Data_Out[48] (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/i_RCV_Data[48] (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/i_RCV_Data[48] (Packet_Filter_TOP)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/i_RCV_Data[48] (Packet_Filter_fsm)
+                                                          0.00       2.91 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U301/Y (CLKINVX2M)         0.07       2.97 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U611/Y (AND4X4M)           0.15       3.12 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U588/Y (NAND2X4M)          0.06       3.18 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U524/Y (NAND4BBX4M)        0.16       3.33 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U658/Y (OAI2BB1X4M)        0.17       3.50 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U793/Y (AOI211X4M)         0.20       3.70 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U775/Y (AND3X6M)           0.17       3.87 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U801/Y (AND3X6M)           0.13       3.99 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U800/Y (NAND3BX4M)         0.08       4.07 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3453/Y (NAND3BX4M)        0.17       4.24 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3454/Y (OR2X6M)           0.16       4.40 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U802/Y (NAND3BX4M)         0.08       4.48 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U541/Y (OAI2B11X4M)        0.09       4.57 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U488/Y (NOR2X4M)           0.11       4.68 r
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/U3446/Y (NAND3BX4M)        0.09       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/Pf/o_Error (Packet_Filter_fsm)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/PF/o_Error (Packet_Filter_TOP)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/genblk1.RT/o_Error (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       4.77 f
+  pt/u_PHY_RX/PF_Error (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  pt/RX_Error (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       4.77 f
+  LT/phy_rx_error (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       4.77 f
+  LT/LT_DUT/phy_rx_error (LTSSM_00000008_5_32)            0.00       4.77 f
+  LT/LT_DUT/U665/Y (NAND2BX8M)                            0.14       4.92 f
+  LT/LT_DUT/U3124/Y (NAND3BX4M)                           0.09       5.01 r
+  LT/LT_DUT/U416/Y (INVX6M)                               0.07       5.08 f
+  LT/LT_DUT/Soft_RST_blocks (LTSSM_00000008_5_32)         0.00       5.08 f
+  LT/Soft_RST_blocks (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                                          0.00       5.08 f
+  pt/Soft_RST_blocks (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/Soft_RST_blocks (PHY_TX_8_3_00000004_00000008_0_2)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/Soft_RST_blocks (TX_TOP)                 0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/Soft_RST_blocks (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                                          0.00       5.08 f
+  pt/u_PHY_TX/TT/IB/U474/Y (NAND3BX4M)                    0.18       5.26 f
+  pt/u_PHY_TX/TT/IB/U337/Y (INVX8M)                       0.12       5.38 r
+  pt/u_PHY_TX/TT/IB/U34/Y (NAND2BX8M)                     0.06       5.44 f
+  pt/u_PHY_TX/TT/IB/U324/Y (NOR2X1M)                      0.14       5.57 r
+  pt/u_PHY_TX/TT/IB/U331/Y (NOR2X2M)                      0.08       5.66 f
+  pt/u_PHY_TX/TT/IB/U330/Y (NOR2X2M)                      0.12       5.77 r
+  pt/u_PHY_TX/TT/IB/U179/Y (INVX2M)                       0.06       5.83 f
+  pt/u_PHY_TX/TT/IB/U178/Y (CLKINVX4M)                    0.08       5.91 r
+  pt/u_PHY_TX/TT/IB/U1186/Y (BUFX2M)                      0.12       6.03 r
+  pt/u_PHY_TX/TT/IB/U265/Y (BUFX4M)                       0.26       6.30 r
+  pt/u_PHY_TX/TT/IB/U1989/Y (MX2XLM)                      0.21       6.50 r
+  pt/u_PHY_TX/TT/IB/mem_reg[1][56]/D (DFFRQX2M)           0.00       6.50 r
+  data arrival time                                                  6.50
+
+  clock clk (rise edge)                                   7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -0.20       6.80
+  pt/u_PHY_TX/TT/IB/mem_reg[1][56]/CK (DFFRQX2M)          0.00       6.80 r
+  library setup time                                     -0.29       6.51
+  data required time                                                 6.51
+  --------------------------------------------------------------------------
+  data required time                                                 6.51
+  data arrival time                                                 -6.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

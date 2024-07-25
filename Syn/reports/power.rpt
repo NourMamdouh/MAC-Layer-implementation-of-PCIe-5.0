@@ -1,0 +1,865 @@
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : PL_TOP
+Version: K-2015.06
+Date   : Mon Jul  8 06:32:44 2024
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+PL_TOP                                    1.254   28.885 4.99e+08   30.637 100.0
+  LT (LTSSM_TOP_5_256_32_3_00000004_00000008)
+                                          0.302    4.084 1.06e+08    4.491  14.7
+    sc (SKP_Counter)                   1.34e-03 3.64e-02 4.53e+05 3.81e-02   0.1
+      r57 (SKP_Counter_DW01_inc_0)     2.25e-04 5.44e-04 1.66e+05 9.36e-04   0.0
+    T_DUT (Timer)                      3.07e-03 7.95e-02 1.05e+06 8.36e-02   0.3
+      add_88 (Timer_DW01_inc_1)        1.82e-04 4.98e-04 2.08e+05 8.88e-04   0.0
+      add_107 (Timer_DW01_inc_0)       2.35e-04 5.45e-04 1.25e+05 9.05e-04   0.0
+    dec[31].D_DUT (decoder_00000008_00000004_5_31)
+                                       6.39e-03    0.107 2.50e+06    0.116   0.4
+    dec[30].D_DUT (decoder_00000008_00000004_5_30)
+                                       6.60e-03    0.106 2.45e+06    0.115   0.4
+    dec[29].D_DUT (decoder_00000008_00000004_5_29)
+                                       6.73e-03    0.105 2.42e+06    0.114   0.4
+    dec[28].D_DUT (decoder_00000008_00000004_5_28)
+                                       6.60e-03    0.104 2.40e+06    0.113   0.4
+    dec[27].D_DUT (decoder_00000008_00000004_5_27)
+                                       6.39e-03    0.106 2.51e+06    0.114   0.4
+    dec[26].D_DUT (decoder_00000008_00000004_5_26)
+                                       5.40e-03    0.104 2.36e+06    0.112   0.4
+    dec[25].D_DUT (decoder_00000008_00000004_5_25)
+                                       6.07e-03    0.104 2.45e+06    0.113   0.4
+    dec[24].D_DUT (decoder_00000008_00000004_5_24)
+                                       6.26e-03    0.105 2.41e+06    0.114   0.4
+    dec[23].D_DUT (decoder_00000008_00000004_5_23)
+                                       6.42e-03    0.105 2.32e+06    0.114   0.4
+    dec[22].D_DUT (decoder_00000008_00000004_5_22)
+                                       5.59e-03    0.107 2.46e+06    0.115   0.4
+    dec[21].D_DUT (decoder_00000008_00000004_5_21)
+                                       6.07e-03    0.105 2.39e+06    0.114   0.4
+    dec[20].D_DUT (decoder_00000008_00000004_5_20)
+                                       5.42e-03    0.106 2.40e+06    0.114   0.4
+    dec[19].D_DUT (decoder_00000008_00000004_5_19)
+                                       5.33e-03    0.106 2.36e+06    0.113   0.4
+    dec[18].D_DUT (decoder_00000008_00000004_5_18)
+                                       5.99e-03    0.106 2.42e+06    0.115   0.4
+    dec[17].D_DUT (decoder_00000008_00000004_5_17)
+                                       5.37e-03    0.106 2.37e+06    0.113   0.4
+    dec[16].D_DUT (decoder_00000008_00000004_5_16)
+                                       6.50e-03    0.106 2.43e+06    0.115   0.4
+    dec[15].D_DUT (decoder_00000008_00000004_5_15)
+                                       6.50e-03    0.109 2.48e+06    0.118   0.4
+    dec[14].D_DUT (decoder_00000008_00000004_5_14)
+                                       6.13e-03    0.106 2.36e+06    0.115   0.4
+    dec[13].D_DUT (decoder_00000008_00000004_5_13)
+                                       5.72e-03    0.108 2.42e+06    0.116   0.4
+    dec[12].D_DUT (decoder_00000008_00000004_5_12)
+                                       6.44e-03    0.108 2.44e+06    0.117   0.4
+    dec[11].D_DUT (decoder_00000008_00000004_5_11)
+                                       6.31e-03    0.105 2.42e+06    0.114   0.4
+    dec[10].D_DUT (decoder_00000008_00000004_5_10)
+                                       7.31e-03    0.105 2.49e+06    0.115   0.4
+    dec[9].D_DUT (decoder_00000008_00000004_5_9)
+                                       6.57e-03    0.107 2.49e+06    0.116   0.4
+    dec[8].D_DUT (decoder_00000008_00000004_5_8)
+                                       5.58e-03    0.108 2.51e+06    0.116   0.4
+    dec[7].D_DUT (decoder_00000008_00000004_5_7)
+                                       5.38e-03    0.105 2.33e+06    0.112   0.4
+    dec[6].D_DUT (decoder_00000008_00000004_5_6)
+                                       5.83e-03    0.105 2.43e+06    0.113   0.4
+    dec[5].D_DUT (decoder_00000008_00000004_5_5)
+                                       5.76e-03    0.106 2.47e+06    0.114   0.4
+    dec[4].D_DUT (decoder_00000008_00000004_5_4)
+                                       6.24e-03    0.104 2.38e+06    0.113   0.4
+    dec[3].D_DUT (decoder_00000008_00000004_5_3)
+                                       5.98e-03    0.104 2.37e+06    0.112   0.4
+    dec[2].D_DUT (decoder_00000008_00000004_5_2)
+                                       5.26e-03    0.104 2.47e+06    0.112   0.4
+    dec[1].D_DUT (decoder_00000008_00000004_5_1)
+                                       6.51e-03    0.107 2.40e+06    0.116   0.4
+    dec[0].D_DUT (decoder_00000008_00000004_5_0)
+                                       5.47e-03    0.106 2.40e+06    0.114   0.4
+    OC_DUT (OS_CREATOR_256_32_00000008_3_00000004)
+                                       2.75e-02 8.10e-02 4.30e+06    0.113   0.4
+      add_119 (OS_CREATOR_256_32_00000008_3_00000004_DW01_inc_0)
+                                          0.000    0.000 1.25e+05 1.25e-04   0.0
+    LT_DUT (LTSSM_00000008_5_32)       6.58e-02    0.500 2.23e+07    0.588   1.9
+      r458 (LTSSM_00000008_5_32_DW01_cmp6_6)
+                                       4.83e-06 1.75e-05 3.96e+05 4.18e-04   0.0
+      r459 (LTSSM_00000008_5_32_DW01_cmp6_5)
+                                          0.000    0.000 3.26e+05 3.26e-04   0.0
+      eq_539 (LTSSM_00000008_5_32_DW01_cmp6_4)
+                                       9.01e-04 4.92e-03 3.96e+05 6.22e-03   0.0
+      eq_586 (LTSSM_00000008_5_32_DW01_cmp6_3)
+                                       8.60e-05 2.95e-04 3.68e+05 7.49e-04   0.0
+      eq_1081 (LTSSM_00000008_5_32_DW01_cmp6_2)
+                                       2.89e-06 8.44e-06 3.09e+05 3.21e-04   0.0
+      eq_1086_2 (LTSSM_00000008_5_32_DW01_cmp6_1)
+                                       5.82e-06 2.53e-05 2.87e+05 3.18e-04   0.0
+      eq_1092_2 (LTSSM_00000008_5_32_DW01_cmp6_0)
+                                          0.000    0.000 4.74e+05 4.74e-04   0.0
+  pt (phy_top_0_256_8_3_0000000b_00000005_00000004_00000008_32_30_31_4_2_13_4_8_2_3)
+                                          0.657   24.782 3.86e+08   25.825  84.3
+    u_PHY_RX (PHY_RX_00000008_0000000b_00000004_00000005_32_30_31_4_256_8_3_0_2_13_4_8_2_3)
+                                          0.436   12.721 1.70e+08   13.326  43.5
+      DUT (top_RX_0_00000004_256_32_2_13_4_3_8_2_00000008_3)
+                                          0.291    4.519 8.13e+07    4.891  16.0
+        genblk1.sc_Gen3[31].Block_Type_Logic_1 (Block_Type_Logic_1)
+                                       7.67e-05 2.69e-03 2.39e+04 2.80e-03   0.0
+        genblk1.sc_Gen3[31].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_1)
+                                       1.23e-03 1.22e-02 1.55e+05 1.36e-02   0.0
+        genblk1.sc_Gen3[31].descrambler (Descrambler_1)
+                                       3.87e-03 2.90e-03 2.81e+05 7.05e-03   0.0
+        genblk1.sc_Gen3[31].descrambler_control (Descrambler_Controler_1)
+                                       1.08e-03 3.68e-03 2.37e+05 5.00e-03   0.0
+        genblk1.sc_Gen3[31].LF1 (LFSR_8_1)
+                                       3.32e-04 3.51e-02 4.93e+05 3.60e-02   0.1
+        genblk1.sc_Gen3[31].lfsr_8_gen3 (LFSR_8_gen3_1)
+                                       1.70e-03 8.38e-02 1.10e+06 8.66e-02   0.3
+        genblk1.sc_Gen3[30].Block_Type_Logic_1 (Block_Type_Logic_2)
+                                       6.90e-05 2.72e-03 2.39e+04 2.81e-03   0.0
+        genblk1.sc_Gen3[30].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_2)
+                                       1.47e-03 1.26e-02 1.73e+05 1.43e-02   0.0
+        genblk1.sc_Gen3[30].descrambler (Descrambler_2)
+                                       4.66e-03 3.27e-03 3.13e+05 8.23e-03   0.0
+        genblk1.sc_Gen3[30].descrambler_control (Descrambler_Controler_2)
+                                       1.19e-03 3.87e-03 2.44e+05 5.31e-03   0.0
+        genblk1.sc_Gen3[30].LF1 (LFSR_8_2)
+                                       3.30e-04 3.51e-02 4.93e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[30].lfsr_8_gen3 (LFSR_8_gen3_2)
+                                       1.69e-03 8.27e-02 1.10e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[29].Block_Type_Logic_1 (Block_Type_Logic_3)
+                                       7.11e-05 2.72e-03 2.39e+04 2.81e-03   0.0
+        genblk1.sc_Gen3[29].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_3)
+                                       1.24e-03 1.23e-02 1.65e+05 1.37e-02   0.0
+        genblk1.sc_Gen3[29].descrambler (Descrambler_3)
+                                       5.19e-03 3.84e-03 3.49e+05 9.38e-03   0.0
+        genblk1.sc_Gen3[29].descrambler_control (Descrambler_Controler_3)
+                                       9.79e-04 3.51e-03 2.09e+05 4.69e-03   0.0
+        genblk1.sc_Gen3[29].LF1 (LFSR_8_3)
+                                       3.32e-04 3.51e-02 4.93e+05 3.60e-02   0.1
+        genblk1.sc_Gen3[29].lfsr_8_gen3 (LFSR_8_gen3_3)
+                                       1.71e-03 8.27e-02 1.11e+06 8.56e-02   0.3
+        genblk1.sc_Gen3[28].Block_Type_Logic_1 (Block_Type_Logic_4)
+                                       6.60e-05 2.76e-03 2.84e+04 2.85e-03   0.0
+        genblk1.sc_Gen3[28].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_4)
+                                       1.12e-03 1.22e-02 1.54e+05 1.34e-02   0.0
+        genblk1.sc_Gen3[28].descrambler (Descrambler_4)
+                                       4.83e-03 3.54e-03 3.25e+05 8.70e-03   0.0
+        genblk1.sc_Gen3[28].descrambler_control (Descrambler_Controler_4)
+                                       9.62e-04 3.43e-03 2.06e+05 4.59e-03   0.0
+        genblk1.sc_Gen3[28].LF1 (LFSR_8_4)
+                                       3.30e-04 3.51e-02 4.93e+05 3.60e-02   0.1
+        genblk1.sc_Gen3[28].lfsr_8_gen3 (LFSR_8_gen3_4)
+                                       1.70e-03 8.38e-02 1.12e+06 8.66e-02   0.3
+        genblk1.sc_Gen3[27].Block_Type_Logic_1 (Block_Type_Logic_5)
+                                       6.89e-05 2.72e-03 2.39e+04 2.82e-03   0.0
+        genblk1.sc_Gen3[27].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_5)
+                                       1.29e-03 1.26e-02 1.81e+05 1.41e-02   0.0
+        genblk1.sc_Gen3[27].descrambler (Descrambler_5)
+                                       4.02e-03 4.49e-03 4.17e+05 8.92e-03   0.0
+        genblk1.sc_Gen3[27].descrambler_control (Descrambler_Controler_5)
+                                       1.07e-03 3.62e-03 2.33e+05 4.92e-03   0.0
+        genblk1.sc_Gen3[27].LF1 (LFSR_8_5)
+                                       3.31e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[27].lfsr_8_gen3 (LFSR_8_gen3_5)
+                                       1.66e-03 8.25e-02 1.24e+06 8.54e-02   0.3
+        genblk1.sc_Gen3[26].Block_Type_Logic_1 (Block_Type_Logic_6)
+                                       9.38e-05 2.76e-03 2.84e+04 2.88e-03   0.0
+        genblk1.sc_Gen3[26].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_6)
+                                       1.26e-03 1.26e-02 1.72e+05 1.41e-02   0.0
+        genblk1.sc_Gen3[26].descrambler (Descrambler_6)
+                                       3.09e-03 4.50e-03 3.70e+05 7.96e-03   0.0
+        genblk1.sc_Gen3[26].descrambler_control (Descrambler_Controler_6)
+                                       1.25e-03 3.83e-03 2.50e+05 5.34e-03   0.0
+        genblk1.sc_Gen3[26].LF1 (LFSR_8_6)
+                                       3.31e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[26].lfsr_8_gen3 (LFSR_8_gen3_6)
+                                       1.66e-03 8.15e-02 1.24e+06 8.44e-02   0.3
+        genblk1.sc_Gen3[25].Block_Type_Logic_1 (Block_Type_Logic_7)
+                                       7.49e-05 2.69e-03 2.39e+04 2.79e-03   0.0
+        genblk1.sc_Gen3[25].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_7)
+                                       1.17e-03 1.26e-02 1.86e+05 1.39e-02   0.0
+        genblk1.sc_Gen3[25].descrambler (Descrambler_7)
+                                       2.59e-03 3.67e-03 3.36e+05 6.59e-03   0.0
+        genblk1.sc_Gen3[25].descrambler_control (Descrambler_Controler_7)
+                                       1.37e-03 3.97e-03 2.44e+05 5.58e-03   0.0
+        genblk1.sc_Gen3[25].LF1 (LFSR_8_7)
+                                       3.31e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[25].lfsr_8_gen3 (LFSR_8_gen3_7)
+                                       1.66e-03 8.05e-02 1.23e+06 8.34e-02   0.3
+        genblk1.sc_Gen3[24].Block_Type_Logic_1 (Block_Type_Logic_8)
+                                       1.09e-04 2.74e-03 2.83e+04 2.88e-03   0.0
+        genblk1.sc_Gen3[24].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_8)
+                                       1.19e-03 1.25e-02 1.80e+05 1.39e-02   0.0
+        genblk1.sc_Gen3[24].descrambler (Descrambler_8)
+                                       2.95e-03 3.93e-03 3.44e+05 7.23e-03   0.0
+        genblk1.sc_Gen3[24].descrambler_control (Descrambler_Controler_8)
+                                       1.32e-03 4.12e-03 2.58e+05 5.70e-03   0.0
+        genblk1.sc_Gen3[24].LF1 (LFSR_8_8)
+                                       3.32e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[24].lfsr_8_gen3 (LFSR_8_gen3_8)
+                                       1.67e-03 8.26e-02 1.24e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[23].Block_Type_Logic_1 (Block_Type_Logic_9)
+                                       8.49e-05 2.76e-03 2.84e+04 2.87e-03   0.0
+        genblk1.sc_Gen3[23].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_9)
+                                       1.41e-03 1.27e-02 1.86e+05 1.43e-02   0.0
+        genblk1.sc_Gen3[23].descrambler (Descrambler_9)
+                                       4.65e-03 6.04e-03 4.48e+05 1.11e-02   0.0
+        genblk1.sc_Gen3[23].descrambler_control (Descrambler_Controler_9)
+                                       1.08e-03 3.65e-03 2.45e+05 4.98e-03   0.0
+        genblk1.sc_Gen3[23].LF1 (LFSR_8_9)
+                                       3.30e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[23].lfsr_8_gen3 (LFSR_8_gen3_9)
+                                       1.66e-03 8.26e-02 1.24e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[22].Block_Type_Logic_1 (Block_Type_Logic_10)
+                                       7.90e-05 2.74e-03 2.40e+04 2.84e-03   0.0
+        genblk1.sc_Gen3[22].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_10)
+                                       1.39e-03 1.26e-02 1.74e+05 1.42e-02   0.0
+        genblk1.sc_Gen3[22].descrambler (Descrambler_10)
+                                       3.21e-03 3.81e-03 3.23e+05 7.34e-03   0.0
+        genblk1.sc_Gen3[22].descrambler_control (Descrambler_Controler_10)
+                                       1.08e-03 3.67e-03 2.33e+05 4.97e-03   0.0
+        genblk1.sc_Gen3[22].LF1 (LFSR_8_10)
+                                       3.31e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[22].lfsr_8_gen3 (LFSR_8_gen3_10)
+                                       1.66e-03 8.25e-02 1.24e+06 8.54e-02   0.3
+        genblk1.sc_Gen3[21].Block_Type_Logic_1 (Block_Type_Logic_11)
+                                       7.10e-05 2.73e-03 2.39e+04 2.82e-03   0.0
+        genblk1.sc_Gen3[21].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_11)
+                                       1.33e-03 1.26e-02 1.76e+05 1.41e-02   0.0
+        genblk1.sc_Gen3[21].descrambler (Descrambler_11)
+                                       4.65e-03 3.48e-03 3.29e+05 8.46e-03   0.0
+        genblk1.sc_Gen3[21].descrambler_control (Descrambler_Controler_11)
+                                       1.07e-03 3.62e-03 2.26e+05 4.91e-03   0.0
+        genblk1.sc_Gen3[21].LF1 (LFSR_8_11)
+                                       3.31e-04 3.51e-02 4.77e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[21].lfsr_8_gen3 (LFSR_8_gen3_11)
+                                       1.66e-03 8.26e-02 1.25e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[20].Block_Type_Logic_1 (Block_Type_Logic_12)
+                                       6.83e-05 2.72e-03 2.39e+04 2.81e-03   0.0
+        genblk1.sc_Gen3[20].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_12)
+                                       1.33e-03 1.26e-02 1.75e+05 1.41e-02   0.0
+        genblk1.sc_Gen3[20].descrambler (Descrambler_12)
+                                       4.53e-03 4.45e-03 3.76e+05 9.36e-03   0.0
+        genblk1.sc_Gen3[20].descrambler_control (Descrambler_Controler_12)
+                                       1.15e-03 3.68e-03 2.48e+05 5.08e-03   0.0
+        genblk1.sc_Gen3[20].LF1 (LFSR_8_12)
+                                       3.31e-04 3.51e-02 4.85e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[20].lfsr_8_gen3 (LFSR_8_gen3_12)
+                                       1.66e-03 8.36e-02 1.26e+06 8.66e-02   0.3
+        genblk1.sc_Gen3[19].Block_Type_Logic_1 (Block_Type_Logic_13)
+                                       7.75e-05 2.70e-03 2.39e+04 2.81e-03   0.0
+        genblk1.sc_Gen3[19].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_13)
+                                       1.37e-03 1.27e-02 1.81e+05 1.42e-02   0.0
+        genblk1.sc_Gen3[19].descrambler (Descrambler_13)
+                                       4.64e-03 4.80e-03 3.89e+05 9.83e-03   0.0
+        genblk1.sc_Gen3[19].descrambler_control (Descrambler_Controler_13)
+                                       1.22e-03 3.77e-03 2.36e+05 5.22e-03   0.0
+        genblk1.sc_Gen3[19].LF1 (LFSR_8_13)
+                                       3.30e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[19].lfsr_8_gen3 (LFSR_8_gen3_13)
+                                       1.66e-03 8.26e-02 1.24e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[18].Block_Type_Logic_1 (Block_Type_Logic_14)
+                                       8.98e-05 2.74e-03 2.84e+04 2.86e-03   0.0
+        genblk1.sc_Gen3[18].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_14)
+                                       1.23e-03 1.26e-02 1.77e+05 1.41e-02   0.0
+        genblk1.sc_Gen3[18].descrambler (Descrambler_14)
+                                       3.52e-03 4.71e-03 3.80e+05 8.61e-03   0.0
+        genblk1.sc_Gen3[18].descrambler_control (Descrambler_Controler_14)
+                                       1.32e-03 3.80e-03 2.50e+05 5.37e-03   0.0
+        genblk1.sc_Gen3[18].LF1 (LFSR_8_14)
+                                       3.30e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[18].lfsr_8_gen3 (LFSR_8_gen3_14)
+                                       1.66e-03 8.26e-02 1.24e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[17].Block_Type_Logic_1 (Block_Type_Logic_15)
+                                       1.28e-04 2.77e-03 2.79e+04 2.92e-03   0.0
+        genblk1.sc_Gen3[17].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_15)
+                                       1.31e-03 1.29e-02 1.84e+05 1.44e-02   0.0
+        genblk1.sc_Gen3[17].descrambler (Descrambler_15)
+                                       4.60e-03 4.26e-03 3.72e+05 9.23e-03   0.0
+        genblk1.sc_Gen3[17].descrambler_control (Descrambler_Controler_15)
+                                       1.47e-03 3.95e-03 2.70e+05 5.69e-03   0.0
+        genblk1.sc_Gen3[17].LF1 (LFSR_8_15)
+                                       3.31e-04 3.51e-02 4.75e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[17].lfsr_8_gen3 (LFSR_8_gen3_15)
+                                       1.66e-03 8.26e-02 1.25e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[16].Block_Type_Logic_1 (Block_Type_Logic_16)
+                                       8.98e-05 2.76e-03 2.84e+04 2.87e-03   0.0
+        genblk1.sc_Gen3[16].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_16)
+                                       1.27e-03 1.28e-02 1.87e+05 1.43e-02   0.0
+        genblk1.sc_Gen3[16].descrambler (Descrambler_16)
+                                       3.24e-03 4.09e-03 3.80e+05 7.71e-03   0.0
+        genblk1.sc_Gen3[16].descrambler_control (Descrambler_Controler_16)
+                                       1.32e-03 3.96e-03 2.46e+05 5.52e-03   0.0
+        genblk1.sc_Gen3[16].LF1 (LFSR_8_16)
+                                       3.32e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[16].lfsr_8_gen3 (LFSR_8_gen3_16)
+                                       1.66e-03 8.25e-02 1.25e+06 8.54e-02   0.3
+        genblk1.sc_Gen3[15].Block_Type_Logic_1 (Block_Type_Logic_17)
+                                       9.25e-05 2.77e-03 2.84e+04 2.89e-03   0.0
+        genblk1.sc_Gen3[15].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_17)
+                                       1.15e-03 1.25e-02 1.62e+05 1.38e-02   0.0
+        genblk1.sc_Gen3[15].descrambler (Descrambler_17)
+                                       3.59e-03 5.00e-03 3.80e+05 8.98e-03   0.0
+        genblk1.sc_Gen3[15].descrambler_control (Descrambler_Controler_17)
+                                       1.08e-03 3.65e-03 2.34e+05 4.96e-03   0.0
+        genblk1.sc_Gen3[15].LF1 (LFSR_8_17)
+                                       3.30e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[15].lfsr_8_gen3 (LFSR_8_gen3_17)
+                                       1.66e-03 8.26e-02 1.24e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[14].Block_Type_Logic_1 (Block_Type_Logic_18)
+                                       9.70e-05 2.79e-03 2.84e+04 2.92e-03   0.0
+        genblk1.sc_Gen3[14].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_18)
+                                       1.31e-03 1.25e-02 1.80e+05 1.40e-02   0.0
+        genblk1.sc_Gen3[14].descrambler (Descrambler_18)
+                                       3.80e-03 3.29e-03 3.28e+05 7.42e-03   0.0
+        genblk1.sc_Gen3[14].descrambler_control (Descrambler_Controler_18)
+                                       1.24e-03 3.85e-03 2.53e+05 5.35e-03   0.0
+        genblk1.sc_Gen3[14].LF1 (LFSR_8_18)
+                                       3.31e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[14].lfsr_8_gen3 (LFSR_8_gen3_18)
+                                       1.66e-03 8.26e-02 1.24e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[13].Block_Type_Logic_1 (Block_Type_Logic_19)
+                                       8.78e-05 2.75e-03 2.84e+04 2.87e-03   0.0
+        genblk1.sc_Gen3[13].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_19)
+                                       1.05e-03 1.25e-02 1.66e+05 1.37e-02   0.0
+        genblk1.sc_Gen3[13].descrambler (Descrambler_19)
+                                       3.37e-03 2.90e-03 3.09e+05 6.58e-03   0.0
+        genblk1.sc_Gen3[13].descrambler_control (Descrambler_Controler_19)
+                                       1.06e-03 3.58e-03 2.25e+05 4.87e-03   0.0
+        genblk1.sc_Gen3[13].LF1 (LFSR_8_19)
+                                       3.30e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[13].lfsr_8_gen3 (LFSR_8_gen3_19)
+                                       1.66e-03 8.26e-02 1.24e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[12].Block_Type_Logic_1 (Block_Type_Logic_20)
+                                       7.75e-05 2.71e-03 2.39e+04 2.81e-03   0.0
+        genblk1.sc_Gen3[12].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_20)
+                                       1.17e-03 1.26e-02 1.76e+05 1.40e-02   0.0
+        genblk1.sc_Gen3[12].descrambler (Descrambler_20)
+                                       3.91e-03 3.28e-03 3.26e+05 7.51e-03   0.0
+        genblk1.sc_Gen3[12].descrambler_control (Descrambler_Controler_20)
+                                       1.11e-03 3.67e-03 2.37e+05 5.01e-03   0.0
+        genblk1.sc_Gen3[12].LF1 (LFSR_8_20)
+                                       3.31e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[12].lfsr_8_gen3 (LFSR_8_gen3_20)
+                                       1.66e-03 8.26e-02 1.25e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[11].Block_Type_Logic_1 (Block_Type_Logic_21)
+                                       7.13e-05 2.73e-03 2.39e+04 2.82e-03   0.0
+        genblk1.sc_Gen3[11].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_21)
+                                       1.42e-03 1.26e-02 1.76e+05 1.42e-02   0.0
+        genblk1.sc_Gen3[11].descrambler (Descrambler_21)
+                                       4.48e-03 4.85e-03 3.89e+05 9.72e-03   0.0
+        genblk1.sc_Gen3[11].descrambler_control (Descrambler_Controler_21)
+                                       1.11e-03 3.72e-03 2.35e+05 5.07e-03   0.0
+        genblk1.sc_Gen3[11].LF1 (LFSR_8_21)
+                                       3.33e-04 3.51e-02 4.71e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[11].lfsr_8_gen3 (LFSR_8_gen3_21)
+                                       1.67e-03 8.37e-02 1.25e+06 8.66e-02   0.3
+        genblk1.sc_Gen3[10].Block_Type_Logic_1 (Block_Type_Logic_22)
+                                       9.06e-05 2.75e-03 2.84e+04 2.87e-03   0.0
+        genblk1.sc_Gen3[10].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_22)
+                                       1.29e-03 1.26e-02 1.76e+05 1.40e-02   0.0
+        genblk1.sc_Gen3[10].descrambler (Descrambler_22)
+                                       4.10e-03 4.64e-03 3.96e+05 9.14e-03   0.0
+        genblk1.sc_Gen3[10].descrambler_control (Descrambler_Controler_22)
+                                       1.10e-03 3.71e-03 2.43e+05 5.05e-03   0.0
+        genblk1.sc_Gen3[10].LF1 (LFSR_8_22)
+                                       3.30e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[10].lfsr_8_gen3 (LFSR_8_gen3_22)
+                                       1.66e-03 8.26e-02 1.25e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[9].Block_Type_Logic_1 (Block_Type_Logic_23)
+                                       7.07e-05 2.73e-03 2.39e+04 2.83e-03   0.0
+        genblk1.sc_Gen3[9].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_23)
+                                       1.22e-03 1.24e-02 1.74e+05 1.38e-02   0.0
+        genblk1.sc_Gen3[9].descrambler (Descrambler_23)
+                                       4.80e-03 4.76e-03 3.96e+05 9.96e-03   0.0
+        genblk1.sc_Gen3[9].descrambler_control (Descrambler_Controler_23)
+                                       1.04e-03 3.56e-03 2.23e+05 4.83e-03   0.0
+        genblk1.sc_Gen3[9].LF1 (LFSR_8_23)
+                                       3.31e-04 3.51e-02 4.71e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[9].lfsr_8_gen3 (LFSR_8_gen3_23)
+                                       1.66e-03 8.26e-02 1.25e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[8].Block_Type_Logic_1 (Block_Type_Logic_24)
+                                       7.06e-05 2.71e-03 2.39e+04 2.80e-03   0.0
+        genblk1.sc_Gen3[8].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_24)
+                                       1.39e-03 1.28e-02 1.83e+05 1.44e-02   0.0
+        genblk1.sc_Gen3[8].descrambler (Descrambler_24)
+                                       4.61e-03 4.62e-03 3.86e+05 9.62e-03   0.0
+        genblk1.sc_Gen3[8].descrambler_control (Descrambler_Controler_24)
+                                       1.07e-03 3.81e-03 2.36e+05 5.11e-03   0.0
+        genblk1.sc_Gen3[8].LF1 (LFSR_8_24)
+                                       3.29e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[8].lfsr_8_gen3 (LFSR_8_gen3_24)
+                                       1.65e-03 8.36e-02 1.25e+06 8.65e-02   0.3
+        genblk1.sc_Gen3[7].Block_Type_Logic_1 (Block_Type_Logic_25)
+                                       7.23e-05 2.72e-03 2.39e+04 2.82e-03   0.0
+        genblk1.sc_Gen3[7].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_25)
+                                       1.34e-03 1.25e-02 1.72e+05 1.40e-02   0.0
+        genblk1.sc_Gen3[7].descrambler (Descrambler_25)
+                                       4.62e-03 3.21e-03 3.13e+05 8.15e-03   0.0
+        genblk1.sc_Gen3[7].descrambler_control (Descrambler_Controler_25)
+                                       1.07e-03 3.66e-03 2.37e+05 4.97e-03   0.0
+        genblk1.sc_Gen3[7].LF1 (LFSR_8_25)
+                                       3.30e-04 3.51e-02 4.75e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[7].lfsr_8_gen3 (LFSR_8_gen3_25)
+                                       1.66e-03 8.26e-02 1.25e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[6].Block_Type_Logic_1 (Block_Type_Logic_26)
+                                       4.76e-05 2.74e-03 2.83e+04 2.82e-03   0.0
+        genblk1.sc_Gen3[6].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_26)
+                                       1.22e-03 1.26e-02 1.78e+05 1.40e-02   0.0
+        genblk1.sc_Gen3[6].descrambler (Descrambler_26)
+                                       3.37e-03 4.35e-03 3.98e+05 8.12e-03   0.0
+        genblk1.sc_Gen3[6].descrambler_control (Descrambler_Controler_26)
+                                       1.18e-03 3.61e-03 2.33e+05 5.03e-03   0.0
+        genblk1.sc_Gen3[6].LF1 (LFSR_8_26)
+                                       3.30e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[6].lfsr_8_gen3 (LFSR_8_gen3_26)
+                                       1.65e-03 8.15e-02 1.24e+06 8.44e-02   0.3
+        genblk1.sc_Gen3[5].Block_Type_Logic_1 (Block_Type_Logic_27)
+                                       6.78e-05 2.69e-03 2.39e+04 2.79e-03   0.0
+        genblk1.sc_Gen3[5].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_27)
+                                       1.24e-03 1.25e-02 1.73e+05 1.39e-02   0.0
+        genblk1.sc_Gen3[5].descrambler (Descrambler_27)
+                                       3.65e-03 2.78e-03 2.85e+05 6.71e-03   0.0
+        genblk1.sc_Gen3[5].descrambler_control (Descrambler_Controler_27)
+                                       1.08e-03 3.62e-03 2.28e+05 4.93e-03   0.0
+        genblk1.sc_Gen3[5].LF1 (LFSR_8_27)
+                                       3.30e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[5].lfsr_8_gen3 (LFSR_8_gen3_27)
+                                       1.66e-03 8.36e-02 1.25e+06 8.65e-02   0.3
+        genblk1.sc_Gen3[4].Block_Type_Logic_1 (Block_Type_Logic_28)
+                                       9.38e-05 2.79e-03 2.85e+04 2.91e-03   0.0
+        genblk1.sc_Gen3[4].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_28)
+                                       1.17e-03 1.25e-02 1.69e+05 1.38e-02   0.0
+        genblk1.sc_Gen3[4].descrambler (Descrambler_28)
+                                       3.04e-03 2.85e-03 3.00e+05 6.19e-03   0.0
+        genblk1.sc_Gen3[4].descrambler_control (Descrambler_Controler_28)
+                                       1.08e-03 3.67e-03 2.37e+05 4.98e-03   0.0
+        genblk1.sc_Gen3[4].LF1 (LFSR_8_28)
+                                       3.30e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[4].lfsr_8_gen3 (LFSR_8_gen3_28)
+                                       1.66e-03 8.26e-02 1.24e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[3].Block_Type_Logic_1 (Block_Type_Logic_29)
+                                       7.83e-05 2.72e-03 2.39e+04 2.82e-03   0.0
+        genblk1.sc_Gen3[3].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_29)
+                                       1.41e-03 1.25e-02 1.77e+05 1.41e-02   0.0
+        genblk1.sc_Gen3[3].descrambler (Descrambler_29)
+                                       4.58e-03 4.47e-03 3.69e+05 9.41e-03   0.0
+        genblk1.sc_Gen3[3].descrambler_control (Descrambler_Controler_29)
+                                       1.07e-03 3.69e-03 2.41e+05 5.01e-03   0.0
+        genblk1.sc_Gen3[3].LF1 (LFSR_8_29)
+                                       3.29e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[3].lfsr_8_gen3 (LFSR_8_gen3_29)
+                                       1.65e-03 8.26e-02 1.24e+06 8.55e-02   0.3
+        genblk1.sc_Gen3[2].Block_Type_Logic_1 (Block_Type_Logic_30)
+                                       6.67e-05 2.70e-03 2.39e+04 2.79e-03   0.0
+        genblk1.sc_Gen3[2].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_30)
+                                       1.35e-03 1.27e-02 1.84e+05 1.42e-02   0.0
+        genblk1.sc_Gen3[2].descrambler (Descrambler_30)
+                                       2.62e-03 3.56e-03 3.13e+05 6.49e-03   0.0
+        genblk1.sc_Gen3[2].descrambler_control (Descrambler_Controler_30)
+                                       1.05e-03 3.58e-03 2.27e+05 4.86e-03   0.0
+        genblk1.sc_Gen3[2].LF1 (LFSR_8_30)
+                                       3.31e-04 3.51e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[2].lfsr_8_gen3 (LFSR_8_gen3_30)
+                                       1.66e-03 8.15e-02 1.25e+06 8.44e-02   0.3
+        genblk1.sc_Gen3[1].Block_Type_Logic_1 (Block_Type_Logic_31)
+                                       8.78e-05 2.74e-03 2.84e+04 2.85e-03   0.0
+        genblk1.sc_Gen3[1].PIPE_Counter_1 (PIPE_Counter_pipe_00000004_31)
+                                       1.31e-03 1.27e-02 1.90e+05 1.42e-02   0.0
+        genblk1.sc_Gen3[1].descrambler (Descrambler_31)
+                                       3.99e-03 5.61e-03 5.13e+05 1.01e-02   0.0
+        genblk1.sc_Gen3[1].descrambler_control (Descrambler_Controler_31)
+                                       1.28e-03 3.83e-03 2.63e+05 5.37e-03   0.0
+        genblk1.sc_Gen3[1].LF1 (LFSR_8_31)
+                                       3.31e-04 3.50e-02 4.70e+05 3.59e-02   0.1
+        genblk1.sc_Gen3[1].lfsr_8_gen3 (LFSR_8_gen3_31)
+                                       1.67e-03 8.14e-02 1.27e+06 8.43e-02   0.3
+        genblk1.Block_Type_Logic_1 (Block_Type_Logic_0)
+                                       7.69e-05 2.79e-03 3.48e+04 2.90e-03   0.0
+        genblk1.PIPE_Counter_1 (PIPE_Counter_pipe_00000004_0)
+                                       1.29e-03 1.28e-02 1.85e+05 1.43e-02   0.0
+        genblk1.descrambler (Descrambler_0)
+                                       4.60e-03 5.92e-03 4.71e+05 1.10e-02   0.0
+        genblk1.descrambler_control (Descrambler_Controler_0)
+                                       1.45e-03 3.81e-03 2.53e+05 5.51e-03   0.0
+        genblk1.LF1 (LFSR_8_32)        3.57e-04 3.51e-02 5.50e+05 3.60e-02   0.1
+        genblk1.lfsr_8_gen3 (LFSR_8_gen3_32)
+                                       1.66e-03 7.94e-02 1.24e+06 8.23e-02   0.3
+      genblk1.RT (RX_TOP_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                       8.95e-02    8.185 8.76e+07    8.362  27.3
+        RB (Rx_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                          0.000    7.482 6.63e+07    7.549  24.6
+        PF (Packet_Filter_TOP)         8.95e-02    0.702 2.12e+07    0.813   2.7
+          Fc (Frame_Checker)           9.26e-03 2.48e-02 7.91e+05 3.49e-02   0.1
+          CTR (Counter_0)                 0.000 1.03e-02 2.44e+05 1.06e-02   0.0
+          Pf (Packet_Filter_fsm)       7.27e-02    0.105 1.27e+07    0.191   0.6
+          FB (Filtering_Buffer)           0.000    0.549 6.75e+06    0.556   1.8
+    u_PHY_TX (PHY_TX_8_3_00000004_00000008_0_2)
+                                          0.219   12.063 2.16e+08   12.499  40.8
+      ID (IDLE_Counter)                3.69e-07 8.47e-03 9.57e+04 8.56e-03   0.0
+      sc_Gen3[31].DUT (scrambler_and_sync_0_00000008_00000004_2_1)
+                                       3.79e-03    0.199 4.38e+06    0.207   0.7
+        scrambler (Scrambler_1)        1.09e-03 1.48e-03 2.27e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_1)
+                                       1.49e-04 2.19e-03 1.05e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_1)      3.06e-06 6.04e-02 2.10e+06 6.25e-02   0.2
+        LF1 (LFSR_8_33)                3.29e-04 3.55e-02 4.83e+05 3.64e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_33)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_1)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[30].DUT (scrambler_and_sync_0_00000008_00000004_2_2)
+                                       3.79e-03    0.196 4.43e+06    0.204   0.7
+        scrambler (Scrambler_2)        1.09e-03 1.48e-03 2.26e+05 2.80e-03   0.0
+        scrambler_control (Scrambler_Controler_2)
+                                       1.49e-04 2.19e-03 1.05e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_2)      2.04e-06 5.74e-02 2.15e+06 5.96e-02   0.2
+        LF1 (LFSR_8_34)                3.29e-04 3.55e-02 4.83e+05 3.64e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_34)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_2)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[29].DUT (scrambler_and_sync_0_00000008_00000004_2_3)
+                                       3.79e-03    0.197 4.41e+06    0.206   0.7
+        scrambler (Scrambler_3)        1.09e-03 1.48e-03 2.26e+05 2.80e-03   0.0
+        scrambler_control (Scrambler_Controler_3)
+                                       1.49e-04 2.19e-03 1.05e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_3)      2.03e-06 5.88e-02 2.13e+06 6.09e-02   0.2
+        LF1 (LFSR_8_35)                3.29e-04 3.55e-02 4.83e+05 3.64e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_35)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_3)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[28].DUT (scrambler_and_sync_0_00000008_00000004_2_4)
+                                       3.77e-03    0.199 4.49e+06    0.208   0.7
+        scrambler (Scrambler_4)        1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_4)
+                                       1.34e-04 2.19e-03 1.05e+05 2.43e-03   0.0
+        dc_balance (DC_Balance_4)      2.81e-06 6.04e-02 2.20e+06 6.26e-02   0.2
+        LF1 (LFSR_8_36)                3.31e-04 3.61e-02 4.83e+05 3.70e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_36)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_4)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[27].DUT (scrambler_and_sync_0_00000008_00000004_2_5)
+                                       3.79e-03    0.197 4.28e+06    0.205   0.7
+        scrambler (Scrambler_5)        1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_5)
+                                       1.49e-04 2.19e-03 1.04e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_5)      2.09e-06 5.86e-02 1.99e+06 6.06e-02   0.2
+        LF1 (LFSR_8_37)                3.30e-04 3.57e-02 4.83e+05 3.65e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_37)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_5)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[26].DUT (scrambler_and_sync_0_00000008_00000004_2_6)
+                                       3.77e-03    0.196 4.26e+06    0.204   0.7
+        scrambler (Scrambler_6)        1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_6)
+                                       1.34e-04 2.19e-03 1.04e+05 2.43e-03   0.0
+        dc_balance (DC_Balance_6)      2.03e-06 5.74e-02 1.97e+06 5.94e-02   0.2
+        LF1 (LFSR_8_38)                3.30e-04 3.57e-02 4.85e+05 3.65e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_38)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_6)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[25].DUT (scrambler_and_sync_0_00000008_00000004_2_7)
+                                       3.77e-03    0.197 4.37e+06    0.206   0.7
+        scrambler (Scrambler_7)        1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_7)
+                                       1.34e-04 2.19e-03 1.04e+05 2.43e-03   0.0
+        dc_balance (DC_Balance_7)      2.10e-06 5.88e-02 2.08e+06 6.09e-02   0.2
+        LF1 (LFSR_8_39)                3.30e-04 3.57e-02 4.85e+05 3.65e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_39)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_7)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[24].DUT (scrambler_and_sync_0_00000008_00000004_2_8)
+                                       3.77e-03    0.197 4.37e+06    0.206   0.7
+        scrambler (Scrambler_8)        1.09e-03 1.49e-03 2.27e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_8)
+                                       1.34e-04 2.19e-03 1.04e+05 2.43e-03   0.0
+        dc_balance (DC_Balance_8)      2.14e-06 5.88e-02 2.08e+06 6.09e-02   0.2
+        LF1 (LFSR_8_40)                3.30e-04 3.57e-02 4.85e+05 3.65e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_40)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_8)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[23].DUT (scrambler_and_sync_0_00000008_00000004_2_9)
+                                       3.77e-03    0.198 4.31e+06    0.206   0.7
+        scrambler (Scrambler_9)        1.09e-03 1.49e-03 2.27e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_9)
+                                       1.34e-04 2.19e-03 1.04e+05 2.43e-03   0.0
+        dc_balance (DC_Balance_9)      2.43e-06 5.90e-02 2.03e+06 6.10e-02   0.2
+        LF1 (LFSR_8_41)                3.30e-04 3.57e-02 4.85e+05 3.65e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_41)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_9)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[22].DUT (scrambler_and_sync_0_00000008_00000004_2_10)
+                                       3.77e-03    0.197 4.48e+06    0.206   0.7
+        scrambler (Scrambler_10)       1.09e-03 1.49e-03 2.27e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_10)
+                                       1.34e-04 2.19e-03 1.04e+05 2.43e-03   0.0
+        dc_balance (DC_Balance_10)     2.03e-06 5.88e-02 2.19e+06 6.10e-02   0.2
+        LF1 (LFSR_8_42)                3.30e-04 3.57e-02 4.85e+05 3.65e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_42)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_10)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[21].DUT (scrambler_and_sync_0_00000008_00000004_2_11)
+                                       3.77e-03    0.196 4.54e+06    0.204   0.7
+        scrambler (Scrambler_11)       1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_11)
+                                       1.34e-04 2.19e-03 1.04e+05 2.43e-03   0.0
+        dc_balance (DC_Balance_11)     2.04e-06 5.72e-02 2.25e+06 5.95e-02   0.2
+        LF1 (LFSR_8_43)                3.30e-04 3.57e-02 4.85e+05 3.65e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_43)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_11)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[20].DUT (scrambler_and_sync_0_00000008_00000004_2_12)
+                                       3.77e-03    0.196 4.43e+06    0.204   0.7
+        scrambler (Scrambler_12)       1.09e-03 1.49e-03 2.27e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_12)
+                                       1.34e-04 2.19e-03 1.04e+05 2.43e-03   0.0
+        dc_balance (DC_Balance_12)     2.24e-06 5.76e-02 2.14e+06 5.97e-02   0.2
+        LF1 (LFSR_8_44)                3.30e-04 3.57e-02 4.85e+05 3.65e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_44)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_12)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[19].DUT (scrambler_and_sync_0_00000008_00000004_2_13)
+                                       3.79e-03    0.196 4.37e+06    0.204   0.7
+        scrambler (Scrambler_13)       1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_13)
+                                       1.49e-04 2.19e-03 1.04e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_13)     2.24e-06 5.74e-02 2.09e+06 5.95e-02   0.2
+        LF1 (LFSR_8_45)                3.30e-04 3.57e-02 4.83e+05 3.65e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_45)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_13)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[18].DUT (scrambler_and_sync_0_00000008_00000004_2_14)
+                                       3.79e-03    0.198 4.31e+06    0.206   0.7
+        scrambler (Scrambler_14)       1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_14)
+                                       1.49e-04 2.19e-03 1.04e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_14)     2.03e-06 5.88e-02 2.03e+06 6.08e-02   0.2
+        LF1 (LFSR_8_46)                3.31e-04 3.61e-02 4.81e+05 3.69e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_46)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_14)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[17].DUT (scrambler_and_sync_0_00000008_00000004_2_15)
+                                       3.79e-03    0.197 4.40e+06    0.205   0.7
+        scrambler (Scrambler_15)       1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_15)
+                                       1.49e-04 2.19e-03 1.04e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_15)     2.04e-06 5.86e-02 2.11e+06 6.07e-02   0.2
+        LF1 (LFSR_8_47)                3.30e-04 3.57e-02 4.83e+05 3.65e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_47)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_15)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[16].DUT (scrambler_and_sync_0_00000008_00000004_2_16)
+                                       3.79e-03    0.198 4.43e+06    0.207   0.7
+        scrambler (Scrambler_16)       1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_16)
+                                       1.49e-04 2.19e-03 1.04e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_16)     2.24e-06 5.93e-02 2.14e+06 6.14e-02   0.2
+        LF1 (LFSR_8_48)                3.31e-04 3.61e-02 4.81e+05 3.69e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_48)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_16)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[15].DUT (scrambler_and_sync_0_00000008_00000004_2_17)
+                                       3.79e-03    0.197 4.40e+06    0.205   0.7
+        scrambler (Scrambler_17)       1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_17)
+                                       1.49e-04 2.19e-03 1.04e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_17)     2.94e-06 5.86e-02 2.11e+06 6.07e-02   0.2
+        LF1 (LFSR_8_49)                3.30e-04 3.57e-02 4.83e+05 3.65e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_49)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_17)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[14].DUT (scrambler_and_sync_0_00000008_00000004_2_18)
+                                       3.79e-03    0.198 4.91e+06    0.207   0.7
+        scrambler (Scrambler_18)       1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_18)
+                                       1.49e-04 2.19e-03 1.04e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_18)     2.04e-06 5.88e-02 2.63e+06 6.14e-02   0.2
+        LF1 (LFSR_8_50)                3.31e-04 3.61e-02 4.81e+05 3.69e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_50)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_18)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[13].DUT (scrambler_and_sync_0_00000008_00000004_2_19)
+                                       3.79e-03    0.199 4.36e+06    0.208   0.7
+        scrambler (Scrambler_19)       1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_19)
+                                       1.49e-04 2.19e-03 1.04e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_19)     2.04e-06 6.04e-02 2.07e+06 6.25e-02   0.2
+        LF1 (LFSR_8_51)                3.31e-04 3.61e-02 4.81e+05 3.69e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_51)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_19)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[12].DUT (scrambler_and_sync_0_00000008_00000004_2_20)
+                                       3.79e-03    0.199 4.15e+06    0.207   0.7
+        scrambler (Scrambler_20)       1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_20)
+                                       1.49e-04 2.19e-03 1.04e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_20)     2.38e-06 6.04e-02 1.86e+06 6.22e-02   0.2
+        LF1 (LFSR_8_52)                3.31e-04 3.61e-02 4.81e+05 3.69e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_52)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_20)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[11].DUT (scrambler_and_sync_0_00000008_00000004_2_21)
+                                       3.79e-03    0.198 4.27e+06    0.206   0.7
+        scrambler (Scrambler_21)       1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_21)
+                                       1.49e-04 2.19e-03 1.04e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_21)     2.03e-06 5.88e-02 1.98e+06 6.08e-02   0.2
+        LF1 (LFSR_8_53)                3.31e-04 3.61e-02 4.81e+05 3.69e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_53)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_21)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[10].DUT (scrambler_and_sync_0_00000008_00000004_2_22)
+                                       3.79e-03    0.201 4.47e+06    0.209   0.7
+        scrambler (Scrambler_22)       1.09e-03 1.49e-03 2.27e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_22)
+                                       1.49e-04 2.19e-03 1.04e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_22)     2.24e-06 6.19e-02 2.19e+06 6.41e-02   0.2
+        LF1 (LFSR_8_54)                3.31e-04 3.61e-02 4.81e+05 3.69e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_54)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_22)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[9].DUT (scrambler_and_sync_0_00000008_00000004_2_23)
+                                       3.79e-03    0.196 4.29e+06    0.204   0.7
+        scrambler (Scrambler_23)       1.09e-03 1.48e-03 2.25e+05 2.80e-03   0.0
+        scrambler_control (Scrambler_Controler_23)
+                                       1.49e-04 2.19e-03 1.05e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_23)     2.24e-06 5.76e-02 2.00e+06 5.96e-02   0.2
+        LF1 (LFSR_8_55)                3.29e-04 3.55e-02 4.83e+05 3.64e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_55)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_23)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[8].DUT (scrambler_and_sync_0_00000008_00000004_2_24)
+                                       3.79e-03    0.198 4.39e+06    0.206   0.7
+        scrambler (Scrambler_24)       1.09e-03 1.49e-03 2.26e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_24)
+                                       1.49e-04 2.19e-03 1.04e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_24)     3.07e-06 5.88e-02 2.11e+06 6.09e-02   0.2
+        LF1 (LFSR_8_56)                3.31e-04 3.60e-02 4.82e+05 3.68e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_56)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_24)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[7].DUT (scrambler_and_sync_0_00000008_00000004_2_25)
+                                       3.77e-03    0.197 4.41e+06    0.205   0.7
+        scrambler (Scrambler_25)       1.09e-03 1.48e-03 2.27e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_25)
+                                       1.34e-04 2.19e-03 1.05e+05 2.43e-03   0.0
+        dc_balance (DC_Balance_25)     2.03e-06 5.88e-02 2.12e+06 6.09e-02   0.2
+        LF1 (LFSR_8_57)                3.28e-04 3.51e-02 4.87e+05 3.59e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_57)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_25)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[6].DUT (scrambler_and_sync_0_00000008_00000004_2_26)
+                                       3.77e-03    0.196 4.49e+06    0.204   0.7
+        scrambler (Scrambler_26)       1.09e-03 1.48e-03 2.26e+05 2.80e-03   0.0
+        scrambler_control (Scrambler_Controler_26)
+                                       1.34e-04 2.19e-03 1.05e+05 2.43e-03   0.0
+        dc_balance (DC_Balance_26)     2.03e-06 5.74e-02 2.20e+06 5.96e-02   0.2
+        LF1 (LFSR_8_58)                3.29e-04 3.55e-02 4.85e+05 3.64e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_58)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_26)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[5].DUT (scrambler_and_sync_0_00000008_00000004_2_27)
+                                       3.77e-03    0.196 4.31e+06    0.204   0.7
+        scrambler (Scrambler_27)       1.09e-03 1.48e-03 2.26e+05 2.80e-03   0.0
+        scrambler_control (Scrambler_Controler_27)
+                                       1.34e-04 2.19e-03 1.05e+05 2.43e-03   0.0
+        dc_balance (DC_Balance_27)     2.03e-06 5.74e-02 2.02e+06 5.94e-02   0.2
+        LF1 (LFSR_8_59)                3.29e-04 3.55e-02 4.85e+05 3.64e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_59)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_27)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[4].DUT (scrambler_and_sync_0_00000008_00000004_2_28)
+                                       3.77e-03    0.197 4.44e+06    0.205   0.7
+        scrambler (Scrambler_28)       1.09e-03 1.48e-03 2.27e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_28)
+                                       1.34e-04 2.19e-03 1.05e+05 2.43e-03   0.0
+        dc_balance (DC_Balance_28)     2.03e-06 5.88e-02 2.15e+06 6.10e-02   0.2
+        LF1 (LFSR_8_60)                3.28e-04 3.51e-02 4.87e+05 3.59e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_60)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_28)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[3].DUT (scrambler_and_sync_0_00000008_00000004_2_29)
+                                       3.77e-03    0.198 4.38e+06    0.206   0.7
+        scrambler (Scrambler_29)       1.09e-03 1.48e-03 2.26e+05 2.80e-03   0.0
+        scrambler_control (Scrambler_Controler_29)
+                                       1.34e-04 2.19e-03 1.05e+05 2.43e-03   0.0
+        dc_balance (DC_Balance_29)     2.10e-06 5.91e-02 2.10e+06 6.12e-02   0.2
+        LF1 (LFSR_8_61)                3.29e-04 3.55e-02 4.85e+05 3.64e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_61)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_29)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[2].DUT (scrambler_and_sync_0_00000008_00000004_2_30)
+                                       3.79e-03    0.197 4.44e+06    0.206   0.7
+        scrambler (Scrambler_30)       1.09e-03 1.48e-03 2.25e+05 2.80e-03   0.0
+        scrambler_control (Scrambler_Controler_30)
+                                       1.49e-04 2.19e-03 1.05e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_30)     2.54e-06 5.90e-02 2.16e+06 6.11e-02   0.2
+        LF1 (LFSR_8_62)                3.29e-04 3.55e-02 4.83e+05 3.64e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_62)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_30)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      sc_Gen3[1].DUT (scrambler_and_sync_0_00000008_00000004_2_31)
+                                       3.79e-03    0.198 4.43e+06    0.206   0.7
+        scrambler (Scrambler_31)       1.09e-03 1.49e-03 2.28e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_31)
+                                       1.49e-04 2.19e-03 1.05e+05 2.45e-03   0.0
+        dc_balance (DC_Balance_31)     2.24e-06 5.90e-02 2.14e+06 6.11e-02   0.2
+        LF1 (LFSR_8_63)                3.30e-04 3.57e-02 4.83e+05 3.65e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_63)   1.68e-03 8.37e-02 1.13e+06 8.66e-02   0.3
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_31)
+                                       1.24e-04 1.51e-02 2.80e+05 1.55e-02   0.1
+      DUT0 (scrambler_and_sync_0_00000008_00000004_2_0)
+                                       3.70e-03    0.170 4.26e+06    0.178   0.6
+        scrambler (Scrambler_0)        1.10e-03 1.49e-03 2.25e+05 2.81e-03   0.0
+        scrambler_control (Scrambler_Controler_0)
+                                       1.27e-04 2.16e-03 1.00e+05 2.39e-03   0.0
+        dc_balance (DC_Balance_0)      9.24e-07 5.61e-02 2.07e+06 5.82e-02   0.2
+        LF1 (LFSR_8_0)                 3.29e-04 3.55e-02 4.81e+05 3.63e-02   0.1
+        lfsr_8_gen3 (LFSR_8_gen3_0)    1.64e-03 5.93e-02 1.00e+06 6.19e-02   0.2
+        u0_sync_logic (Sync_Logic_0_00000008_00000004_2_0)
+                                       1.25e-04 1.53e-02 3.22e+05 1.57e-02   0.1
+      TT (TX_TOP)                      9.80e-02    5.762 7.53e+07    5.935  19.4
+        TF (Tx_Framing)                4.14e-03 6.57e-02 1.24e+07 8.23e-02   0.3
+          FRAMING_GEN_3 (Gen3_Top_00000008_0000000b_00000004_00000005_32_00000004_00000004_00000002_00000010)
+                                       3.72e-03 6.55e-02 7.93e+06 7.71e-02   0.3
+            SS (OR_Gate_1)                0.000    0.000 7.67e+03 7.67e-06   0.0
+            II (OR_Gate_2)                0.000    0.000 7.67e+03 7.67e-06   0.0
+            REN (OR_Gate_0)               0.000    0.000 6.89e+03 6.89e-06   0.0
+            FB (Framing_Buffer)           0.000 3.31e-02 2.50e+05 3.33e-02   0.1
+            CTR (Counter_1)               0.000 1.03e-02 2.18e+05 1.06e-02   0.0
+            TKS (tokens)               8.26e-04 1.89e-03 7.28e+05 3.44e-03   0.0
+            FSM1 (Framing_fsm_one_lane)
+                                       2.33e-03 1.33e-02 4.29e+06 1.99e-02   0.1
+            FSM32 (Framing_fsm)        4.46e-04 6.83e-03 2.39e+06 9.67e-03   0.0
+        IB (Interface_Buffer_BUFFER_DEPTH8_ADDR_WIDTH3)
+                                       9.38e-02    5.696 6.29e+07    5.853  19.1
+1

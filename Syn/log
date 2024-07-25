@@ -1,0 +1,3361 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/IC/.synopsys_dv_prefs.tcl
+########################### Define Top Module ############################
+set top_module LTSSM_TOP
+LTSSM_TOP
+##################### Define Working Library Directory ######################
+define_design_lib work -path ./work
+1
+############################# Formality Setup File ##########################
+set_svf $top_module.svf
+1
+################## Design Compiler Library Files #setup ######################
+puts "###########################################"
+###########################################
+puts "#      #setting Design Libraries          #"
+#      #setting Design Libraries          #
+puts "###########################################"
+###########################################
+#Add the path of the libraries and RTL files to the search_path variable
+set PROJECT_PATH /home/IC/RX_PCIE
+/home/IC/RX_PCIE
+set LIB_PATH     /home/IC/tsmc_fb_cl013g_sc/aci/sc-m
+/home/IC/tsmc_fb_cl013g_sc/aci/sc-m
+lappend search_path $LIB_PATH/synopsys
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+lappend search_path $PROJECT_PATH/RTL 
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys /home/IC/RX_PCIE/RTL
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell libraries 
+set target_library [list $SSLIB $TTLIB $FFLIB]
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell & Hard Macros libraries 
+set link_library [list * $SSLIB $TTLIB $FFLIB]  
+* scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+######################## Reading RTL Files #################################
+puts "###########################################"
+###########################################
+puts "#             Reading RTL Files           #"
+#             Reading RTL Files           #
+puts "###########################################"
+###########################################
+set file_format sverilog
+sverilog
+#ALU
+#analyze -format $file_format BA_counters.sv
+#analyze -format $file_format BA_flag_genarator.sv
+#analyze -format $file_format BA_FSM.sv
+#analyze -format $file_format BA_TOP.sv
+#analyze -format $file_format Block_Type_Logic.sv
+#analyze -format $file_format Byte_unstripping.sv
+#analyze -format $file_format Counter.sv
+#analyze -format $file_format Descrambler.sv
+#analyze -format $file_format elstc_buff_TOP.sv
+#analyze -format $file_format Filtering_Buffer.sv
+#analyze -format $file_format Frame_Checker.sv
+#analyze -format $file_format lane_control.sv
+#analyze -format $file_format lane_deskew.sv
+#analyze -format $file_format LFSR_8_gen3.sv
+#analyze -format $file_format LFSR_8.sv
+#analyze -format $file_format Descrambler_Controler.sv
+#analyze -format $file_format Packet_Filter_fsm.sv
+#analyze -format $file_format Packet_Filter_TOP.sv
+#analyze -format $file_format PHY_RX.sv
+#analyze -format $file_format PIPE_Counter.sv
+#analyze -format $file_format PIPE_Counter_pipe.sv
+#analyze -format $file_format read_proc_and_ptr_genr.sv
+#analyze -format $file_format Rx_Buffer.sv
+#analyze -format $file_format RX_TOP.sv
+#analyze -format $file_format storage_unit.sv
+#analyze -format $file_format dff_sync2.sv
+#analyze -format $file_format top_RX.sv
+#analyze -format $file_format wptr_generation.sv
+#analyze -format $file_format write_processor.sv
+analyze -format $file_format decoder.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/decoder.sv
+Presto compilation completed successfully.
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+analyze -format $file_format LTSSM.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/LTSSM.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format LTSSM_TOP.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/LTSSM_TOP.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format OS_CREATOR.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/OS_CREATOR.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_format Timer.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/RX_PCIE/RTL/Timer.sv
+Presto compilation completed successfully.
+1
+elaborate -lib WORK LTSSM_TOP
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'LTSSM_TOP'.
+Information: Building the design 'LTSSM'. (HDL-193)
+
+Statistics for case statements in always block at line 298 in file
+	'/home/IC/RX_PCIE/RTL/LTSSM.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           360            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 1573 in file
+	'/home/IC/RX_PCIE/RTL/LTSSM.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1583           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine LTSSM line 171 in file
+		'/home/IC/RX_PCIE/RTL/LTSSM.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      PF_EN_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  O_Pwr_States_reg   | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   TxElecIdle_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| O_Polarity_inv_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     O_rate_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      BA_EN_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine LTSSM line 211 in file
+		'/home/IC/RX_PCIE/RTL/LTSSM.sv'.
+==========================================================================================
+|         Register Name          |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==========================================================================================
+|   physical_recovery_reg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   directed_speed_change_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|         O_Link_Up_reg          | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| idle_to_rlock_transitioned_reg | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      timeout_complete_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      detection_lanes_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|        rcv_link_num_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     non_pad_link_lanes_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+==========================================================================================
+
+Inferred memory devices in process
+	in routine LTSSM line 254 in file
+		'/home/IC/RX_PCIE/RTL/LTSSM.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine LTSSM line 287 in file
+		'/home/IC/RX_PCIE/RTL/LTSSM.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   one_TS_rec_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'OS_CREATOR'. (HDL-193)
+Warning:  /home/IC/RX_PCIE/RTL/OS_CREATOR.sv:237: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/OS_CREATOR.sv:385: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 67 in file
+	'/home/IC/RX_PCIE/RTL/OS_CREATOR.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            70            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 140 in file
+	'/home/IC/RX_PCIE/RTL/OS_CREATOR.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           152            |    auto/auto     |
+|           197            |    auto/auto     |
+|           199            |    auto/auto     |
+|           275            |    auto/auto     |
+|           292            |    auto/auto     |
+|           311            |    auto/auto     |
+|           334            |    auto/auto     |
+|           437            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine OS_CREATOR line 84 in file
+		'/home/IC/RX_PCIE/RTL/OS_CREATOR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ack_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS_CREATOR line 98 in file
+		'/home/IC/RX_PCIE/RTL/OS_CREATOR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     sent_OS_reg     | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS_CREATOR line 113 in file
+		'/home/IC/RX_PCIE/RTL/OS_CREATOR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      o_CNT_reg      | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS_CREATOR line 125 in file
+		'/home/IC/RX_PCIE/RTL/OS_CREATOR.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    skp_flag_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=0". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num0 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num0 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num0 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num0 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=1". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num1 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num1 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num1 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num1 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=2". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num2 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num2 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num2 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num2 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=3". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num3 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num3 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num3 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num3 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=4". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num4 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num4 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num4 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num4 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=5". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num5 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num5 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num5 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num5 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=6". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num6 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num6 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num6 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num6 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=7". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num7 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num7 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num7 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num7 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=8". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num8 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num8 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num8 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num8 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=9". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num9 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num9 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num9 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num9 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=10". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num10 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num10 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num10 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num10 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=11". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num11 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num11 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num11 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num11 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=12". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num12 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num12 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num12 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num12 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=13". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num13 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num13 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num13 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num13 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=14". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num14 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num14 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num14 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num14 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=15". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num15 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num15 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num15 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num15 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=16". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num16 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num16 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num16 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num16 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=17". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num17 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num17 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num17 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num17 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=18". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num18 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num18 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num18 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num18 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=19". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num19 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num19 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num19 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num19 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=20". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num20 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num20 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num20 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num20 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=21". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num21 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num21 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num21 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num21 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=22". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num22 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num22 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num22 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num22 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=23". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num23 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num23 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num23 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num23 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=24". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num24 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num24 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num24 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num24 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=25". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num25 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num25 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num25 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num25 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=26". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num26 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num26 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num26 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num26 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=27". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num27 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num27 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num27 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num27 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=28". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num28 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num28 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num28 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num28 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=29". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num29 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num29 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num29 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num29 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=30". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num30 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num30 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num30 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num30 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'decoder' instantiated from design 'LTSSM_TOP' with
+	the parameters "lane_num=31". (HDL-193)
+$display output: enter rcvrlock
+
+Statistics for case statements in always block at line 225 in file
+	'/home/IC/RX_PCIE/RTL/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           262            |     no/auto      |
+|           272            |    auto/auto     |
+|           275            |     no/auto      |
+|           398            |     no/auto      |
+|           555            |     no/auto      |
+|           681            |     no/auto      |
+|           723            |     no/auto      |
+|           814            |     no/auto      |
+|           817            |    auto/auto     |
+|           862            |    auto/auto     |
+|           931            |     no/auto      |
+|           935            |    auto/auto     |
+|           1008           |     no/auto      |
+|           1062           |     no/auto      |
+|           1117           |     no/auto      |
+|           1207           |     no/auto      |
+|           1312           |     no/auto      |
+|           1340           |    auto/auto     |
+|           1414           |     no/auto      |
+|           1480           |     no/auto      |
+|           1506           |    auto/auto     |
+|           1577           |     no/auto      |
+|           1642           |     no/auto      |
+|           1670           |    auto/auto     |
+|           1745           |    auto/auto     |
+|           1814           |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num31 line 120 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    link_num_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       FTS_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| UpConfig_DataR_reg  | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    Symbol_6_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num31 line 144 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|   recovr_recvrconfg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        OS_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       complience_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        loopback_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       TS1_match_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     pad_link_flag_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        type_OS_reg         | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|        done_cnt_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| recovr_speedequ_config_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num31 line 205 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   cons_count_reg    | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine decoder_lane_num31 line 225 in file
+		'/home/IC/RX_PCIE/RTL/decoder.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|  type_OS_comb_reg   | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+| type_OS_enable_reg  | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|  link_num_comb_reg  | Latch |   8   |  Y  | N  | N  | N  | -  | -  | -  |
+| enable_link_num_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Warning:  /home/IC/RX_PCIE/RTL/decoder.sv:225: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+Information: Building the design 'Timer'. (HDL-193)
+Warning:  /home/IC/RX_PCIE/RTL/Timer.sv:38: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/Timer.sv:42: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/Timer.sv:46: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/Timer.sv:50: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/Timer.sv:54: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/Timer.sv:59: signed to unsigned assignment occurs. (VER-318)
+Warning:  /home/IC/RX_PCIE/RTL/Timer.sv:60: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 34 in file
+	'/home/IC/RX_PCIE/RTL/Timer.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine Timer line 63 in file
+		'/home/IC/RX_PCIE/RTL/Timer.sv'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+|    timeout2_reg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     count_reg_reg      | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+| timeout_value1_reg_reg | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+| timeout_value2_reg_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine Timer line 87 in file
+		'/home/IC/RX_PCIE/RTL/Timer.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| count_reg_speed_reg | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Timer line 103 in file
+		'/home/IC/RX_PCIE/RTL/Timer.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+| timeout2_enable_reg | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'SKP_Counter'. (HDL-193)
+Warning: Cannot find the design 'SKP_Counter' in the library 'WORK'. (LBR-1)
+Warning: Design 'LTSSM_TOP' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+1
+###################### Defining toplevel ###################################
+current_design $top_module
+Current design is 'LTSSM_TOP'.
+{LTSSM_TOP}
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## Liniking All The Design Parts ########"
+######## Liniking All The Design Parts ########
+puts "###############################################"
+###############################################
+link 
+
+  Linking design 'LTSSM_TOP'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (36 designs)              /home/IC/RX_PCIE/Syn/LTSSM_TOP.db, etc
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+
+Information: Building the design 'SKP_Counter'. (HDL-193)
+Warning: Cannot find the design 'SKP_Counter' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'SKP_Counter' in 'LTSSM_TOP'. (LINK-5)
+0
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## checking design consistency ##########"
+######## checking design consistency ##########
+puts "###############################################"
+###############################################
+check_design >> reports/check_design.rpt
+#################### Define Design Constraints #########################
+puts "###############################################"
+###############################################
+puts "############ Design Constraints #### ##########"
+############ Design Constraints #### ##########
+puts "###############################################"
+###############################################
+source -echo ./cons.tcl
+####################################################################################
+# Constraints
+# ----------------------------------------------------------------------------
+#
+# 0. Design Compiler variables
+#
+# 1. Master Clock Definitions
+#
+# 2. Generated Clock Definitions
+#
+# 3. Clock Uncertainties
+#
+# 4. Clock Latencies 
+#
+# 5. Clock Relationships
+#
+# 6. set input/output delay on ports
+#
+# 7. Driving cells
+#
+# 8. Output load
+####################################################################################
+#########################################################
+#### Section 0 : DC Variables ####
+#########################################################
+#################################################################################### 
+# Prevent assign statements in the generated netlist (must be applied before compile command)
+set_fix_multiple_port_nets -all -buffer_constants -feedthroughs
+####################################################################################
+#########################################################
+#### Section 1 : Clock Definition ####
+#########################################################
+#################################################################################### 
+# 1. Master Clock Definitions 
+# 2. Generated Clock Definitions
+# 3. Clock Latencies
+# 4. Clock Uncertainties
+# 4. Clock Transitions
+####################################################################################
+# REF CLOCK (125 MHz)
+set CLK1_NAME CLK
+set CLK1_PER 8
+#2. UART_RX CLOCK (1GHz)
+set CLK2_NAME rx_clk
+set CLK2_PER 1.0
+# Skew
+#set CLK_SETUP_SKEW 0.2
+#set CLK_HOLD_SKEW 0.1
+#1. Master Clocks
+create_clock -name $CLK1_NAME -period $CLK1_PER -waveform {0 4} [get_ports CLK]
+Warning: Can't find port 'CLK' in design 'LTSSM_TOP'. (UID-95)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
+#set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $CLK1_NAME]
+#set_clock_uncertainty -hold $CLK_HOLD_SKEW  [get_clocks $CLK1_NAME]
+#create_clock -name $CLK2_NAME -period $CLK2_PER -waveform {0 0.5} [get_ports rx_clk]
+#set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks $CLK2_NAME]
+#set_clock_uncertainty -hold $CLK_HOLD_SKEW  [get_clocks $CLK2_NAME]
+#2. Generated clocks
+#create_generated_clock -master_clock $CLK2_NAME -source [get_ports UART_CLK]  #                      -name "UART_RX_CLK" [get_port U1_ClkDiv/o_div_clk]  #                      -divide_by 1
+#set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks "UART_RX_CLK"]
+#set_clock_uncertainty -hold $CLK_HOLD_SKEW   [get_clocks "UART_RX_CLK"]
+#create_generated_clock -master_clock $CLK2_NAME -source [get_ports UART_CLK] #                       -name "UART_TX_CLK" [get_port U0_ClkDiv/o_div_clk] #                       -divide_by 32
+#set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks "UART_TX_CLK"]
+#set_clock_uncertainty -hold $CLK_HOLD_SKEW   [get_clocks "UART_TX_CLK"]
+#create_generated_clock -master_clock $CLK1_NAME -source [get_ports REF_CLK] #                       -name "ALU_CLK" [get_port U0_CLK_GATE/GATED_CLK] #                       -divide_by 1
+#set_clock_uncertainty -setup $CLK_SETUP_SKEW [get_clocks "ALU_CLK"]
+#set_clock_uncertainty -hold $CLK_HOLD_SKEW   [get_clocks "ALU_CLK"]
+####################################################################################
+#########################################################
+#### Section 2 : Clocks Relationship ####
+#########################################################
+####################################################################################
+#set_clock_groups -asynchronous -group [get_clocks "$CLK1_NAME local_clk"]  #                               -group [get_clocks "$CLK2_NAME rx_clk "]  
+####################################################################################
+#########################################################
+#### Section 3 : set input/output delay on ports ####
+#########################################################
+####################################################################################
+#set in_delay  [expr 0.2*$CLK2_PER]
+#set out_delay [expr 0.2*$CLK2_PER]
+#Constrain Input Paths
+#set_input_delay $in_delay -clock $CLK2_NAME [get_port UART_RX_IN]
+#Constrain Output Paths
+#set_output_delay $out_delay -clock UART_TX_CLK [get_port UART_TX_O]
+#set_output_delay $out_delay -clock $CLK2_NAME [get_port parity_error]
+#set_output_delay $out_delay -clock $CLK2_NAME [get_port framing_error]
+####################################################################################
+#########################################################
+#### Section 4 : Driving cells ####
+#########################################################
+####################################################################################
+#set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port UART_RX_IN]
+####################################################################################
+#########################################################
+#### Section 5 : Output load ####
+#########################################################
+####################################################################################
+#set_load 0.5 [get_port UART_TX_O]
+#set_load 0.5 [get_port parity_error]
+#set_load 0.5 [get_port framing_error]
+####################################################################################
+#########################################################
+#### Section 6 : Operating Condition ####
+#########################################################
+####################################################################################
+# Define the Worst Library for Max(#setup) analysis
+# Define the Best Library for Min(hold) analysis
+set_operating_conditions -min_library "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -min "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -max_library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c" -max "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' found in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'.
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' found in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'.
+####################################################################################
+#########################################################
+#### Section 7 : wireload Model ####
+#########################################################
+####################################################################################
+#set_wire_load_model -name tsmc13_wl30 -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+####################################################################################
+###################### Mapping and optimization ########################
+puts "###############################################"
+###############################################
+puts "########## Mapping & Optimization #############"
+########## Mapping & Optimization #############
+puts "###############################################"
+###############################################
+compile -map_effort medium
+Warning: Design 'LTSSM_TOP' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 885 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design LTSSM_TOP has different process,
+voltage and temperatures parameters than the parameters at which target library 
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Timer'
+Information: The register 'timeout2_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num31'
+Information: The register 'enable_link_num_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'type_OS_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num30'
+Information: The register 'enable_link_num_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'type_OS_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num29'
+Information: The register 'enable_link_num_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'type_OS_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num28'
+Information: The register 'enable_link_num_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'type_OS_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num27'
+Information: The register 'enable_link_num_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'type_OS_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num26'
+Information: The register 'enable_link_num_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'type_OS_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num25'
+Information: The register 'enable_link_num_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'type_OS_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num24'
+Information: The register 'enable_link_num_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'type_OS_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num23'
+Information: The register 'enable_link_num_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'type_OS_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num22'
+Information: The register 'enable_link_num_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'type_OS_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num21'
+Information: The register 'enable_link_num_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'type_OS_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num20'
+Information: The register 'enable_link_num_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'type_OS_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num19'
+Information: The register 'enable_link_num_reg' is a constant and will be removed. (OPT-1206)
+Information: The register 'type_OS_enable_reg' is a constant and will be removed. (OPT-1206)
+  Processing 'decoder_lane_num18'
