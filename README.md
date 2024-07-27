@@ -1,4 +1,4 @@
-//////////////////////////////////////DESIGN AND IMPLEMENTAION IMPORTAINT INFO AND ASSUMPTIONS////////////////////////////////////////
+///////////DESIGN AND IMPLEMENTAION IMPORTAINT INFO AND ASSUMPTIONS///////
 - This is an implementation for the PCIe 5.0 MAC Layer.
 - The design is parameterized to support two different architectures for interfacing with the lower part (electrical part) of the physical layer:
   1. SERDES architecture
