@@ -15,9 +15,9 @@
 - the design can work with one lane or all lanes (32) but in-between number of lanes are not supported
 
   //////////////////////////////////////SYNTHESIS INFO///////////////////////////////////////////
-  - the technology used is 130n
-  - the running clock is assumed to be 125Mhz, since due to limitations imposed by this technology 4GHz (32GT "gen5 rate "/8 "symbol bits"") is not affordable
-  - if the 32 lanes are in operation then the 32GT/S is virtually achieved (125M*32*8)
-  - the design still works with zero slack whe the period is lowered to 7ns
+- the technology used is 130n
+- the running clock is assumed to be 125Mhz, since due to limitations imposed by this technology 4GHz (32GT "gen5 rate "/8 "symbol bits"") is not affordable
+- if the 32 lanes are in operation then the 32GT/S is virtually achieved (125M*32*8)
+- the design still works with zero slack whe the period is lowered to 7ns
  
-/////***************************************** for more info abot the design details, check the documentation folder*******************************/////
+************************* for more info abot the design details, check the documentation folder******************
